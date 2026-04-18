@@ -1,0 +1,113 @@
+@font-face {
+  font-family: 'ApocRevelations';
+  src: url('https://res.cloudinary.com/dkbhatjde/raw/upload/v1774155589/ApocRevelations-Regular_wnz2nv.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Brown';
+  src: url('https://res.cloudinary.com/dkbhatjde/raw/upload/v1774155996/Brown-Regular_wkp3tt.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  color: #000000;
+  background: #FFFFFF;
+  font-family: var(--font-crimson), serif;
+}
+
+::selection {
+  background: rgba(230, 19, 23, 0.15);
+  color: #000000;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FFFFFF;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #D9D9D9;
+  border-radius: 2px;
+}
+
+@keyframes pulse-scroll {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 0.6; }
+}
+
+.animate-pulse-scroll {
+  animation: pulse-scroll 3s ease-in-out infinite;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html, body {
+  overflow-x: hidden;
+}
+
+/* Mobile app bar clearance — adds bottom padding on mobile so footer content
+   doesn't sit behind the fixed app bar. Desktop (lg+) = 0. */
+@media (max-width: 1023px) {
+  body {
+    padding-bottom: calc(56px + env(safe-area-inset-bottom));
+  }
+}
+
+section[id] {
+  scroll-margin-top: 58px;
+}
+
+/* Calculator slider */
+.tmrw-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 2px;
+  border-radius: 2px;
+  outline: none;
+}
+
+.tmrw-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #000000;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.15s ease;
+}
+
+.tmrw-slider::-webkit-slider-thumb:hover,
+.tmrw-slider::-webkit-slider-thumb:active {
+  transform: scale(1.15);
+}
+
+.tmrw-slider::-moz-range-thumb {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #000000;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.15s ease;
+}
+
+.tmrw-slider::-moz-range-thumb:hover,
+.tmrw-slider::-moz-range-thumb:active {
+  transform: scale(1.15);
+}
