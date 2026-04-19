@@ -34,7 +34,7 @@ export function Peptides() {
 
           <FadeIn delay={0.15}>
             <p>
-              Integrated appropriately &mdash; per individual clinical assessment, never as a default &mdash; peptides are what make the model&apos;s ARPU assumptions real. A member on a peptide protocol is paying substantially more per year than a member on supplements alone, which is why the calculator&apos;s base case assumes approximately $3,000 annual spend at 25% attach. Not every member is a candidate; clinicians assess suitability, including any competitive sporting considerations. The 75% who don&apos;t convert still drive the joining-fee and per-member-per-month streams. The 25% who do are what make this category meaningfully more valuable than a typical supplement channel.
+              Integrated appropriately &mdash; per individual clinical assessment, never as a default &mdash; peptides are what make the model&apos;s ARPU assumptions real. A member on a peptide protocol is paying substantially more per year than a member on supplements alone, which is why the calculator&apos;s base case assumes approximately $3,000 annual spend at 25% attach. Not every member is a candidate; clinicians assess suitability, including any competitive sporting considerations. The 75% who don&apos;t convert still drive the joining-fee and per-member-per-month streams, but we&apos;ll make an additional purchase of supplements, sleep protocols, HRT, etc.
             </p>
           </FadeIn>
         </div>

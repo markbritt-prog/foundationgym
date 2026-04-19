@@ -138,7 +138,7 @@ export const GYM_VALUE = [
 
 export const TERMS_STAGE1 = [
   { label: "Type", value: "Referral channel partnership. TMRW runs the clinic end-to-end." },
-  { label: "Exclusivity", value: `Sole TMRW gym partner in ${PARTNER_SUBURB} for first 6 months` },
+  { label: "Exclusivity", value: `Launch TMRW gym partner in ${PARTNER_SUBURB} for first 6 months` },
   { label: "Term", value: "3 years from go-live" },
   { label: "Attribution", value: "Foundation-assigned partner code. Used for online signup and at TMRW collection centre booking." },
   { label: "Member pricing", value: "$249 joining (50% off), $249 per month thereafter" },
