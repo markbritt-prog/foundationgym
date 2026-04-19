@@ -14,7 +14,7 @@ export function CalculatorControls({ inputs, setInputs }: Props) {
     setInputs({
       activationsY1: s.activationsY1,
       onlineMix: s.onlineMix,
-      annualGrowthRate: s.annualGrowthRate,
+      annualNewJoinerIncrement: s.annualNewJoinerIncrement,
       retentionMonths: s.retentionMonths,
       productAttachRate: s.productAttachRate,
     });
@@ -46,8 +46,8 @@ export function CalculatorControls({ inputs, setInputs }: Props) {
       <div className="mt-12 space-y-10">
         <Slider
           label="Activations in Year 1"
-          min={10}
-          max={100}
+          min={20}
+          max={150}
           step={5}
           value={inputs.activationsY1}
           onChange={(v) => setInputs({ ...inputs, activationsY1: v })}
@@ -63,13 +63,13 @@ export function CalculatorControls({ inputs, setInputs }: Props) {
           format={(v) => `${v}% online`}
         />
         <Slider
-          label="Annual growth in new joiners"
+          label="New joiners added each year"
           min={0}
-          max={50}
+          max={60}
           step={5}
-          value={Math.round(inputs.annualGrowthRate * 100)}
-          onChange={(v) => setInputs({ ...inputs, annualGrowthRate: v / 100 })}
-          format={(v) => `${v}% / yr`}
+          value={inputs.annualNewJoinerIncrement}
+          onChange={(v) => setInputs({ ...inputs, annualNewJoinerIncrement: v })}
+          format={(v) => `+${v} / yr`}
         />
         <Slider
           label="Average retention"

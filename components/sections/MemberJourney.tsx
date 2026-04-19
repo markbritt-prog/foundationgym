@@ -13,7 +13,7 @@ export function MemberJourney() {
       <div className="max-w-5xl mx-auto px-6 md:px-10">
         <FadeIn>
           <span className="font-ui text-[0.65rem] md:text-[0.7rem] uppercase tracking-[0.04em] text-tmrw-grey-300 mb-4 block">
-            04 &mdash; THE MEMBER JOURNEY
+            05 &mdash; THE MEMBER JOURNEY
           </span>
         </FadeIn>
 

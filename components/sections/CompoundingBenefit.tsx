@@ -7,7 +7,7 @@ export function CompoundingBenefit() {
       <div className="max-w-5xl mx-auto px-6 md:px-10">
         <FadeIn>
           <span className="font-ui text-[0.65rem] md:text-[0.7rem] uppercase tracking-[0.04em] text-tmrw-grey-500 mb-5 block">
-            03 &mdash; THE COMPOUNDING BENEFIT
+            04 &mdash; THE COMPOUNDING BENEFIT
           </span>
         </FadeIn>
 
@@ -23,7 +23,7 @@ export function CompoundingBenefit() {
               Every {PARTNER_NAME} member who does this with us is a member who can see, in data, what their training is actually doing. Six months in, their epigenetic age drops. Twelve months in, their biomarkers shift. They attribute that to you, and to us. Both.
             </p>
             <p>
-              We want to be honest: we haven&apos;t proven this out at scale yet. Stage 1 is partly designed to measure it. But the logic is clean &mdash; a member on an integrated protocol doesn&apos;t churn out of either side. Fitness alone churns. Supplements alone churn. Fitness plus measured biology plus personalised protocols? That&apos;s different.
+              We want to be honest: we haven&apos;t proven this out at scale yet. The launch window is partly designed to measure it. But the logic is clean &mdash; a member on an integrated protocol doesn&apos;t churn out of either side. Fitness alone churns. Supplements alone churn. Fitness plus measured biology plus personalised protocols? That&apos;s different.
             </p>
             <p className="text-tmrw-white">
               Our working hypothesis: {PARTNER_NAME}&apos;s retention across the TMRW cohort improves by{" "}

@@ -8,7 +8,7 @@ interface Props {
 }
 
 const ATTACH_ROWS = [0.15, 0.2, 0.25, 0.3, 0.35];
-const ACTIVATION_COLS = [15, 25, 35, 50, 70];
+const ACTIVATION_COLS = [30, 40, 50, 60, 70];
 
 function nearest<T extends number>(value: T, options: T[]): T {
   return options.reduce((a, b) =>
@@ -32,7 +32,7 @@ export function SensitivityMatrix({ inputs, className = "" }: Props) {
         WHAT THE PARTNERSHIP IS POTENTIALLY WORTH.
       </h3>
       <p className="font-body text-[0.9rem] text-tmrw-grey-700 mt-4 max-w-2xl leading-[1.6] tracking-[-0.01em]">
-        5-year annual average revenue to Foundation across Year&nbsp;1 activations and attach scenarios. Holds your current growth and retention sliders constant. The highlighted cell reflects your current slider position.
+        5-year annual average revenue to Foundation across Year&nbsp;1 activations and attach scenarios. Holds your current annual-increment and retention sliders constant. The highlighted cell reflects your current slider position.
       </p>
 
       <div className="mt-8 md:mt-10 -mx-6 md:mx-0 overflow-x-auto">
@@ -67,7 +67,7 @@ export function SensitivityMatrix({ inputs, className = "" }: Props) {
                     acts,
                     attach,
                     inputs.onlineMix,
-                    inputs.annualGrowthRate,
+                    inputs.annualNewJoinerIncrement,
                     inputs.retentionMonths
                   );
                   const isCurrent =
@@ -96,7 +96,7 @@ export function SensitivityMatrix({ inputs, className = "" }: Props) {
       </p>
 
       <p className="font-body text-[0.75rem] italic text-tmrw-grey-700 mt-5 leading-[1.55] tracking-[-0.01em] max-w-2xl">
-        Average of Year&nbsp;1 through Year&nbsp;5. Cohort model: new joiners grow at your annual growth rate; active members each year = last year&apos;s retained cohort plus this year&apos;s new joiners, with churn derived from your retention slider.
+        Average of Year&nbsp;1 through Year&nbsp;5. Cohort model: new joiners grow by your fixed annual increment; active members each year = last year&apos;s retained cohort plus this year&apos;s new joiners, with churn derived from your retention slider.
       </p>
     </div>
   );

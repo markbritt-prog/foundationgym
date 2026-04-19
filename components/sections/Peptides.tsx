@@ -15,7 +15,7 @@ export function Peptides() {
 
         <FadeIn>
           <h2 className="font-display text-[1.25rem] sm:text-[1.5rem] md:text-[1.75rem] lg:text-[2rem] leading-none tracking-[-0.01em] uppercase text-tmrw-black mt-5 md:mt-6">
-            THE CATEGORY, SPECIFICALLY.
+            RAPIDLY CHANGING CATEGORY.
           </h2>
         </FadeIn>
 

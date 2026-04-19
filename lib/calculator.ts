@@ -2,8 +2,8 @@ import { COMMERCIAL } from "./constants";
 
 export interface CalcInputs {
   activationsY1: number;
-  onlineMix: number;          // 0–1, share of activations that happen online via partner code
-  annualGrowthRate: number;   // 0–1, YoY growth in new joiners
+  onlineMix: number;              // 0–1, share of activations that happen online via partner code
+  annualNewJoinerIncrement: number; // integer count added to new joiners each subsequent year
   retentionMonths: number;
   productAttachRate: number;
 }
@@ -69,13 +69,15 @@ export const computeYear = computeYearEcon;
 
 export function compute(inputs: CalcInputs): CalcResult {
   const annualChurnRate = Math.min(1, 12 / Math.max(1, inputs.retentionMonths));
-  const growth = inputs.annualGrowthRate;
 
   const years: YearResult[] = [];
   let prevActive = 0;
 
   for (let i = 0; i < 5; i++) {
-    const newJoiners = Math.round(inputs.activationsY1 * Math.pow(1 + growth, i));
+    const newJoiners = Math.max(
+      0,
+      inputs.activationsY1 + i * inputs.annualNewJoinerIncrement
+    );
     const retained = Math.round(prevActive * (1 - annualChurnRate));
     const active = retained + newJoiners;
     const econ = computeYearEcon(
@@ -104,14 +106,14 @@ export function compute(inputs: CalcInputs): CalcResult {
 
 /**
  * Sensitivity cell — 5-year annual average revenue to Foundation.
- * Assumes 20% YoY growth in new joiners and an 18-month average retention
- * unless overridden by caller.
+ * Assumes +25 new joiners per year and an 18-month average retention unless
+ * overridden by caller.
  */
 export function computeSensitivityCell(
   activationsY1: number,
   attachRate: number,
   onlineMix: number = 0.7,
-  annualGrowthRate: number = 0.2,
+  annualNewJoinerIncrement: number = 25,
   retentionMonths: number = 18
 ): number {
   const blended = blendedActivationRate(onlineMix);
@@ -120,7 +122,7 @@ export function computeSensitivityCell(
   let total = 0;
   let prevActive = 0;
   for (let i = 0; i < 5; i++) {
-    const newJoiners = activationsY1 * Math.pow(1 + annualGrowthRate, i);
+    const newJoiners = Math.max(0, activationsY1 + i * annualNewJoinerIncrement);
     const active = prevActive * (1 - annualChurnRate) + newJoiners;
 
     const joining = newJoiners * blended;

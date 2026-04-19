@@ -7,7 +7,6 @@ import {
   DEAL_PANELS,
   DEAL_ECONOMICS,
   JOURNEY_STEPS,
-  STAGE1_LEARNINGS,
   TERMS_STAGE1,
   NEXT_STEPS,
 } from "@/lib/constants";
@@ -32,25 +31,58 @@ function generateMarkdown(): string {
   // 01 What You've Built
   push("## 01 \u2014 What You\u2019ve Built");
   blank();
-  push("**Your members are already doing the work.**");
+  push("**Come down. Get measured. Rise up with a plan.**");
   blank();
   push(
-    `Your members have already made the investment to train at Bourke Street. They chose ${PARTNER_NAME} because they wanted real coaching, real programming, real outcomes \u2014 not a commodity gym.`
+    "You call yourselves Longevity Specialists. Train like an athlete at any age. Live stronger for longer. But the fitness layer alone can only take a member so far toward it."
   );
   blank();
   push(
-    `The work they\u2019re putting in \u2014 the lifts, the conditioning, the recovery \u2014 is changing their biology in ways they can\u2019t see, and can\u2019t feel, until years later. That\u2019s the gap. It\u2019s not a gap in ${PARTNER_NAME}; it\u2019s a gap in what any gym can offer on its own.`
+    `Your members have already made the investment to train at Bourke Street. They chose ${PARTNER_NAME} because they wanted real coaching, real programming, real outcomes, real community. The work they\u2019re putting in is changing their biology \u2014 in ways they can\u2019t see, and can\u2019t feel, until years later.`
   );
   blank();
   push(
-    "We run the clinic. You run the gym. Together, your members get what Life Time members get at [MIORA](https://miora.lifetime.life/) and Equinox members get at [Function Health](https://www.functionhealth.com/campaign/equinox-function-health) \u2014 a precision health layer that sits next to their training, operated end-to-end by us."
+    "We run the clinical layer. Bloods, epigenetic testing, personalised protocols, prescribing, supplements. End-to-end. The thing you\u2019ve positioned yourselves toward, operated by us, for your members."
+  );
+  blank();
+  push(
+    `No other independent gym in ${PARTNER_SUBURB} has this. We think ${PARTNER_NAME} should be the pilot.`
+  );
+  blank();
+  push(
+    "The integrated model is proven internationally \u2014 [Life Time\u2019s MIORA](https://miora.lifetime.life/), [Equinox \u00d7 Function Health](https://www.functionhealth.com/campaign/equinox-function-health), [Fountain Life](https://www.fountainlife.com/). Each was built bespoke, over years, on proprietary clinical infrastructure. " +
+      `${PARTNER_NAME} doesn\u2019t need to build anything. We already did.`
   );
   blank();
   push("---");
   blank();
 
-  // 02 Deal
-  push("## 02 \u2014 How This Works");
+  // 02 Why Now
+  push("## 02 \u2014 Why Now");
+  blank();
+  push("**The category has shifted.**");
+  blank();
+  push(
+    `Health and fitness spending in Australia rose 27% year-on-year in early 2025 against broader discretionary declines. Fitness has moved from a discretionary purchase to essential lifestyle maintenance. The ${PARTNER_NAME} member already pays a premium for outcomes. The question is whether the category next to fitness \u2014 longevity, diagnostics, protocol-driven health \u2014 sits adjacent to ${PARTNER_NAME}, or somewhere else.`
+  );
+  blank();
+  push(
+    "Facility and training revenue is largely capped. Your members are already at the top of what a gym membership alone can charge. The only remaining lever for meaningful ARPU growth is a category shift \u2014 from fitness access to integrated health."
+  );
+  blank();
+  push(
+    `Internationally, the integrated model is proven. [Life Time\u2019s MIORA](https://miora.lifetime.life/), [Equinox\u2019s partnership with Function Health](https://www.functionhealth.com/campaign/equinox-function-health), [Fountain Life](https://www.fountainlife.com/). Each was built bespoke over years on proprietary clinical infrastructure. What Australia has lacked is the platform that lets a premium operator run the integrated model without having to build the clinic. That\u2019s what TMRW is \u2014 and ${PARTNER_NAME} in ${PARTNER_SUBURB} is where we want to prove it.`
+  );
+  blank();
+  push(
+    "This is especially true for peptides, where consumer demand has already moved into the mainstream and where the prescribing infrastructure \u2014 not the regulation \u2014 is what separates a legitimate clinical offering from a grey-market risk most gym members shouldn\u2019t be taking."
+  );
+  blank();
+  push("---");
+  blank();
+
+  // 03 Deal
+  push("## 03 \u2014 How This Works");
   blank();
   push("**Foundation introduces. TMRW operates.**");
   blank();
@@ -79,8 +111,8 @@ function generateMarkdown(): string {
   push("---");
   blank();
 
-  // 03 Compounding Benefit
-  push("## 03 \u2014 The Compounding Benefit");
+  // 04 Compounding Benefit
+  push("## 04 \u2014 The Compounding Benefit");
   blank();
   push("**The member who can see their biology change doesn\u2019t cancel.**");
   blank();
@@ -89,7 +121,7 @@ function generateMarkdown(): string {
   );
   blank();
   push(
-    "We want to be honest: we haven\u2019t proven this out at scale yet. Stage 1 is partly designed to measure it. But the logic is clean \u2014 a member on an integrated protocol doesn\u2019t churn out of either side. Fitness alone churns. Supplements alone churn. Fitness plus measured biology plus personalised protocols? That\u2019s different."
+    "We want to be honest: we haven\u2019t proven this out at scale yet. The launch window is partly designed to measure it. But the logic is clean \u2014 a member on an integrated protocol doesn\u2019t churn out of either side. Fitness alone churns. Supplements alone churn. Fitness plus measured biology plus personalised protocols? That\u2019s different."
   );
   blank();
   push(
@@ -103,8 +135,8 @@ function generateMarkdown(): string {
   push("---");
   blank();
 
-  // 04 Member Journey
-  push("## 04 \u2014 The Member Journey");
+  // 05 Member Journey
+  push("## 05 \u2014 The Member Journey");
   blank();
   for (const s of JOURNEY_STEPS) {
     push(`**Step ${s.step}: ${s.title}** *(${s.time})*`);
@@ -115,8 +147,8 @@ function generateMarkdown(): string {
   push("---");
   blank();
 
-  // 05 Programme
-  push("## 05 \u2014 The Longevity Programme");
+  // 06 Programme
+  push("## 06 \u2014 The Longevity Programme");
   blank();
   push("**What the member gets.**");
   blank();
@@ -146,39 +178,39 @@ function generateMarkdown(): string {
   );
   blank();
   push("01. **The joining-fee discount (50%)** \u2014 is this the hook that\u2019ll actually move your members, or are they price-insensitive enough that we could dial it back to 25%?");
-  push("02. **The peptide consult (included)** \u2014 included in the member offer for now. Want to keep it there, or prefer we structure it as a separate upsell so Foundation earns on it directly?");
+  push("02. **What\u2019s the right additional offer value?** \u2014 peptide consultation, performance nutrition, deep-dive on gut health \u2014 there are several extras we could pull into the member offer to sharpen it. Which one moves your members?");
   push("03. **The revenue share mix ($100 / $300 / $10 / 5%)** \u2014 is this enough for you to actively champion this, or should we stretch it to make sure you\u2019re pushing it hard?");
   blank();
   push("---");
   blank();
 
-  // 06 Economics
-  push("## 06 \u2014 The Economics");
+  // 07 Economics
+  push("## 07 \u2014 The Economics");
   blank();
-  push("**Modest, honest, autopilot.**");
+  push("**Realistic forecasts.**");
   blank();
   push(
-    "We\u2019re not going to pretend this is a blockbuster. It\u2019s an additive revenue line for a gym that does nothing clinical to maintain it. The interactive calculator on the site updates live against slider inputs across 5 scenarios (Soft Open, Conservative, Base, Strong, Bullish)."
+    "The interactive calculator on the site updates live against slider inputs across 5 scenarios (Soft Open, Conservative, Base, Strong, Bullish)."
   );
   blank();
   push("**Base-case outputs:**");
-  push(`- Steady-state annual run-rate to ${PARTNER_NAME}: ~$13k/yr`);
-  push("- 5-year total: ~$65k");
+  push(`- Year 1 to ${PARTNER_NAME}: 75 new members; +25 each subsequent year.`);
+  push("- 5-year run rate compounds as the active cohort builds against 24-month average retention.");
   blank();
   push(
-    "Product-line attach and spend assumptions are the model\u2019s most sensitive inputs and have no empirical anchor yet. Base-case attach of 25% assumes members who convert become peptide-tier members at approximately $3,000 annual spend across supplements, compounded peptides, retests, and protocol adjustments. The online-vs-collection-centre channel mix is the second-most sensitive input \u2014 collection-centre activations pay 3\u00d7 online rates, reflecting their higher conversion and lifetime value. Stage 1\u2019s first 6 months will confirm or revise these figures."
+    "Product-line attach and spend assumptions are the model\u2019s most sensitive inputs and have no empirical anchor yet. Base-case attach of 25% assumes members who convert become peptide-tier members at approximately $3,000 annual spend across supplements, compounded peptides, retests, and protocol adjustments. The online-vs-collection-centre channel mix is the second-most sensitive input \u2014 collection-centre activations pay 3\u00d7 online rates, reflecting their higher conversion and lifetime value. The first six months of the launch will confirm or revise these figures."
   );
   blank();
   push("---");
   blank();
 
-  // 07 Launching Together
-  push("## 07 \u2014 Launching Together");
+  // 08 Launching Together
+  push("## 08 \u2014 Launching Together");
   blank();
-  push("**You\u2019re still laying foundations. So are we.**");
+  push("**Inviting your members on a new journey.**");
   blank();
   push(
-    "This isn\u2019t a partnership between two mature brands trying to extract from a stable market. It\u2019s two teams at the beginning of something, choosing to do the next bit together. The launch should feel like that."
+    "Your model is clearly more mature and developed than us, but you\u2019re pushing the boundaries on a different approach. We\u2019re not framing this as a partnership between two brands trying to extract from a stable market. The launch should feel like inviting customers to join a new type of journey."
   );
   blank();
   push("### What TMRW drives");
@@ -212,24 +244,10 @@ function generateMarkdown(): string {
   push("---");
   blank();
 
-  // 08 Learnings
-  push("## 08 \u2014 What We Learn in Stage 1");
-  blank();
-  push(
-    "**What decides Stage 2.** The launch term is designed to answer 4 questions. The answers determine what \u2014 if anything \u2014 comes next. Referral channels either convert or they don\u2019t; we\u2019ll know inside 6 months."
-  );
-  blank();
-  for (let i = 0; i < STAGE1_LEARNINGS.length; i++) {
-    push(`${String(i + 1).padStart(2, "0")}. ${STAGE1_LEARNINGS[i]}`);
-  }
-  blank();
-  push("---");
-  blank();
-
   // 09 Peptides
   push("## 09 \u2014 Peptides, Specifically");
   blank();
-  push("**The category, specifically.**");
+  push("**Rapidly changing category.**");
   blank();
   push(
     "Peptides have moved from the edges of clinical practice into the mainstream. Consumer demand is ahead of supply \u2014 members are asking, and many are buying from grey-market sources they shouldn\u2019t trust. Global regulatory posture is shifting to match. The United States is in active review of its peptide compounding rules, a process widely expected to broaden clinical access meaningfully through 2026 and 2027. Australia typically follows the US by 18 months to 2 years."
@@ -250,7 +268,7 @@ function generateMarkdown(): string {
   push("## 10 \u2014 Partnership Terms");
   blank();
   push(
-    "**Indicative term sheet.** Stage 1, launch term. Stage 2 terms are out of scope for this document and would be drafted jointly at month 6 if we proceed."
+    "**Indicative term sheet.** The launch-term shape. Everything below is indicative \u2014 the formal agreement is drafted once we align."
   );
   blank();
   push("| Term | Detail |");

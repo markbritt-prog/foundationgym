@@ -117,13 +117,6 @@ export const JOURNEY_STEPS = [
 
 // ─── 08 — WHAT WE LEARN ──────────────────────────────────────
 
-export const STAGE1_LEARNINGS = [
-  "Conversion rate from Foundation member exposure to activated TMRW member",
-  "Channel mix \u2014 what share of activations come online vs in-person",
-  "Product attach and spend \u2014 the most sensitive input in the model",
-  "The retention effect on Foundation\u2019s cohort \u2014 the number that matters most",
-] as const;
-
 // ─── WHAT CHANGES FOR FOUNDATION (unused but kept) ───────────
 
 export const GYM_VALUE = [
@@ -154,8 +147,9 @@ export const TERMS_STAGE1 = [
   { label: "Clinical liability", value: "TMRW. Foundation carries none." },
   { label: "Co-branded events", value: "4 per year at 350 Bourke. TMRW provides speakers and content." },
   { label: "Co-launch marketing", value: "Coordinated social launch. TMRW provides creative, assets, and paid budget." },
-  { label: "In-gym visibility", value: "Modest partner mark. No dedicated signage, screens, or staff script required." },
-  { label: "Influencer activation", value: "TMRW runs the ambassador programme and funds content production. Foundation members with reach invited in." },
+  { label: "Temporary signage", value: "Modest co-branded signage during the launch period. Comes down when the launch window ends." },
+  { label: "Digital device for sign-up", value: "TMRW provides an iPad or similar in-gym for on-the-spot member activation during the launch window." },
+  { label: "Influencer visibility", value: "Foundation members with reach invited into TMRW\u2019s ambassador programme. Co-branded content, amplified across both sides." },
   { label: "Data and privacy", value: "Clinical record sits with TMRW. Australian Privacy Act." },
   { label: "Termination", value: "Either party, 30 days written notice" },
 ] as const;
@@ -165,21 +159,21 @@ export const TERMS_STAGE1 = [
 export const NEXT_STEPS = [
   {
     step: "01",
-    title: "Founders\u2019 conversation",
-    desc: "Thirty minutes, founders to founders. We align on the shape, adjust anything that doesn\u2019t feel right, and confirm the launch plan.",
-    timeline: "This week",
+    title: "Alignment between the teams",
+    desc: "A working session between the Foundation and TMRW teams. Align on the shape, adjust anything that doesn\u2019t feel right, confirm the launch plan.",
+    timeline: "28 April",
   },
   {
     step: "02",
     title: "Launch preparation",
     desc: "Partner code issued. Member-facing assets produced \u2014 email copy, in-app messages, in-class script, launch social. TMRW briefs the clinical team. Foundation schedules the launch event.",
-    timeline: "1\u20132 weeks",
+    timeline: "Early May",
   },
   {
     step: "03",
     title: "Go live",
     desc: "Launch across Foundation\u2019s channels with a co-branded event at 350 Bourke. Members sign up, onboard, and start their programme.",
-    timeline: "Week 3",
+    timeline: "Mid-May",
   },
 ] as const;
 

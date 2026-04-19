@@ -73,8 +73,8 @@ const DIALS: { label: string; question: string }[] = [
     question: "Is this the hook that\u2019ll actually move your members, or are they price-insensitive enough that we could dial it back to 25%?",
   },
   {
-    label: "The peptide consult (included)",
-    question: "Included in the member offer for now. Want to keep it there, or prefer we structure it as a separate upsell so Foundation earns on it directly?",
+    label: "What\u2019s the right additional offer value?",
+    question: "Peptide consultation, performance nutrition, deep-dive on gut health \u2014 there are several extras we could pull into the member offer to sharpen it. Which one moves your members?",
   },
   {
     label: "The revenue share mix ($100 / $300 / $10 / 5%)",
@@ -91,7 +91,7 @@ export function ValueStack() {
       <div className="max-w-5xl mx-auto px-6 md:px-10">
         <FadeIn>
           <span className="font-ui text-[0.65rem] md:text-[0.7rem] uppercase tracking-[0.04em] text-tmrw-grey-700">
-            05 &mdash; THE LONGEVITY PROGRAMME
+            06 &mdash; THE LONGEVITY PROGRAMME
           </span>
         </FadeIn>
 
