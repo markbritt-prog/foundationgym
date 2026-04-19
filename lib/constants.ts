@@ -145,7 +145,7 @@ export const TERMS_STAGE1 = [
   { label: "Foundation revenue lines", value: "$100 per online activation + $300 per in-person activation + $10 per active member per month + 5% of TMRW product revenue per member" },
   { label: "Setup fee", value: "None" },
   { label: "Clinical liability", value: "TMRW. Foundation carries none." },
-  { label: "Co-branded events", value: "4 per year at 350 Bourke. TMRW provides speakers and content." },
+  { label: "Co-branded events", value: "2\u20134 per year at 350 Bourke, at Foundation\u2019s choice. TMRW provides speakers and content." },
   { label: "Co-launch marketing", value: "Coordinated social launch. TMRW provides creative, assets, and paid budget." },
   { label: "Temporary signage", value: "Modest co-branded signage during the launch period. Comes down when the launch window ends." },
   { label: "Digital device for sign-up", value: "TMRW provides an iPad or similar in-gym for on-the-spot member activation during the launch window." },
