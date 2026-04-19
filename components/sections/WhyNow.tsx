@@ -4,7 +4,7 @@ import { PARTNER_NAME, PARTNER_SUBURB } from "@/lib/constants";
 export function WhyNow() {
   return (
     <section id="why-now" className="bg-tmrw-grey-50 py-14 sm:py-16 md:py-20 lg:py-24">
-      <div className="max-w-5xl mx-auto px-6 md:px-10">
+      <div className="max-w-6xl mx-auto px-6 md:px-10">
         <FadeIn>
           <span className="font-ui text-[0.65rem] md:text-[0.7rem] uppercase tracking-[0.04em] text-tmrw-grey-700 mb-4 block">
             02 &mdash; WHY NOW

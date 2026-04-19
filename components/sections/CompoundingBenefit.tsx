@@ -4,7 +4,7 @@ import { PARTNER_NAME } from "@/lib/constants";
 export function CompoundingBenefit() {
   return (
     <section id="compounding-benefit" className="bg-tmrw-black py-16 sm:py-20 md:py-24 lg:py-32">
-      <div className="max-w-5xl mx-auto px-6 md:px-10">
+      <div className="max-w-6xl mx-auto px-6 md:px-10">
         <FadeIn>
           <span className="font-ui text-[0.65rem] md:text-[0.7rem] uppercase tracking-[0.04em] text-tmrw-grey-500 mb-5 block">
             04 &mdash; THE COMPOUNDING BENEFIT

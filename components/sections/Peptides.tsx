@@ -6,7 +6,7 @@ export function Peptides() {
       id="peptides"
       className="bg-tmrw-white py-12 md:py-16 lg:py-20 scroll-mt-14"
     >
-      <div className="max-w-5xl mx-auto px-6 md:px-10">
+      <div className="max-w-6xl mx-auto px-6 md:px-10">
         <FadeIn>
           <span className="font-ui text-[0.65rem] md:text-[0.7rem] uppercase tracking-[0.04em] text-tmrw-grey-700">
             09 &mdash; PEPTIDES, SPECIFICALLY

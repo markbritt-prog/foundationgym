@@ -21,7 +21,7 @@
 body {
   color: #000000;
   background: #FFFFFF;
-  font-family: var(--font-crimson), serif;
+  font-family: 'Crimson Text', serif;
 }
 
 ::selection {

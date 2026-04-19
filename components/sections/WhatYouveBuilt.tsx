@@ -7,7 +7,7 @@ export function WhatYouveBuilt() {
       id="what-youve-built"
       className="bg-tmrw-white py-20 sm:py-24 md:py-32 lg:py-40"
     >
-      <div className="max-w-5xl mx-auto px-6 md:px-10">
+      <div className="max-w-6xl mx-auto px-6 md:px-10">
 
         {/* Section tag — the single accent moment */}
         <FadeIn>

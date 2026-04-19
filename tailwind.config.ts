@@ -41,7 +41,7 @@ const config: Config = {
       },
       fontFamily: {
         display: ["ApocRevelations", "serif"],
-        body: ["var(--font-crimson)", "serif"],
+        body: ["'Crimson Text'", "serif"],
         ui: ["Brown", "sans-serif"],
       },
       keyframes: {
