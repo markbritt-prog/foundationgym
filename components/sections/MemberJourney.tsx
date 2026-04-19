@@ -2,10 +2,9 @@ import { FadeIn } from "@/components/ui/FadeIn";
 import { JOURNEY_STEPS, PARTNER_NAME } from "@/lib/constants";
 
 function accentFor(i: number): { text: string; border: string } {
-  // Alternate syringe red / toxic green across steps
-  return i % 2 === 0
-    ? { text: "text-tmrw-syringe", border: "border-tmrw-syringe" }
-    : { text: "text-tmrw-infusion", border: "border-tmrw-infusion" };
+  // Quiet default, vitality on the retest/optimise step which is the payoff
+  if (i === 5) return { text: "text-tmrw-vitality", border: "border-tmrw-vitality" };
+  return { text: "text-tmrw-grey-700", border: "border-tmrw-grey-300" };
 }
 
 export function MemberJourney() {
@@ -13,8 +12,8 @@ export function MemberJourney() {
     <section id="member-journey" className="bg-tmrw-black py-14 sm:py-16 md:py-20 lg:py-24">
       <div className="max-w-5xl mx-auto px-6 md:px-10">
         <FadeIn>
-          <span className="font-ui text-[0.65rem] md:text-[0.7rem] uppercase tracking-[0.04em] text-tmrw-infusion mb-4 block">
-            03 &mdash; THE MEMBER JOURNEY
+          <span className="font-ui text-[0.65rem] md:text-[0.7rem] uppercase tracking-[0.04em] text-tmrw-grey-300 mb-4 block">
+            04 &mdash; THE MEMBER JOURNEY
           </span>
         </FadeIn>
 

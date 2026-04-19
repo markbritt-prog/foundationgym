@@ -3,6 +3,7 @@
 import {
   PARTNER_NAME,
   PARTNER_SUBURB,
+  PARTNER_ADDRESS,
   PROPOSAL_DATE,
   DEAL_PANELS,
   DEAL_ECONOMICS,
@@ -24,73 +25,41 @@ function generateMarkdown(): string {
     `*A partnership proposal from TMRW to ${PARTNER_NAME}. ${PARTNER_SUBURB}, ${PROPOSAL_DATE}.*`
   );
   blank();
-  push("---");
-  blank();
-
-  // 01 Proposition
-  push("## 01 \u2014 The Proposition");
-  blank();
-  push("**Referral-only. Zero ops. Four revenue lines.**");
-  blank();
-  push(
-    `The deal is straightforward. ${PARTNER_NAME} introduces its members to TMRW through a partner code. TMRW operates everything clinical \u2014 onboarding, bloods, results, supplements, prescribing, fulfilment, indemnity. ${PARTNER_NAME} keeps doing what ${PARTNER_NAME} does.`
-  );
-  blank();
-  push(
-    `Four revenue lines to ${PARTNER_NAME} for life of membership. No room, no staff, no clinical insurance extension, no operational burden on your side. Stage 1 can be live in 2 to 3 weeks with a co-branded launch event at 350 Bourke.`
-  );
-  blank();
-  push(
-    "A deeper integration is possible \u2014 onsite collection days, dedicated clinical space, peptide intensives for Foundation members \u2014 but that\u2019s a month-6 conversation, once we have real data about what your members respond to."
-  );
+  push("> Come down. Get measured. Rise up with a plan.");
   blank();
   push("---");
   blank();
 
-  // 02 Why Now
-  push("## 02 \u2014 Why Now");
+  // 01 What You've Built
+  push("## 01 \u2014 What You\u2019ve Built");
   blank();
-  push("**The category has shifted.**");
+  push("**Your members are already doing the work.**");
   blank();
   push(
-    `Health and fitness spending in Australia rose 27% year-on-year in early 2025 against broader discretionary declines. Fitness has moved from a discretionary purchase to essential lifestyle maintenance. The ${PARTNER_NAME} member already pays a premium for outcomes. The question is whether the category next to fitness \u2014 longevity, diagnostics, protocol-driven health \u2014 sits adjacent to ${PARTNER_NAME}, or somewhere else.`
+    `Your members are paying $55 to $90 a week to train at ${PARTNER_ADDRESS}. They chose ${PARTNER_NAME} because they wanted real coaching, real programming, real outcomes \u2014 not a commodity gym.`
   );
   blank();
   push(
-    "Facility and training revenue is largely capped. Your members are already at the top of what a gym membership alone can charge. The only remaining lever for meaningful ARPU growth is a category shift \u2014 from fitness access to integrated health."
+    `The work they\u2019re putting in \u2014 the lifts, the conditioning, the recovery \u2014 is changing their biology in ways they can\u2019t see, and can\u2019t feel, until years later. That\u2019s the gap. It\u2019s not a gap in ${PARTNER_NAME}; it\u2019s a gap in what any gym can offer on its own.`
   );
   blank();
   push(
-    `Internationally, the integrated model is proven. [Life Time\u2019s MIORA](https://miora.lifetime.life/), [Equinox\u2019s partnership with Function Health](https://www.functionhealth.com/campaign/equinox-function-health), [Fountain Life](https://www.fountainlife.com/). Each was built bespoke over years on proprietary clinical infrastructure. What Australia has lacked is the platform that lets a premium operator \u2014 at any scale \u2014 offer integrated health to its members without building a clinic. That\u2019s what TMRW is. With ${PARTNER_NAME}, we skip the build entirely and run it as a channel.`
+    "We run the clinic. You run the gym. Together, your members get what Life Time members get at [MIORA](https://miora.lifetime.life/) and Equinox members get at [Function Health](https://www.functionhealth.com/campaign/equinox-function-health) \u2014 a precision health layer that sits next to their training, operated end-to-end by us."
   );
   blank();
   push(
-    "This is especially true for peptides, where consumer demand has already moved into the mainstream and where the prescribing infrastructure \u2014 not the regulation \u2014 is what separates a legitimate clinical offering from a grey-market risk most gym members shouldn\u2019t be taking."
+    `We\u2019d like to start with ${PARTNER_NAME}. No other independent gym in ${PARTNER_SUBURB} has this. We think you\u2019re the right partner to prove it does.`
   );
   blank();
   push("---");
   blank();
 
-  // 03 Member Journey
-  push("## 03 \u2014 The Member Journey");
+  // 02 Deal
+  push("## 02 \u2014 How This Works");
   blank();
-  push(
-    `**From gym floor to personalised protocol.** A ${PARTNER_NAME} member signs up online or at a TMRW collection centre. Protocol is built on their data and shipped direct.`
-  );
+  push("**Foundation introduces. TMRW operates.**");
   blank();
-  for (const s of JOURNEY_STEPS) {
-    push(`**Step ${s.step}: ${s.title}** *(${s.time})*`);
-    blank();
-    push(s.desc);
-    blank();
-  }
-  push("---");
-  blank();
-
-  // 04 Deal
-  push("## 04 \u2014 The Deal on One Screen");
-  blank();
-  push("**What\u2019s on the table.** The entire partnership, at a glance.");
+  push("The whole deal, on one screen. If it doesn\u2019t fit here, it\u2019s not in the deal.");
   blank();
   for (const p of DEAL_PANELS) {
     push(`### ${p.ordinal}`);
@@ -115,7 +84,43 @@ function generateMarkdown(): string {
   push("---");
   blank();
 
-  // 05 The Longevity Programme
+  // 03 Compounding Benefit
+  push("## 03 \u2014 The Compounding Benefit");
+  blank();
+  push("**The member who can see their biology change doesn\u2019t cancel.**");
+  blank();
+  push(
+    `Every ${PARTNER_NAME} member who does this with us is a member who can see, in data, what their training is actually doing. Six months in, their epigenetic age drops. Twelve months in, their biomarkers shift. They attribute that to you, and to us. Both.`
+  );
+  blank();
+  push(
+    "We want to be honest: we haven\u2019t proven this out at scale yet. Stage 1 is partly designed to measure it. But the logic is clean \u2014 a member on an integrated protocol doesn\u2019t churn out of either side. Fitness alone churns. Supplements alone churn. Fitness plus measured biology plus personalised protocols? That\u2019s different."
+  );
+  blank();
+  push(
+    `Our working hypothesis: ${PARTNER_NAME}\u2019s retention across the TMRW cohort improves by **15 to 25 percent** over 12 months. We\u2019ll have a real answer by month 6.`
+  );
+  blank();
+  push(
+    "If that\u2019s directionally right, it\u2019s a bigger number than everything in the economics section put together. This is the part of the partnership we\u2019re actually most interested in finding out about."
+  );
+  blank();
+  push("---");
+  blank();
+
+  // 04 Member Journey
+  push("## 04 \u2014 The Member Journey");
+  blank();
+  for (const s of JOURNEY_STEPS) {
+    push(`**Step ${s.step}: ${s.title}** *(${s.time})*`);
+    blank();
+    push(s.desc);
+    blank();
+  }
+  push("---");
+  blank();
+
+  // 05 Programme
   push("## 05 \u2014 The Longevity Programme");
   blank();
   push("**What the member gets.**");
@@ -126,65 +131,44 @@ function generateMarkdown(): string {
   blank();
   push("| Item | Qty | Retail / unit | Subtotal |");
   push("| --- | --- | --- | --- |");
-  push(
-    "| Epigenetic age testing (TruAge / TruHealth bundle) | 3 \u00d7 | $1,300 | $3,900 |"
-  );
-  push(
-    "| Comprehensive blood panel | 1 \u00d7 | $400 | $400 |"
-  );
-  push(
-    "| Deep-dive clinician consultations | 3 \u00d7 | $220 | $660 |"
-  );
-  push(
-    "| Peptide doctor consultation | 1 \u00d7 | $220 | $220 |"
-  );
-  push(
-    "| Doctor-approved personalised medical plan | 1 \u00d7 | $160 | $160 |"
-  );
-  push(
-    "| Precision supplement protocol | 12 months | $180 | $2,160 |"
-  );
+  push("| Epigenetic age testing (TruAge / TruHealth bundle) | 3 \u00d7 | $1,300 | $3,900 |");
+  push("| Comprehensive blood panel | 1 \u00d7 | $400 | $400 |");
+  push("| Deep-dive clinician consultations | 3 \u00d7 | $220 | $660 |");
+  push("| Peptide doctor consultation | 1 \u00d7 | $220 | $220 |");
+  push("| Doctor-approved personalised medical plan | 1 \u00d7 | $160 | $160 |");
+  push("| Precision supplement protocol | 12 months | $180 | $2,160 |");
   blank();
   push("**Total member value, Year 1: $7,500**");
   blank();
   push("*Assumes full 12-month retention and protocol adherence.*");
   blank();
-  push("### The Balance");
+  push("### The Dials");
   blank();
-  push("**Three things worth your feedback.**");
-  blank();
-  push(
-    "We think we\u2019ve structured a compelling offer to drive adoption at scale, but we want your feedback on the balance. Three things in particular."
-  );
-  blank();
-  push("01. **The joining-fee discount** \u2014 currently 50%. Members save $250 vs public pricing.");
-  push(
-    "02. **The peptide and high-performance nutrition consult** \u2014 currently included in the member offer."
-  );
-  push(
-    `03. **The revenue share mix to ${PARTNER_NAME}** \u2014 currently $100 per online activation, $300 per collection-centre activation, $10 per active member per month, 5% of product revenue.`
-  );
+  push("**Three things we\u2019d like your take on.**");
   blank();
   push(
-    "These are the pieces we expect to move as we learn what works. The next section shows the commercial shape as it currently stands."
+    "We\u2019ve structured this to go live in three weeks. Before anything gets locked in, there are three dials we\u2019d genuinely like your view on \u2014 we want this to be a shape you\u2019ll push, not a shape you\u2019ll tolerate."
   );
+  blank();
+  push("01. **The joining-fee discount (50%)** \u2014 is this the hook that\u2019ll actually move your members, or are they price-insensitive enough that we could dial it back to 25%?");
+  push("02. **The peptide consult (included)** \u2014 included in the member offer for now. Want to keep it there, or prefer we structure it as a separate upsell so Foundation earns on it directly?");
+  push("03. **The revenue share mix ($100 / $300 / $10 / 5%)** \u2014 is this enough for you to actively champion this, or should we stretch it to make sure you\u2019re pushing it hard?");
   blank();
   push("---");
   blank();
 
-  // 06 Financial
-  push("## 06 \u2014 The Financial Partnership");
+  // 06 Economics
+  push("## 06 \u2014 The Economics");
   blank();
-  push("**Model the outcomes.**");
+  push("**Modest, honest, autopilot.**");
   blank();
   push(
-    "The economics from both sides. The interactive calculator on the site updates live against slider inputs across 5 scenarios (Soft Open, Conservative, Base, Strong, Bullish)."
+    "We\u2019re not going to pretend this is a blockbuster. It\u2019s an additive revenue line for a gym that does nothing clinical to maintain it. The interactive calculator on the site updates live against slider inputs across 5 scenarios (Soft Open, Conservative, Base, Strong, Bullish)."
   );
   blank();
   push("**Base-case outputs:**");
-  push(`- Year 1 total to ${PARTNER_NAME}: ~$9k`);
+  push(`- Steady-state annual run-rate to ${PARTNER_NAME}: ~$13k/yr`);
   push("- 5-year total: ~$65k");
-  push("- Annualised average: ~$13k/yr");
   blank();
   push(
     "Product-line attach and spend assumptions are the model\u2019s most sensitive inputs and have no empirical anchor yet. Base-case attach of 25% assumes members who convert become peptide-tier members at approximately $3,000 annual spend across supplements, compounded peptides, retests, and protocol adjustments. The online-vs-collection-centre channel mix is the second-most sensitive input \u2014 collection-centre activations pay 3\u00d7 online rates, reflecting their higher conversion and lifetime value. Stage 1\u2019s first 6 months will confirm or revise these figures."
@@ -196,8 +180,10 @@ function generateMarkdown(): string {
   // 07 Launching Together
   push("## 07 \u2014 Launching Together");
   blank();
+  push("**You\u2019re still laying foundations. So are we.**");
+  blank();
   push(
-    "**A launch, not a soft open.** The partnership works if it\u2019s announced, seen, and talked about."
+    "This isn\u2019t a partnership between two mature brands trying to extract from a stable market. It\u2019s two teams at the beginning of something, choosing to do the next bit together. The launch should feel like that."
   );
   blank();
   push("### What TMRW drives");
@@ -251,15 +237,15 @@ function generateMarkdown(): string {
   push("**The category, specifically.**");
   blank();
   push(
-    "Peptides have moved from the edges of clinical practice into the mainstream. Consumer demand is ahead of supply \u2014 members are asking, and many are buying from grey-market sources they shouldn\u2019t trust. Global regulatory posture is shifting to match. The United States is in active review of its peptide compounding rules, a process widely expected to broaden clinical access meaningfully through 2026 and 2027. Australia typically follows the US by 18 months to 2 years. Increasing acceptance \u2014 and increasing legitimacy \u2014 is the direction of travel."
+    "Peptides have moved from the edges of clinical practice into the mainstream. Consumer demand is ahead of supply \u2014 members are asking, and many are buying from grey-market sources they shouldn\u2019t trust. Global regulatory posture is shifting to match. The United States is in active review of its peptide compounding rules, a process widely expected to broaden clinical access meaningfully through 2026 and 2027. Australia typically follows the US by 18 months to 2 years."
   );
   blank();
   push(
-    "TMRW already operates inside Australia\u2019s compliant pathway \u2014 Schedule 4 prescription through our integrative GP and nurse-practitioner network, with fulfilment through licensed Australian compounding pharmacies. This is the infrastructure a gym cannot build in-house. Medical networks take years, pharmacy relationships take reputation, and the clinical decision support, dosing protocols, and follow-up workflows take serious investment. By the time the global regulatory environment is fully settled, we want to be the operator premium gyms already trust \u2014 not the operator scrambling to build capability after the rules have moved."
+    "TMRW already operates inside Australia\u2019s compliant pathway \u2014 Schedule 4 prescription through our integrative GP and nurse-practitioner network, with fulfilment through licensed Australian compounding pharmacies. This is the infrastructure a gym cannot build in-house."
   );
   blank();
   push(
-    "Integrated appropriately \u2014 per individual clinical assessment, never as a default \u2014 peptides are what make the model\u2019s ARPU assumptions real. A member on a peptide protocol is paying substantially more per year than a member on supplements alone, which is why the calculator\u2019s base case assumes approximately $3,000 annual spend at 25% attach. Not every member is a candidate; clinicians assess suitability, including any competitive sporting considerations. The 75% who don\u2019t convert still drive the joining-fee and per-member-per-month streams. The 25% who do are what make this category meaningfully more valuable than a typical supplement channel."
+    "Integrated appropriately \u2014 per individual clinical assessment, never as a default \u2014 peptides are what make the model\u2019s ARPU assumptions real. A member on a peptide protocol is paying substantially more per year than a member on supplements alone, which is why the calculator\u2019s base case assumes approximately $3,000 annual spend at 25% attach."
   );
   blank();
   push("---");
@@ -276,9 +262,7 @@ function generateMarkdown(): string {
   push("| --- | --- |");
   for (const t of TERMS_STAGE1) push(`| ${t.label} | ${t.value} |`);
   blank();
-  push(
-    "*Terms are indicative. A formal agreement will be drafted upon agreement in principle.*"
-  );
+  push("*Terms are indicative. A formal agreement will be drafted upon agreement in principle.*");
   blank();
   push("---");
   blank();
@@ -373,7 +357,7 @@ export function DownloadMarkdown({
   return (
     <button
       onClick={handleDownload}
-      className="inline-flex items-center gap-2 px-5 py-2.5 min-h-[44px] border border-tmrw-grey-800 rounded-sm font-ui text-[0.6rem] uppercase tracking-[0.04em] text-tmrw-grey-300 transition-all duration-300 hover:border-tmrw-syringe hover:text-tmrw-white hover:bg-tmrw-grey-900"
+      className="inline-flex items-center gap-2 px-5 py-2.5 min-h-[44px] border border-tmrw-grey-800 rounded-sm font-ui text-[0.6rem] uppercase tracking-[0.04em] text-tmrw-grey-300 transition-all duration-300 hover:border-tmrw-white hover:text-tmrw-white hover:bg-tmrw-grey-900"
     >
       {icon}
       DOWNLOAD MARKDOWN

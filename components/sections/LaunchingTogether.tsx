@@ -5,20 +5,20 @@ export function LaunchingTogether() {
     <section id="launching-together" className="bg-tmrw-white py-14 sm:py-16 md:py-20 lg:py-24">
       <div className="max-w-5xl mx-auto px-6 md:px-10">
         <FadeIn>
-          <span className="font-ui text-[0.65rem] md:text-[0.7rem] uppercase tracking-[0.04em] text-tmrw-syringe mb-4 block">
+          <span className="font-ui text-[0.65rem] md:text-[0.7rem] uppercase tracking-[0.04em] text-tmrw-grey-700 mb-4 block">
             07 &mdash; LAUNCHING TOGETHER
           </span>
         </FadeIn>
 
         <FadeIn>
           <h2 className="font-display text-[1.375rem] sm:text-[1.625rem] md:text-[2rem] lg:text-[2.5rem] uppercase leading-none tracking-[-0.01em] text-tmrw-black">
-            A LAUNCH, NOT A SOFT OPEN.
+            YOU&apos;RE STILL LAYING FOUNDATIONS.<br />SO ARE WE.
           </h2>
         </FadeIn>
 
         <FadeIn>
           <p className="font-body text-[0.9rem] sm:text-[0.95rem] md:text-[1.05rem] leading-[1.55] tracking-[-0.01em] text-tmrw-grey-700 max-w-xl mt-4">
-            The partnership works if it&apos;s announced, seen, and talked about.
+            This isn&apos;t a partnership between two mature brands trying to extract from a stable market. It&apos;s two teams at the beginning of something, choosing to do the next bit together. The launch should feel like that.
           </p>
         </FadeIn>
 

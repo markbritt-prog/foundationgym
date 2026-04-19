@@ -6,20 +6,20 @@ export function DealOnOneScreen() {
     <section id="deal" className="bg-tmrw-grey-50 py-16 sm:py-20 md:py-24 lg:py-32">
       <div className="max-w-5xl mx-auto px-6 md:px-10">
         <FadeIn>
-          <span className="font-ui text-[0.65rem] md:text-[0.7rem] uppercase tracking-[0.04em] text-tmrw-syringe mb-5 block">
-            04 &mdash; THE DEAL
+          <span className="font-ui text-[0.65rem] md:text-[0.7rem] uppercase tracking-[0.04em] text-tmrw-grey-700 mb-5 block">
+            02 &mdash; HOW THIS WORKS
           </span>
         </FadeIn>
 
         <FadeIn>
           <h2 className="font-display text-[1.875rem] sm:text-[2.25rem] md:text-[2.75rem] lg:text-[4rem] uppercase leading-[0.95] tracking-[-0.01em] text-tmrw-black">
-            WHAT&apos;S ON THE TABLE.
+            FOUNDATION INTRODUCES.<br />TMRW OPERATES.
           </h2>
         </FadeIn>
 
         <FadeIn>
           <p className="font-body text-[0.9rem] sm:text-[0.95rem] md:text-[1.05rem] leading-[1.55] tracking-[-0.01em] text-tmrw-grey-700 max-w-2xl mt-5">
-            The entire partnership, at a glance.
+            The whole deal, on one screen. If it doesn&apos;t fit here, it&apos;s not in the deal.
           </p>
         </FadeIn>
 
@@ -35,8 +35,8 @@ export function DealOnOneScreen() {
         </div>
 
         <FadeIn delay={0.4}>
-          <p className="font-body text-[0.8rem] italic text-tmrw-grey-700 mt-8 text-center tracking-[-0.01em]">
-            Year 1 base case: ~$9k to Foundation. Model the full economics below &darr;
+          <p className="font-body text-[0.85rem] md:text-[0.9rem] italic text-tmrw-grey-700 mt-8 text-center tracking-[-0.01em]">
+            Modest on paper. The real return is what this does to your retention &mdash; next section.
           </p>
         </FadeIn>
       </div>

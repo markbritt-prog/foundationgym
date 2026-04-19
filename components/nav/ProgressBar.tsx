@@ -10,7 +10,7 @@ export function ProgressBar() {
       aria-hidden="true"
     >
       <div
-        className="h-full bg-tmrw-syringe origin-left transition-transform duration-75 ease-linear"
+        className="h-full bg-tmrw-grey-700 origin-left transition-transform duration-75 ease-linear"
         style={{ transform: `scaleX(${progress})` }}
       />
     </div>

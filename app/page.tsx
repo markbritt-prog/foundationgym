@@ -3,17 +3,17 @@ import { SectionDots } from "@/components/nav/SectionDots";
 import { ProgressBar } from "@/components/nav/ProgressBar";
 import { MobileAppBar } from "@/components/nav/MobileAppBar";
 import { Hero } from "@/components/sections/Hero";
-import { Proposition } from "@/components/sections/Proposition";
-import { WhyNow } from "@/components/sections/WhyNow";
-import { MemberJourney } from "@/components/sections/MemberJourney";
+import { WhatYouveBuilt } from "@/components/sections/WhatYouveBuilt";
 import { DealOnOneScreen } from "@/components/sections/DealOnOneScreen";
+import { CompoundingBenefit } from "@/components/sections/CompoundingBenefit";
+import { MemberJourney } from "@/components/sections/MemberJourney";
 import { ValueStack } from "@/components/sections/ValueStack";
 import { FinancialPartnership } from "@/components/sections/FinancialPartnership";
 import { LaunchingTogether } from "@/components/sections/LaunchingTogether";
 import { Learnings } from "@/components/sections/Learnings";
+import { Peptides } from "@/components/sections/Peptides";
 import { Terms } from "@/components/sections/Terms";
 import { NextSteps } from "@/components/sections/NextSteps";
-import { Peptides } from "@/components/sections/Peptides";
 import { Footer } from "@/components/sections/Footer";
 
 export default function Home() {
@@ -23,18 +23,13 @@ export default function Home() {
       <TopNav />
       <SectionDots />
       <Hero />
-      {/* The opportunity */}
-      <Proposition />
-      <WhyNow />
-      {/* The experience */}
-      <MemberJourney />
-      {/* The deal */}
+      <WhatYouveBuilt />
       <DealOnOneScreen />
+      <CompoundingBenefit />
+      <MemberJourney />
       <ValueStack />
       <FinancialPartnership />
-      {/* Execution */}
       <LaunchingTogether />
-      {/* Closing */}
       <Learnings />
       <Peptides />
       <Terms />

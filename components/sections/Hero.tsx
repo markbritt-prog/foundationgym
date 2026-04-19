@@ -64,6 +64,9 @@ export function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.2, ease, delay: 0.4 }}
         >
+          <p className="font-display text-[1.5rem] md:text-[2rem] uppercase tracking-[-0.01em] text-tmrw-white mb-6">
+            Come down. Get measured.<br />Rise up with a plan.
+          </p>
           <p className="font-body text-[1rem] md:text-[1.2rem] leading-[1.55] tracking-[-0.01em] text-tmrw-grey-300">
             A partnership proposal from TMRW to {PARTNER_NAME}.
             <br className="hidden md:block" /> {PARTNER_SUBURB}, {PROPOSAL_DATE}.

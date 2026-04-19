@@ -28,7 +28,7 @@ export function Footer() {
         <p className="font-ui text-[0.6rem] uppercase tracking-[0.04em]">
           <a
             href="https://startmytomorrow.com"
-            className="text-tmrw-grey-700 hover:text-tmrw-syringe transition-colors"
+            className="text-tmrw-grey-700 hover:text-tmrw-white transition-colors"
           >
             STARTMYTOMORROW.COM
           </a>

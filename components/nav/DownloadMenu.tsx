@@ -24,7 +24,7 @@ export function DownloadMenu({ inverted, fullWidth }: Props) {
     fullWidth ? "w-full justify-center" : ""
   } ${
     inverted
-      ? "border-tmrw-grey-800 text-tmrw-grey-300 hover:border-tmrw-syringe hover:text-tmrw-white"
+      ? "border-tmrw-grey-800 text-tmrw-grey-300 hover:border-tmrw-white hover:text-tmrw-white"
       : "border-tmrw-grey-300 text-tmrw-grey-700 hover:border-tmrw-black hover:text-tmrw-black"
   }`;
 

@@ -24,8 +24,8 @@ const TABS: Tab[] = [
     ),
   },
   {
-    id: "why-now",
-    label: "Why",
+    id: "what-youve-built",
+    label: "Members",
     icon: (
       <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
         <circle cx="10" cy="10" r="6.5" stroke="currentColor" strokeWidth="1.5" />
@@ -108,7 +108,7 @@ export function MobileAppBar() {
               key={tab.id}
               onClick={() => onTap(tab.id)}
               className={`flex flex-col items-center justify-center gap-1 py-2.5 px-1 min-h-[56px] transition-colors duration-150 active:bg-tmrw-grey-50 ${
-                isActive ? "text-tmrw-syringe" : "text-tmrw-grey-700"
+                isActive ? "text-tmrw-black" : "text-tmrw-grey-700"
               }`}
               aria-current={isActive ? "true" : undefined}
             >

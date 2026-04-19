@@ -64,7 +64,7 @@ export function SectionDots() {
             <span
               className={`block rounded-full transition-all duration-200 ${
                 isActive
-                  ? "w-2 h-2 bg-tmrw-syringe"
+                  ? "w-2 h-2 bg-tmrw-black"
                   : "w-1.5 h-1.5 bg-tmrw-grey-300 group-hover:bg-tmrw-grey-700"
               }`}
             />

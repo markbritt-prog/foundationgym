@@ -16,15 +16,15 @@ export function FinancialPartnership() {
     <section id="financial" className="bg-tmrw-white py-16 sm:py-20 md:py-24 lg:py-32">
       <div className="max-w-5xl mx-auto px-6 md:px-10">
         <span className="font-ui text-[0.65rem] md:text-[0.7rem] uppercase tracking-[0.04em] text-tmrw-syringe mb-5 block">
-          06 &mdash; THE FINANCIAL PARTNERSHIP
+          06 &mdash; THE ECONOMICS
         </span>
 
         <h2 className="font-display text-[1.875rem] sm:text-[2.25rem] md:text-[2.75rem] lg:text-[4rem] uppercase leading-[0.95] tracking-[-0.01em] text-tmrw-black">
-          MODEL THE OUTCOMES.
+          MODEST, HONEST, AUTOPILOT.
         </h2>
 
         <p className="font-body text-[0.9rem] sm:text-[0.95rem] md:text-[1.05rem] leading-[1.55] tracking-[-0.01em] text-tmrw-grey-700 max-w-2xl mt-5">
-          The economics from both sides. Adjust any input &mdash; the model updates live. Scroll for the full 5-year build and sensitivity analysis.
+          We&apos;re not going to pretend this is a blockbuster. It&apos;s an additive revenue line for a gym that does nothing clinical to maintain it. Adjust any input &mdash; the model updates live.
         </p>
 
         <CalculatorHero result={result} />

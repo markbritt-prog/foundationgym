@@ -75,9 +75,9 @@ export function TopNav() {
               >
                 {shortLabel}
                 <span
-                  className={`absolute -bottom-1 left-0 right-0 mx-auto h-px bg-tmrw-syringe transition-all duration-200 ${
-                    isActive ? "w-full" : "w-0"
-                  }`}
+                  className={`absolute -bottom-1 left-0 right-0 mx-auto h-px transition-all duration-200 ${
+                    scrolled ? "bg-tmrw-black" : "bg-tmrw-white"
+                  } ${isActive ? "w-full" : "w-0"}`}
                 />
               </button>
             );

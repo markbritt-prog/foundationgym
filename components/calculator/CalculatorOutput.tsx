@@ -14,7 +14,7 @@ export function CalculatorOutput({ result }: Props) {
 
   return (
     <div className="lg:sticky lg:top-24 border border-tmrw-grey-200 bg-tmrw-grey-50 p-7 rounded-sm">
-      <span className="font-ui text-[0.65rem] uppercase tracking-[0.04em] text-tmrw-syringe">
+      <span className="font-ui text-[0.65rem] uppercase tracking-[0.04em] text-tmrw-grey-700">
         CURRENT MODEL
       </span>
 
