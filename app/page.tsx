@@ -9,7 +9,6 @@ import { MemberJourney } from "@/components/sections/MemberJourney";
 import { DealOnOneScreen } from "@/components/sections/DealOnOneScreen";
 import { ValueStack } from "@/components/sections/ValueStack";
 import { FinancialPartnership } from "@/components/sections/FinancialPartnership";
-import { TheHub } from "@/components/sections/TheHub";
 import { LaunchingTogether } from "@/components/sections/LaunchingTogether";
 import { Learnings } from "@/components/sections/Learnings";
 import { Terms } from "@/components/sections/Terms";
@@ -34,7 +33,6 @@ export default function Home() {
       <ValueStack />
       <FinancialPartnership />
       {/* Execution */}
-      <TheHub />
       <LaunchingTogether />
       {/* Closing */}
       <Learnings />

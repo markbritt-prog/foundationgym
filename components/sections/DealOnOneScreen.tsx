@@ -36,7 +36,7 @@ export function DealOnOneScreen() {
 
         <FadeIn delay={0.4}>
           <p className="font-body text-[0.8rem] italic text-tmrw-grey-700 mt-8 text-center tracking-[-0.01em]">
-            Year 1 base case: ~$138k to VRTUS. Model the full economics below &darr;
+            Year 1 base case: ~$9k to Foundation. Model the full economics below &darr;
           </p>
         </FadeIn>
       </div>

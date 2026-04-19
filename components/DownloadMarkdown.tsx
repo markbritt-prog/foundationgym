@@ -30,20 +30,18 @@ function generateMarkdown(): string {
   // 01 Proposition
   push("## 01 \u2014 The Proposition");
   blank();
+  push("**Referral-only. Zero ops. Four revenue lines.**");
+  blank();
   push(
-    `**The Equinox \u00d7 Function Health model, in ${PARTNER_SUBURB}.**`
+    `The deal is straightforward. ${PARTNER_NAME} introduces its members to TMRW through a partner code. TMRW operates everything clinical \u2014 onboarding, bloods, results, supplements, prescribing, fulfilment, indemnity. ${PARTNER_NAME} keeps doing what ${PARTNER_NAME} does.`
   );
   blank();
   push(
-    `TMRW runs the clinical layer so premium gyms don\u2019t have to. Equinox does this in the US with Function Health. Life Time built MIORA in-house. Saint Haven built its own. This is the Australian equivalent, starting with ${PARTNER_NAME} in ${PARTNER_SUBURB}.`
+    `Four revenue lines to ${PARTNER_NAME} for life of membership. No room, no staff, no clinical insurance extension, no operational burden on your side. Stage 1 can be live in 2 to 3 weeks with a co-branded launch event at 350 Bourke.`
   );
   blank();
   push(
-    `Stage 1 can be live in 3 weeks with marketing activation. A TMRW clinical node inside ${PARTNER_NAME}. Zero capex, zero clinical risk. 3 revenue lines to ${PARTNER_NAME} from day one.`
-  );
-  blank();
-  push(
-    `Deeper integration is also possible \u2014 closer to Life Time\u2019s model \u2014 but that\u2019s a month-6 conversation, once we have real data.`
+    "A deeper integration is possible \u2014 onsite collection days, dedicated clinical space, peptide intensives for Foundation members \u2014 but that\u2019s a month-6 conversation, once we have real data about what your members respond to."
   );
   blank();
   push("---");
@@ -55,7 +53,7 @@ function generateMarkdown(): string {
   push("**The category has shifted.**");
   blank();
   push(
-    "Health and fitness spending in Australia rose 27% year-on-year in early 2025 against broader discretionary declines. Fitness has moved from a discretionary purchase to essential lifestyle maintenance. The VRTUS member already pays a premium for outcomes. The question is whether the category next to fitness \u2014 longevity, diagnostics, protocol-driven health \u2014 sits inside VRTUS, or somewhere else."
+    `Health and fitness spending in Australia rose 27% year-on-year in early 2025 against broader discretionary declines. Fitness has moved from a discretionary purchase to essential lifestyle maintenance. The ${PARTNER_NAME} member already pays a premium for outcomes. The question is whether the category next to fitness \u2014 longevity, diagnostics, protocol-driven health \u2014 sits adjacent to ${PARTNER_NAME}, or somewhere else.`
   );
   blank();
   push(
@@ -63,7 +61,7 @@ function generateMarkdown(): string {
   );
   blank();
   push(
-    "Internationally, the integrated model is proven. [Life Time\u2019s MIORA](https://miora.lifetime.life/), [Equinox\u2019s partnership with Function Health](https://www.functionhealth.com/campaign/equinox-function-health), [Fountain Life](https://www.fountainlife.com/). Each was built bespoke over years on proprietary clinical infrastructure. What Australia has lacked is the platform that lets a premium operator run the integrated model without having to build the clinic. That\u2019s what TMRW is \u2014 and VRTUS in Bondi is where we want to prove it."
+    `Internationally, the integrated model is proven. [Life Time\u2019s MIORA](https://miora.lifetime.life/), [Equinox\u2019s partnership with Function Health](https://www.functionhealth.com/campaign/equinox-function-health), [Fountain Life](https://www.fountainlife.com/). Each was built bespoke over years on proprietary clinical infrastructure. What Australia has lacked is the platform that lets a premium operator \u2014 at any scale \u2014 offer integrated health to its members without building a clinic. That\u2019s what TMRW is. With ${PARTNER_NAME}, we skip the build entirely and run it as a channel.`
   );
   blank();
   push(
@@ -77,7 +75,7 @@ function generateMarkdown(): string {
   push("## 03 \u2014 The Member Journey");
   blank();
   push(
-    "**From gym floor to personalised protocol.** The entire onboarding happens at VRTUS. No external appointments, no waiting. One visit to start."
+    `**From gym floor to personalised protocol.** A ${PARTNER_NAME} member signs up online or at a TMRW collection centre. Protocol is built on their data and shipped direct.`
   );
   blank();
   for (const s of JOURNEY_STEPS) {
@@ -123,7 +121,7 @@ function generateMarkdown(): string {
   push("**What the member gets.**");
   blank();
   push(
-    "What a VRTUS member receives in year one, and what they\u2019d pay for equivalent care elsewhere in Australia."
+    `What a ${PARTNER_NAME} member receives in year one, and what they\u2019d pay for equivalent care elsewhere in Australia.`
   );
   blank();
   push("| Item | Qty | Retail / unit | Subtotal |");
@@ -159,12 +157,12 @@ function generateMarkdown(): string {
     "We think we\u2019ve structured a compelling offer to drive adoption at scale, but we want your feedback on the balance. Three things in particular."
   );
   blank();
-  push("01. **The joining-fee discount** \u2014 currently 50%.");
+  push("01. **The joining-fee discount** \u2014 currently 50%. Members save $250 vs public pricing.");
   push(
-    "02. **The peptide and high-performance nutrition consult** \u2014 currently included."
+    "02. **The peptide and high-performance nutrition consult** \u2014 currently included in the member offer."
   );
   push(
-    "03. **The revenue share mix to VRTUS** \u2014 currently $249 per activation, $10 per active member per month, 10% of product revenue."
+    `03. **The revenue share mix to ${PARTNER_NAME}** \u2014 currently $100 per online activation, $300 per collection-centre activation, $10 per active member per month, 5% of product revenue.`
   );
   blank();
   push(
@@ -184,53 +182,19 @@ function generateMarkdown(): string {
   );
   blank();
   push("**Base-case outputs:**");
-  push("- Year 1 total to VRTUS: ~$138k");
-  push("- 5-year total: ~$824k");
-  push("- Annualised average: ~$165k/yr");
+  push(`- Year 1 total to ${PARTNER_NAME}: ~$9k`);
+  push("- 5-year total: ~$65k");
+  push("- Annualised average: ~$13k/yr");
   blank();
   push(
-    "Product-line attach and spend assumptions are the model\u2019s most sensitive inputs and have no empirical anchor yet. Base-case attach of 30% assumes members who convert become peptide-tier members at approximately $3,000 annual spend across supplements, compounded peptides, retests, and protocol adjustments. Peptide prescribing operates inside Australia\u2019s existing Schedule 4 pathway via TMRW\u2019s integrative GP network and licensed compounding pharmacy relationships. Stage 1\u2019s first 6 months will confirm or revise these figures."
+    "Product-line attach and spend assumptions are the model\u2019s most sensitive inputs and have no empirical anchor yet. Base-case attach of 25% assumes members who convert become peptide-tier members at approximately $3,000 annual spend across supplements, compounded peptides, retests, and protocol adjustments. The online-vs-collection-centre channel mix is the second-most sensitive input \u2014 collection-centre activations pay 3\u00d7 online rates, reflecting their higher conversion and lifetime value. Stage 1\u2019s first 6 months will confirm or revise these figures."
   );
   blank();
   push("---");
   blank();
 
-  // 07 Hub
-  push("## 07 \u2014 The TMRW Hub at VRTUS");
-  blank();
-  push(
-    "**A clinical node inside the gym.** Zero capex. Zero clinical risk to VRTUS. 6-month launch term."
-  );
-  blank();
-  push("### What VRTUS provides");
-  blank();
-  push(
-    "The upstairs room, in its current state. We configure it as a clinical space \u2014 screening, consultation, blood collection. Room access 7\u201310am, 3 days per week, for the initial 6-month term. We can extend to 6 hours per day within the term if volume supports it."
-  );
-  blank();
-  push(
-    "Brand access. Signage in the room and at reception, co-branded member communications through your existing channels, and staff briefings so that your trainers understand when and how to refer."
-  );
-  blank();
-  push("### What TMRW brings");
-  blank();
-  push(
-    "The clinical team. A credentialed phlebotomist at every session and a TMRW clinician available for consultations, protocol reviews, and onsite escalation. All staff operate under TMRW\u2019s clinical governance \u2014 their professional indemnity, their liability, their training."
-  );
-  blank();
-  push(
-    "The full back-end. Booking system, member app, billing, diagnostic supply, supplement fulfilment, clinical decision support, member comms, and the prescribing pathway itself \u2014 integrative GPs credentialed to prescribe Schedule 4 therapies, paired with licensed Australian compounding pharmacy relationships, which together unlock a peptide-tier offering that is difficult for any gym to build in-house. VRTUS does not operate any part of the clinical workflow."
-  );
-  blank();
-  push(
-    "Full indemnity and product liability. No clinical insurance extension required on the VRTUS side."
-  );
-  blank();
-  push("---");
-  blank();
-
-  // 08 Launching Together
-  push("## 08 \u2014 Launching Together");
+  // 07 Launching Together
+  push("## 07 \u2014 Launching Together");
   blank();
   push(
     "**A launch, not a soft open.** The partnership works if it\u2019s announced, seen, and talked about."
@@ -239,39 +203,39 @@ function generateMarkdown(): string {
   push("### What TMRW drives");
   blank();
   push(
-    "The campaign. Co-branded creative and the paid-media budget, PR, and a launch event held at VRTUS. All content production \u2014 photography, short-form video, founder interviews, member stories \u2014 on the TMRW budget."
+    "The campaign. Co-branded creative and the paid-media budget, PR, and a launch event held at 350 Bourke. All content production \u2014 photography, short-form video, founder interviews, member stories \u2014 on the TMRW budget."
   );
   blank();
   push(
-    "Ongoing content. Quarterly storytelling drops featuring VRTUS members whose protocols produce meaningful change. TMRW\u2019s ambassador network amplifies the launch; members of the VRTUS community who have reach are introduced into that programme."
+    `Ongoing content. Quarterly storytelling drops featuring ${PARTNER_NAME} members whose protocols produce meaningful change. TMRW\u2019s ambassador network amplifies the launch; members of the ${PARTNER_NAME} community who have reach are introduced into that programme.`
   );
   blank();
-  push("### What VRTUS provides");
+  push(`### What ${PARTNER_NAME} provides`);
   blank();
   push(
-    "Channels and coordination. The VRTUS social accounts announcing the partnership in coordinated sequence with TMRW. Access to the in-gym digital screens on the standard content loop. Modest signage near the entrance noting that VRTUS is a TMRW collection centre."
-  );
-  blank();
-  push(
-    "Member comms and introductions. Email, app notification, and newsletter inclusion at launch. Warm introductions to VRTUS members who could be ambassadors or influencer candidates. Founder, trainer, and operations team availability for co-branded content days."
+    `Channels and coordination. ${PARTNER_NAME}\u2019s social accounts and email announcing the partnership in coordinated sequence with TMRW. Partner code in the member app and new-member welcome sequence. One co-branded in-gym launch event, plus one TMRW event per quarter after that.`
   );
   blank();
   push(
-    "A pace-of-aging leaderboard among VRTUS members. Epigenetic data makes competitive wellness visible and shareable \u2014 the gym with the lowest biological age in Bondi."
+    `Member comms and introductions. Warm introductions to ${PARTNER_NAME} members who could be ambassadors or influencer candidates. Founder, coach, and operations team availability for co-branded content days.`
   );
   blank();
   push(
-    "One marketing lead as a point of contact. TMRW integrates into the VRTUS marketing calendar rather than competing with it."
+    `A pace-of-aging leaderboard among ${PARTNER_NAME} members. Epigenetic data makes competitive wellness visible and shareable \u2014 the ${PARTNER_SUBURB} gym with the lowest biological age.`
+  );
+  blank();
+  push(
+    `One marketing lead as a point of contact. TMRW integrates into the ${PARTNER_NAME} marketing calendar rather than competing with it.`
   );
   blank();
   push("---");
   blank();
 
-  // 09 Learnings
-  push("## 09 \u2014 What We Learn in Stage 1");
+  // 08 Learnings
+  push("## 08 \u2014 What We Learn in Stage 1");
   blank();
   push(
-    "**What decides Stage 2.** The launch term is designed to answer 4 questions. The answers determine what \u2014 if anything \u2014 comes next."
+    "**What decides Stage 2.** The launch term is designed to answer 4 questions. The answers determine what \u2014 if anything \u2014 comes next. Referral channels either convert or they don\u2019t; we\u2019ll know inside 6 months."
   );
   blank();
   for (let i = 0; i < STAGE1_LEARNINGS.length; i++) {
@@ -281,8 +245,8 @@ function generateMarkdown(): string {
   push("---");
   blank();
 
-  // 10 Peptides
-  push("## 10 \u2014 Peptides, Specifically");
+  // 09 Peptides
+  push("## 09 \u2014 Peptides, Specifically");
   blank();
   push("**The category, specifically.**");
   blank();
@@ -295,14 +259,14 @@ function generateMarkdown(): string {
   );
   blank();
   push(
-    "Integrated appropriately \u2014 per individual clinical assessment, never as a default \u2014 peptides are what make the model\u2019s ARPU assumptions real. A member on a peptide protocol is paying substantially more per year than a member on supplements alone, which is why the calculator\u2019s base case assumes approximately $3,000 annual spend at 30% attach. Not every member is a candidate; clinicians assess suitability, including any competitive sporting considerations. The 70% who don\u2019t convert still drive the joining-fee and per-member-per-month streams. The 30% who do are what make this category meaningfully more valuable than a typical supplement channel \u2014 and what keep VRTUS\u2019s Stage 1 economics above the threshold that makes this partnership worth doing."
+    "Integrated appropriately \u2014 per individual clinical assessment, never as a default \u2014 peptides are what make the model\u2019s ARPU assumptions real. A member on a peptide protocol is paying substantially more per year than a member on supplements alone, which is why the calculator\u2019s base case assumes approximately $3,000 annual spend at 25% attach. Not every member is a candidate; clinicians assess suitability, including any competitive sporting considerations. The 75% who don\u2019t convert still drive the joining-fee and per-member-per-month streams. The 25% who do are what make this category meaningfully more valuable than a typical supplement channel."
   );
   blank();
   push("---");
   blank();
 
-  // 11 Terms
-  push("## 11 \u2014 Partnership Terms");
+  // 10 Terms
+  push("## 10 \u2014 Partnership Terms");
   blank();
   push(
     "**Indicative term sheet.** Stage 1, launch term. Stage 2 terms are out of scope for this document and would be drafted jointly at month 6 if we proceed."
@@ -319,8 +283,8 @@ function generateMarkdown(): string {
   push("---");
   blank();
 
-  // 12 Next Steps
-  push("## 12 \u2014 What Happens Next");
+  // 11 Next Steps
+  push("## 11 \u2014 What Happens Next");
   blank();
   push("**3 steps to launch.**");
   blank();
@@ -364,7 +328,7 @@ export function DownloadMarkdown({
     const url = URL.createObjectURL(blob);
     const a = document.createElement("a");
     a.href = url;
-    a.download = `TMRW-x-${PARTNER_NAME}-Partnership-Proposal.md`;
+    a.download = `TMRW-x-${PARTNER_NAME.replace(/\s+/g, "-")}-Partnership-Proposal.md`;
     document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);

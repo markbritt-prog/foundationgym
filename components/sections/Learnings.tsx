@@ -7,7 +7,7 @@ export function Learnings() {
       <div className="max-w-5xl mx-auto px-6 md:px-10">
         <FadeIn>
           <span className="font-ui text-[0.65rem] md:text-[0.7rem] uppercase tracking-[0.04em] text-tmrw-grey-700 block">
-            09 &mdash; WHAT WE LEARN IN STAGE 1
+            08 &mdash; WHAT WE LEARN IN STAGE 1
           </span>
         </FadeIn>
 
@@ -19,7 +19,7 @@ export function Learnings() {
 
         <FadeIn>
           <p className="font-body text-[0.925rem] md:text-[0.95rem] text-tmrw-grey-700 leading-[1.65] tracking-[-0.01em] mt-6 max-w-xl">
-            The launch term is designed to answer 4 questions. The answers determine what &mdash; if anything &mdash; comes next.
+            The launch term is designed to answer 4 questions. The answers determine what &mdash; if anything &mdash; comes next. Referral channels either convert or they don&apos;t; we&apos;ll know inside 6 months.
           </p>
         </FadeIn>
 

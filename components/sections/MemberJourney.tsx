@@ -26,7 +26,7 @@ export function MemberJourney() {
 
         <FadeIn>
           <p className="font-body text-[0.9rem] sm:text-[0.95rem] md:text-[1.05rem] text-tmrw-grey-300 mt-4 max-w-xl leading-[1.55] tracking-[-0.01em]">
-            The entire onboarding happens at {PARTNER_NAME}. No external appointments, no waiting. One visit to start.
+            A {PARTNER_NAME} member signs up online or at a TMRW collection centre. Protocol is built on their data and shipped direct.
           </p>
         </FadeIn>
 

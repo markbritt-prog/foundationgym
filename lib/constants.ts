@@ -1,66 +1,75 @@
-export const PARTNER_NAME = "VRTUS";
-export const PARTNER_SUBURB = "Bondi";
+export const PARTNER_NAME = "The Foundation";
+export const PARTNER_SUBURB = "Surry Hills";
 export const PROPOSAL_DATE = "April 2026";
 
-// ─── COMMERCIAL MODEL (canonical) ────────────────────────────
+// ─── COMMERCIAL MODEL (canonical, two-tier activation) ───────
 
 export const COMMERCIAL = {
   joiningFee: 499,
   joiningDiscount: 0.5,
   memberPaysJoining: 249,
-  vrtusJoiningShare: 249,
+
+  // Two-tier activation revenue to Foundation:
+  onlineActivation: 100,         // member signs up online with Foundation's partner code
+  inPersonActivation: 300,       // member activates at a TMRW collection centre (Foundation code attributed)
+
   monthlyFee: 249,
-  vrtusMonthlyShare: 10,
-  productRevenueShare: 0.1,
+  foundationMonthlyShare: 10,    // per active TMRW member, per month, for life of membership
+  productRevenueShare: 0.05,     // 5% of TMRW product revenue per active member
   productAvgSpendPerAttached: 3000,
 } as const;
 
-// ─── 03 — THE DEAL ON ONE SCREEN ─────────────────────────────
+// ─── 04 — THE DEAL ON ONE SCREEN ─────────────────────────────
 
 export const DEAL_PANELS = [
   {
-    ordinal: "01 \u2014 THE SPACE",
-    title: "VRTUS provides",
+    ordinal: "01 \u2014 THE CHANNEL",
+    title: "Foundation introduces",
     lines: [
-      "A dedicated room upstairs",
-      "7\u201310am access, 3 days per week",
-      "6-month launch term",
-      "Co-branded signage and member comms",
+      "Partner code activated across member channels",
+      "Email, app, in-class mentions, new-member onboarding",
+      "Featured in Foundation\u2019s email newsletter and member comms",
+      "One TMRW event per quarter at 350 Bourke, co-hosted",
     ],
-    footnote: "Optional extension to 6 hours per day within the term if volume supports it.",
+    footnote: "Foundation introduces. TMRW operates. Zero clinical risk, zero capex, zero ops burden on Foundation.",
   },
   {
-    ordinal: "02 \u2014 THE CLINIC",
-    title: "TMRW brings",
+    ordinal: "02 \u2014 THE MEMBER OFFER",
+    title: "Foundation members receive",
     lines: [
-      "Phlebotomist and credentialed clinician",
-      "All equipment, consumables, clinical governance",
-      "Member app, billing, clinical support",
-      "Full indemnity, zero capex to VRTUS",
-    ],
-    footnote: "All clinical risk sits with TMRW under its clinical standard.",
-  },
-  {
-    ordinal: "03 \u2014 THE MEMBER OFFER",
-    title: "VRTUS members receive",
-    lines: [
-      "Joining fee reduced to $249 from $499",
-      "Priority onboarding at the VRTUS Hub",
+      "50% off TMRW joining fee ($249 vs $499)",
+      "Priority access and scheduling at TMRW collection centres",
       "The full longevity programme, itemised next",
-      "3 epigenetic retests, blood panel, peptide consult included",
+      "Protocols designed to integrate with Foundation\u2019s training",
     ],
-    footnote: "Members bill TMRW directly. No collection, no clinical liability flowing through VRTUS.",
+    footnote: "Members bill TMRW directly. No collection, no clinical liability flowing through Foundation.",
+  },
+  {
+    ordinal: "03 \u2014 THE OPERATIONS",
+    title: "TMRW runs it all",
+    lines: [
+      "Member onboarding, booking, billing, fulfilment",
+      "Clinical team, prescribing pathway, compounding pharmacy",
+      "All bloods drawn at TMRW collection centres",
+      "Full indemnity and product liability sit with TMRW",
+    ],
+    footnote: "No staff briefings, no room, no signage burden, no clinical insurance extension required.",
   },
 ] as const;
 
 export const DEAL_ECONOMICS = {
   ordinal: "04 \u2014 THE ECONOMICS",
-  title: "VRTUS earns three ways",
+  title: "Foundation earns four ways",
   rows: [
     {
-      value: "$249",
-      label: "PER ACTIVATION",
-      note: "Paid on joining",
+      value: "$100",
+      label: "PER ONLINE ACTIVATION",
+      note: "Member signs up with Foundation\u2019s partner code",
+    },
+    {
+      value: "$300",
+      label: "PER COLLECTION-CENTRE ACTIVATION",
+      note: "Member activates in person at a TMRW collection centre",
     },
     {
       value: "$10",
@@ -68,7 +77,7 @@ export const DEAL_ECONOMICS = {
       note: "Ongoing, for life of membership",
     },
     {
-      value: "10%",
+      value: "5%",
       label: "OF TMRW PRODUCT REVENUE",
       note: "Per member, on supplements, peptides, retests",
     },
@@ -76,100 +85,99 @@ export const DEAL_ECONOMICS = {
   footnote: "Longevity programme next. Financial model after.",
 } as const;
 
-// ─── 08 — MEMBER JOURNEY ─────────────────────────────────────
+// ─── 03 — MEMBER JOURNEY ─────────────────────────────────────
 
 export const JOURNEY_STEPS = [
   {
     step: "01",
     title: "Sign Up",
-    desc: "Member registers at VRTUS or online with partner code. 50% off joining fee applied automatically.",
+    desc: "Member signs up at startmytomorrow.com with Foundation\u2019s partner code, or books into a TMRW collection centre. 50% off joining fee applied automatically.",
     time: "2 min",
   },
   {
     step: "02",
     title: "Health Story",
-    desc: "Complete the TMRW Health Story online or at the VRTUS Hub \u2014 medical history, goals, lifestyle. Done on their phone between sessions.",
+    desc: "Complete the TMRW Health Story online \u2014 medical history, goals, training context. Done on their phone before bloods.",
     time: "10 min",
   },
   {
     step: "03",
-    title: "VRTUS Hub",
-    desc: "TMRW phlebotomist takes bloods at the VRTUS Hub upstairs. No fasting drama \u2014 we schedule around their training.",
+    title: "Bloods at a TMRW Collection Centre",
+    desc: "TMRW phlebotomist takes bloods at the member\u2019s nearest TMRW collection centre. Scheduling optimised around their Foundation training week.",
     time: "15 min",
   },
   {
     step: "04",
     title: "Bloods Dashboard + First Supplements",
-    desc: "Full comprehensive bloods dashboard with AI interactivity. First personalised supplement pods selected from 70 clinical-grade ingredients, delivered to the Hub.",
+    desc: "Full comprehensive bloods dashboard with AI interactivity. First personalised supplement pods selected from 70 clinical-grade ingredients, shipped direct to the member.",
     time: "Within 1 week",
   },
   {
     step: "05",
     title: "Epigenetic Results + Better TMRW Plan",
-    desc: "Full epigenetic results including disease risk and system scores. Complete Better TMRW plan including exercise programming, shareable directly with their VRTUS personal trainer.",
+    desc: "Full epigenetic results including disease risk and system scores. Complete Better TMRW plan including exercise programming, shareable with their Foundation coach.",
     time: "2\u20133 weeks",
   },
   {
     step: "06",
     title: "Retest + Optimise",
-    desc: "Full re-test \u2014 bloods plus epigenetics \u2014 compared against baseline. Updated dashboard, protocol refinements, peptide review with TMRW\u2019s prescribing doctor at the Hub.",
+    desc: "Full re-test \u2014 bloods plus epigenetics \u2014 compared against baseline. Updated dashboard, protocol refinements, peptide review with TMRW\u2019s prescribing doctor.",
     time: "12 weeks after last test",
   },
   {
     step: "07",
     title: "Ongoing Support",
-    desc: "Regular clinical check-ins at the Hub and preferred access to TMRW\u2019s prescribing peptide doctor. The retest + optimise cycle runs continuously every 12 weeks.",
+    desc: "Regular clinical check-ins and preferred access to TMRW\u2019s prescribing peptide doctor. The retest + optimise cycle runs continuously every 12 weeks.",
     time: "Ongoing",
   },
 ] as const;
 
-// ─── 09 — WHAT WE LEARN ──────────────────────────────────────
+// ─── 08 — WHAT WE LEARN ──────────────────────────────────────
 
 export const STAGE1_LEARNINGS = [
-  "Conversion rate from VRTUS member exposure to activated TMRW member",
+  "Conversion rate from Foundation member exposure to activated TMRW member",
+  "Channel mix \u2014 what share of activations come online vs in-person at collection centres",
   "Product-line attach and spend \u2014 the most sensitive input in the model",
-  "Hub utilisation and the economics of the clinician rotation",
   "Retention and outcome signal for the Stage-1 cohort over 6 to 12 months",
 ] as const;
 
-// ─── 11 — WHAT CHANGES FOR VRTUS ─────────────────────────────
+// ─── 10 — WHAT CHANGES FOR FOUNDATION ────────────────────────
 
 export const GYM_VALUE = [
   {
     title: "Geographic exclusivity",
-    body: `TMRW will not partner with another independent gym in ${PARTNER_SUBURB} for 6 months. ${PARTNER_NAME} is the only premium gym in the suburb with an integrated precision health offering. No hedge, no second partner \u2014 this is a commitment.`,
+    body: `TMRW will not partner with another independent gym in ${PARTNER_SUBURB} for 6 months. ${PARTNER_NAME} is the only premium training environment in the suburb with an integrated precision health offering. No hedge, no second partner \u2014 this is a commitment.`,
   },
   {
-    title: "A clinical layer, without the clinic",
-    body: "A credentialed medical team operating inside VRTUS, without a single clinical hire, regulatory filing, or insurance extension from your side. What Life Time built internally over 3 years is available from week 1, at zero capex.",
+    title: "A clinical layer, zero ops",
+    body: "A credentialed medical team looking after your members, without a single clinical hire, regulatory filing, or insurance extension from Foundation. You introduce, we operate. Everything clinical sits with TMRW.",
   },
   {
-    title: "ARPU at the category level, not the feature level",
-    body: "A member paying $70 a week for a gym cannot be charged meaningfully more for the gym. A member whose health trajectory is being measured, interpreted, and actively managed \u2014 that member is in a different category. The path from fitness access to integrated health is how premium operators grow ARPU from here. TMRW is the mechanism.",
+    title: "ARPU where the ceiling is low",
+    body: "A gym membership has a price ceiling. A member whose health trajectory is being measured, interpreted, and actively managed \u2014 that member is in a different category. TMRW adds a revenue line for every active Foundation member, for the life of their TMRW membership, without changing anything about how Foundation operates.",
   },
 ] as const;
 
-// ─── 12 — TERMS (Stage 1 only) ───────────────────────────────
+// ─── 10 — TERMS (Stage 1 only) ───────────────────────────────
 
 export const TERMS_STAGE1 = [
-  { label: "Type", value: "Referral channel + TMRW Hub at VRTUS" },
+  { label: "Type", value: "Referral channel partnership. No TMRW physical presence at Foundation." },
   { label: "Exclusivity", value: `Sole TMRW gym partner in ${PARTNER_SUBURB} for first 6 months` },
   { label: "Term", value: "3 years from go-live" },
-  { label: "Hub access", value: "Upstairs room, 7\u201310am, 3 days per week" },
-  { label: "Extension option", value: "Up to 6 hours per day within the term, volume dependent" },
+  { label: "Attribution", value: "Foundation-assigned partner code. Used for online signup; entered at booking for collection-centre activation." },
   { label: "Member pricing", value: "$249 joining (50% off), $249 per month thereafter" },
-  { label: "VRTUS revenue lines", value: "$249 per activation + $10 per active member per month + 10% of TMRW product revenue per active member" },
+  { label: "Foundation revenue lines", value: "$100 per online activation + $300 per collection-centre activation + $10 per active member per month + 5% of TMRW product revenue per active member" },
   { label: "Setup fee", value: "None" },
-  { label: "Clinical liability", value: "TMRW (credentialed staff under TMRW governance)" },
-  { label: "Co-branded events", value: "3 events during the launch period. TMRW provides speakers and content." },
+  { label: "Clinical liability", value: "TMRW. Foundation carries none." },
+  { label: "Co-branded events", value: "1 event per quarter at 350 Bourke (4 per year). TMRW provides speakers and content." },
   { label: "Co-launch marketing", value: "Coordinated social launch across both brands. TMRW provides creative, assets, and paid budget." },
-  { label: "In-gym visibility", value: "Digital screen loop, entry signage, member comms." },
-  { label: "Influencer activation", value: "TMRW runs the ambassador programme and funds content production." },
+  { label: "In-gym visibility", value: "Modest partner mark. No dedicated signage, screens, or staff script required." },
+  { label: "Influencer activation", value: "TMRW runs the ambassador programme and funds content production. Foundation members with reach invited into the programme." },
   { label: "Data and privacy", value: "Clinical record sits with TMRW. Australian Privacy Act." },
   { label: "Termination", value: "Either party, 30 days written notice" },
 ] as const;
 
-// ─── 13 — NEXT STEPS ─────────────────────────────────────────
+// ─── 11 — NEXT STEPS ─────────────────────────────────────────
 
 export const NEXT_STEPS = [
   {
@@ -181,14 +189,14 @@ export const NEXT_STEPS = [
   {
     step: "02",
     title: "Launch preparation",
-    desc: "Hub fit-out in the upstairs room, staff briefing, partner-code setup, launch creative and PR plan. TMRW produces co-branded collateral and briefs the clinical team.",
-    timeline: "2\u20133 weeks",
+    desc: "Partner code issued. Member-facing assets produced \u2014 email copy, app-message copy, in-class script, launch social. TMRW briefs the clinical team. Foundation schedules the launch event.",
+    timeline: "1\u20132 weeks",
   },
   {
     step: "03",
     title: "Go live",
-    desc: "Launch with a co-branded event at VRTUS. Members sign up, complete their Health Story, and have their first bloods taken at the Hub. Live.",
-    timeline: "Week 4",
+    desc: "Launch across Foundation\u2019s channels with a co-branded event at 350 Bourke. Members sign up, onboard online or at a collection centre, and start their programme. Live.",
+    timeline: "Week 3",
   },
 ] as const;
 
@@ -201,10 +209,9 @@ export const NAV_SECTIONS = [
   { id: "deal", label: "04 \u2014 THE DEAL" },
   { id: "value-stack", label: "05 \u2014 PROGRAMME" },
   { id: "financial", label: "06 \u2014 FINANCIAL" },
-  { id: "hub", label: "07 \u2014 THE HUB" },
-  { id: "launching-together", label: "08 \u2014 LAUNCHING" },
-  { id: "learnings", label: "09 \u2014 LEARNINGS" },
-  { id: "peptides", label: "10 \u2014 PEPTIDES" },
-  { id: "terms", label: "11 \u2014 TERMS" },
-  { id: "next-steps", label: "12 \u2014 NEXT" },
+  { id: "launching-together", label: "07 \u2014 LAUNCHING" },
+  { id: "learnings", label: "08 \u2014 LEARNINGS" },
+  { id: "peptides", label: "09 \u2014 PEPTIDES" },
+  { id: "terms", label: "10 \u2014 TERMS" },
+  { id: "next-steps", label: "11 \u2014 NEXT" },
 ] as const;

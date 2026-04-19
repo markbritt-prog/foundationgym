@@ -1,6 +1,7 @@
 "use client";
 import type { CalcInputs, CalcResult } from "@/lib/calculator";
 import { formatDollarsShort } from "@/lib/calculator";
+import { COMMERCIAL } from "@/lib/constants";
 
 interface Props {
   inputs: CalcInputs;
@@ -22,12 +23,20 @@ export function CalculatorOutput({ result }: Props) {
           {formatDollarsShort(y1.total)}
         </div>
         <div className="font-ui text-[0.65rem] uppercase tracking-[0.04em] text-tmrw-grey-700 mt-2">
-          YEAR 1 TO VRTUS
+          YEAR 1 TO FOUNDATION
         </div>
       </div>
 
       <div className="mt-6 border-t border-tmrw-grey-200 pt-2">
-        <OutputRow label="Joining fee income" value={formatDollarsShort(y1.joiningIncome)} />
+        <OutputRow
+          label="Online joining"
+          value={`${y1.onlineJoiners} \u00d7 $${COMMERCIAL.onlineActivation}`}
+        />
+        <OutputRow
+          label="In-person joining"
+          value={`${y1.inPersonJoiners} \u00d7 $${COMMERCIAL.inPersonActivation}`}
+        />
+        <OutputRow label="Joining total" value={formatDollarsShort(y1.joiningIncome)} />
         <OutputRow label="Monthly income" value={formatDollarsShort(y1.monthlyIncome)} />
         <OutputRow label="Product revenue share" value={formatDollarsShort(y1.productIncome)} />
         <OutputRow label="Product share of total" value={`${Math.round(productShareOfTotal)}%`} />

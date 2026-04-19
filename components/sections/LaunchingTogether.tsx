@@ -6,7 +6,7 @@ export function LaunchingTogether() {
       <div className="max-w-5xl mx-auto px-6 md:px-10">
         <FadeIn>
           <span className="font-ui text-[0.65rem] md:text-[0.7rem] uppercase tracking-[0.04em] text-tmrw-syringe mb-4 block">
-            08 &mdash; LAUNCHING TOGETHER
+            07 &mdash; LAUNCHING TOGETHER
           </span>
         </FadeIn>
 
@@ -30,10 +30,10 @@ export function LaunchingTogether() {
               </span>
               <div className="mt-5 space-y-5 font-body text-[0.95rem] leading-[1.65] tracking-[-0.01em] text-tmrw-grey-700">
                 <p>
-                  The campaign. Co-branded creative and the paid-media budget, PR, and a launch event held at VRTUS. All content production &mdash; photography, short-form video, founder interviews, member stories &mdash; on the TMRW budget.
+                  The campaign. Co-branded creative and the paid-media budget, PR, and a launch event held at 350 Bourke. All content production &mdash; photography, short-form video, founder interviews, member stories &mdash; on the TMRW budget.
                 </p>
                 <p>
-                  Ongoing content. Quarterly storytelling drops featuring VRTUS members whose protocols produce meaningful change. TMRW&apos;s ambassador network amplifies the launch; members of the VRTUS community who have reach are introduced into that programme.
+                  Ongoing content. Quarterly storytelling drops featuring Foundation members whose protocols produce meaningful change. TMRW&apos;s ambassador network amplifies the launch; members of the Foundation community who have reach are introduced into that programme.
                 </p>
               </div>
             </div>
@@ -42,20 +42,20 @@ export function LaunchingTogether() {
           <FadeIn delay={0.2}>
             <div>
               <span className="font-ui text-[0.65rem] uppercase tracking-[0.04em] text-tmrw-grey-700 block">
-                WHAT VRTUS PROVIDES
+                WHAT FOUNDATION PROVIDES
               </span>
               <div className="mt-5 space-y-5 font-body text-[0.95rem] leading-[1.65] tracking-[-0.01em] text-tmrw-grey-700">
                 <p>
-                  Channels and coordination. The VRTUS social accounts announcing the partnership in coordinated sequence with TMRW. Access to the in-gym digital screens on the standard content loop. Modest signage near the entrance noting that VRTUS is a TMRW collection centre.
+                  Channels and coordination. Foundation&apos;s social accounts and email announcing the partnership in coordinated sequence with TMRW. Partner code in the member app and new-member welcome sequence. One co-branded in-gym launch event, plus one TMRW event per quarter after that.
                 </p>
                 <p>
-                  Member comms and introductions. Email, app notification, and newsletter inclusion at launch. Warm introductions to VRTUS members who could be ambassadors or influencer candidates. Founder, trainer, and operations team availability for co-branded content days.
+                  Member comms and introductions. Warm introductions to Foundation members who could be ambassadors or influencer candidates. Founder, coach, and operations team availability for co-branded content days.
                 </p>
                 <p>
-                  A pace-of-aging leaderboard among VRTUS members. Epigenetic data makes competitive wellness visible and shareable &mdash; the gym with the lowest biological age in Bondi.
+                  A pace-of-aging leaderboard among Foundation members. Epigenetic data makes competitive wellness visible and shareable &mdash; the Surry Hills gym with the lowest biological age.
                 </p>
                 <p>
-                  One marketing lead as a point of contact. TMRW integrates into the VRTUS marketing calendar rather than competing with it.
+                  One marketing lead as a point of contact. TMRW integrates into the Foundation marketing calendar rather than competing with it.
                 </p>
               </div>
             </div>

@@ -9,7 +9,7 @@ export function Peptides() {
       <div className="max-w-5xl mx-auto px-6 md:px-10">
         <FadeIn>
           <span className="font-ui text-[0.65rem] md:text-[0.7rem] uppercase tracking-[0.04em] text-tmrw-grey-700">
-            10 &mdash; PEPTIDES, SPECIFICALLY
+            09 &mdash; PEPTIDES, SPECIFICALLY
           </span>
         </FadeIn>
 
@@ -34,7 +34,7 @@ export function Peptides() {
 
           <FadeIn delay={0.15}>
             <p>
-              Integrated appropriately &mdash; per individual clinical assessment, never as a default &mdash; peptides are what make the model&apos;s ARPU assumptions real. A member on a peptide protocol is paying substantially more per year than a member on supplements alone, which is why the calculator&apos;s base case assumes approximately $3,000 annual spend at 30% attach. Not every member is a candidate; clinicians assess suitability, including any competitive sporting considerations. The 70% who don&apos;t convert still drive the joining-fee and per-member-per-month streams. The 30% who do are what make this category meaningfully more valuable than a typical supplement channel &mdash; and what keep VRTUS&apos;s Stage 1 economics above the threshold that makes this partnership worth doing.
+              Integrated appropriately &mdash; per individual clinical assessment, never as a default &mdash; peptides are what make the model&apos;s ARPU assumptions real. A member on a peptide protocol is paying substantially more per year than a member on supplements alone, which is why the calculator&apos;s base case assumes approximately $3,000 annual spend at 25% attach. Not every member is a candidate; clinicians assess suitability, including any competitive sporting considerations. The 75% who don&apos;t convert still drive the joining-fee and per-member-per-month streams. The 25% who do are what make this category meaningfully more valuable than a typical supplement channel.
             </p>
           </FadeIn>
         </div>

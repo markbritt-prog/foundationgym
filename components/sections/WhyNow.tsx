@@ -19,7 +19,7 @@ export function WhyNow() {
         <div className="mt-8 md:mt-10 space-y-6 font-body text-[0.925rem] md:text-[0.95rem] leading-[1.65] tracking-[-0.01em] text-tmrw-grey-700">
           <FadeIn delay={0.1}>
             <p>
-              Health and fitness spending in Australia rose 27% year-on-year in early 2025 against broader discretionary declines. Fitness has moved from a discretionary purchase to essential lifestyle maintenance. The VRTUS member already pays a premium for outcomes. The question is whether the category next to fitness &mdash; longevity, diagnostics, protocol-driven health &mdash; sits inside VRTUS, or somewhere else.
+              Health and fitness spending in Australia rose 27% year-on-year in early 2025 against broader discretionary declines. Fitness has moved from a discretionary purchase to essential lifestyle maintenance. The Foundation member already pays a premium for outcomes. The question is whether the category next to fitness &mdash; longevity, diagnostics, protocol-driven health &mdash; sits adjacent to Foundation, or somewhere else.
             </p>
           </FadeIn>
           <FadeIn delay={0.15}>
@@ -56,7 +56,7 @@ export function WhyNow() {
               >
                 Fountain Life
               </a>
-              . Each was built bespoke over years on proprietary clinical infrastructure. What Australia has lacked is the platform that lets a premium operator run the integrated model without having to build the clinic. That&apos;s what TMRW is &mdash; and VRTUS in Bondi is where we want to prove it.
+              . Each was built bespoke over years on proprietary clinical infrastructure. What Australia has lacked is the platform that lets a premium operator &mdash; at any scale &mdash; offer integrated health to its members without building a clinic. That&apos;s what TMRW is. With Foundation, we skip the build entirely and run it as a channel.
             </p>
           </FadeIn>
           <FadeIn delay={0.25}>

@@ -70,15 +70,15 @@ const TOTAL_STACK_VALUE = STACK.reduce((sum, item) => sum + item.subtotal, 0);
 const DIALS: { label: string; detail: string }[] = [
   {
     label: "The joining-fee discount",
-    detail: "currently 50%.",
+    detail: "currently 50%. Members save $250 vs public pricing.",
   },
   {
     label: "The peptide and high-performance nutrition consult",
-    detail: "currently included.",
+    detail: "currently included in the member offer.",
   },
   {
-    label: "The revenue share mix to VRTUS",
-    detail: "currently $249 per activation, $10 per active member per month, 10% of product revenue.",
+    label: "The revenue share mix to Foundation",
+    detail: "currently $100 per online activation, $300 per collection-centre activation, $10 per active member per month, 5% of product revenue.",
   },
 ];
 
@@ -103,7 +103,7 @@ export function ValueStack() {
 
         <FadeIn>
           <p className="font-body text-[0.9rem] sm:text-[0.95rem] md:text-[1.05rem] leading-[1.55] tracking-[-0.01em] text-tmrw-grey-700 max-w-2xl mt-5">
-            What a VRTUS member receives in year one, and what they&apos;d
+            What a Foundation member receives in year one, and what they&apos;d
             pay for equivalent care elsewhere in Australia.
           </p>
         </FadeIn>
