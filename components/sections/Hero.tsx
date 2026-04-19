@@ -32,7 +32,7 @@ export function Hero() {
 
       <div className="relative z-10 flex flex-col items-center text-center px-6 w-full max-w-2xl">
         <motion.div
-          className="inline-flex items-center gap-5 sm:gap-6 md:gap-10 bg-tmrw-black border border-tmrw-grey-800 px-8 sm:px-10 md:px-14 py-7 sm:py-9 md:py-11 rounded-sm shadow-[0_40px_100px_-20px_rgba(0,0,0,0.8)]"
+          className="inline-flex items-center gap-5 sm:gap-6 md:gap-10 bg-tmrw-white border border-tmrw-grey-200 px-8 sm:px-10 md:px-14 py-7 sm:py-9 md:py-11 rounded-sm shadow-[0_40px_100px_-20px_rgba(0,0,0,0.8)]"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.2, ease }}
@@ -43,9 +43,9 @@ export function Hero() {
             width={200}
             height={56}
             priority
-            className="h-7 sm:h-9 md:h-10 w-auto"
+            className="h-7 sm:h-9 md:h-10 w-auto invert"
           />
-          <span className="font-ui text-[1rem] sm:text-[1.1rem] md:text-[1.2rem] text-tmrw-grey-300">
+          <span className="font-ui text-[1rem] sm:text-[1.1rem] md:text-[1.2rem] text-tmrw-grey-700">
             &times;
           </span>
           <Image
@@ -54,7 +54,7 @@ export function Hero() {
             width={200}
             height={56}
             priority
-            className="h-9 sm:h-11 md:h-14 w-auto invert"
+            className="h-9 sm:h-11 md:h-14 w-auto"
           />
         </motion.div>
 
