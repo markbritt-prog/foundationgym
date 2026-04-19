@@ -1,5 +1,5 @@
 import { FadeIn } from "@/components/ui/FadeIn";
-import { PARTNER_NAME, PARTNER_ADDRESS, PARTNER_SUBURB } from "@/lib/constants";
+import { PARTNER_NAME, PARTNER_SUBURB } from "@/lib/constants";
 
 export function WhatYouveBuilt() {
   return (
@@ -29,16 +29,16 @@ export function WhatYouveBuilt() {
         <FadeIn delay={0.15}>
           <div className="mt-12 md:mt-16 space-y-6 font-body text-[1rem] sm:text-[1.05rem] md:text-[1.15rem] leading-[1.65] tracking-[-0.01em] text-tmrw-grey-700 max-w-3xl">
             <p>
-              You call yourselves Longevity Specialists. Train like an athlete at any age. Live stronger for longer. That&apos;s a position taken deliberately, and it&apos;s the right one &mdash; but the fitness layer alone can only take a member so far toward it.
+              You call yourselves Longevity Specialists. Train like an athlete at any age. Live stronger for longer. But the fitness layer alone can only take a member so far toward it.
             </p>
             <p>
-              Your members have already made the investment to train at {PARTNER_ADDRESS}. They chose {PARTNER_NAME} because they wanted real coaching, real programming, real outcomes. The work they&apos;re putting in is changing their biology &mdash; in ways they can&apos;t see, and can&apos;t feel, until years later.
+              Your members have already made the investment to train at Bourke Street. They chose {PARTNER_NAME} because they wanted real coaching, real programming, real outcomes, real community. The work they&apos;re putting in is changing their biology &mdash; in ways they can&apos;t see, and can&apos;t feel, until years later.
             </p>
             <p>
               We run the clinical layer. Bloods, epigenetic testing, personalised protocols, prescribing, supplements. End-to-end. The thing you&apos;ve positioned yourselves toward, operated by us, for your members.
             </p>
             <p className="text-tmrw-black">
-              No other independent gym in {PARTNER_SUBURB} has this. We think {PARTNER_NAME} should be the first.
+              No other independent gym in {PARTNER_SUBURB} has this. We think {PARTNER_NAME} should be the pilot.
             </p>
           </div>
         </FadeIn>
