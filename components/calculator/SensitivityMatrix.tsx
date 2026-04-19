@@ -77,7 +77,7 @@ export function SensitivityMatrix({ inputs, className = "" }: Props) {
                       key={acts}
                       className={`py-4 px-2 text-center font-body text-[0.875rem] md:text-[0.95rem] tracking-[-0.01em] transition-colors whitespace-nowrap ${
                         isCurrent
-                          ? "bg-tmrw-syringe text-tmrw-white font-semibold"
+                          ? "bg-tmrw-infusion text-tmrw-black font-semibold"
                           : "text-tmrw-black"
                       }`}
                     >

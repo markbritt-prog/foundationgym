@@ -24,17 +24,34 @@ const config: Config = {
             800: "#252525",
             900: "#1B1B1B",
           },
-          syringe: "#E61317",
-          blood: "#500000",
-          vitality: "#3F6B4A",
-          infusion: "#E4A30B",
-          infusionSoft: "#F4E4B9",
+          // Secondary palette — canonical TMRW hexes
+          syringe: "#E61317",      // Syringe Red
+          infusion: "#E4A30B",     // Infusion Yellow (PRIMARY ACCENT)
+          blood: "#500000",        // Blood Red
+          electric: "#2339FF",     // Electric Blue
+          toxic: "#00E755",        // Toxic Green
+          // Tertiary palette — rarely used
+          alert: "#FF3300",        // Alert Orange
+          serum: "#FCE369",        // Serum Yellow
+          vitality: "#FF9335",     // Vitality Orange
+          deeplab: "#000B70",      // Deep Lab Blue
+          tonic: "#003D1C",        // Tonic Green
+          infusionSoft: "#F4E4B9", // Tinted background variant
         },
       },
       fontFamily: {
         display: ["ApocRevelations", "serif"],
         body: ["var(--font-crimson)", "serif"],
         ui: ["Brown", "sans-serif"],
+      },
+      keyframes: {
+        "pulse-scroll": {
+          "0%, 100%": { opacity: "1" },
+          "50%": { opacity: "0.4" },
+        },
+      },
+      animation: {
+        "pulse-scroll": "pulse-scroll 2.4s ease-in-out infinite",
       },
     },
   },

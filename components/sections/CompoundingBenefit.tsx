@@ -6,7 +6,7 @@ export function CompoundingBenefit() {
     <section id="compounding-benefit" className="bg-tmrw-black py-16 sm:py-20 md:py-24 lg:py-32">
       <div className="max-w-5xl mx-auto px-6 md:px-10">
         <FadeIn>
-          <span className="font-ui text-[0.65rem] md:text-[0.7rem] uppercase tracking-[0.04em] text-tmrw-vitality mb-5 block">
+          <span className="font-ui text-[0.65rem] md:text-[0.7rem] uppercase tracking-[0.04em] text-tmrw-grey-500 mb-5 block">
             03 &mdash; THE COMPOUNDING BENEFIT
           </span>
         </FadeIn>
@@ -27,7 +27,7 @@ export function CompoundingBenefit() {
             </p>
             <p className="text-tmrw-white">
               Our working hypothesis: {PARTNER_NAME}&apos;s retention across the TMRW cohort improves by{" "}
-              <span className="text-tmrw-vitality">15 to 25 percent</span>{" "}
+              <span className="text-tmrw-infusion">15 to 25 percent</span>{" "}
               over 12 months. We&apos;d love to prove that together over 12 months.
             </p>
             <p>

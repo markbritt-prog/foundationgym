@@ -2,9 +2,9 @@ import { FadeIn } from "@/components/ui/FadeIn";
 import { JOURNEY_STEPS, PARTNER_NAME } from "@/lib/constants";
 
 function accentFor(i: number): { text: string; border: string } {
-  // Quiet default, vitality on the retest/optimise step which is the payoff
-  if (i === 5) return { text: "text-tmrw-vitality", border: "border-tmrw-vitality" };
-  return { text: "text-tmrw-grey-700", border: "border-tmrw-grey-300" };
+  // Quiet default, single accent on the retest/optimise step which is the payoff
+  if (i === 5) return { text: "text-tmrw-infusion", border: "border-tmrw-infusion" };
+  return { text: "text-tmrw-grey-500", border: "border-tmrw-grey-700" };
 }
 
 export function MemberJourney() {
