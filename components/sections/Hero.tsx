@@ -49,7 +49,7 @@ export function Hero() {
             &times;
           </span>
           <Image
-            src="https://images.squarespace-cdn.com/content/v1/667f5ff8685c815b0139018a/3203fcf6-d20d-429d-b7cd-e2ff0fcbc5ab/Asset+2%23IN.png?format=1500w"
+            src="/foundation-logo.png"
             alt={PARTNER_NAME}
             width={200}
             height={56}
