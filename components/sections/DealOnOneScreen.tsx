@@ -19,7 +19,7 @@ export function DealOnOneScreen() {
 
         <FadeIn>
           <p className="font-body text-[0.9rem] sm:text-[0.95rem] md:text-[1.05rem] leading-[1.55] tracking-[-0.01em] text-tmrw-grey-700 max-w-2xl mt-5">
-            The whole deal, on one screen. If it doesn&apos;t fit here, it&apos;s not in the deal.
+            The whole deal, on one screen.
           </p>
         </FadeIn>
 
@@ -59,8 +59,9 @@ function DealPanel({ panel }: { panel: typeof DEAL_PANELS[number] }) {
             key={line}
             className={`py-1.5 ${i > 0 ? "border-t border-tmrw-grey-100" : ""}`}
           >
-            <p className="font-body text-[0.875rem] text-tmrw-grey-700 leading-[1.55] tracking-[-0.01em]">
-              &mdash; {line}
+            <p className="font-body text-[0.875rem] text-tmrw-grey-700 leading-[1.55] tracking-[-0.01em] flex gap-2">
+              <span aria-hidden="true" className="shrink-0">&mdash;</span>
+              <span className="flex-1">{line}</span>
             </p>
           </div>
         ))}

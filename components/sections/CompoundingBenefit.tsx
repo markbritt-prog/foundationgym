@@ -28,10 +28,10 @@ export function CompoundingBenefit() {
             <p className="text-tmrw-white">
               Our working hypothesis: {PARTNER_NAME}&apos;s retention across the TMRW cohort improves by{" "}
               <span className="text-tmrw-vitality">15 to 25 percent</span>{" "}
-              over 12 months. We&apos;ll have a real answer by month 6.
+              over 12 months. We&apos;d love to prove that together over 12 months.
             </p>
             <p>
-              If that&apos;s directionally right, it&apos;s a bigger number than everything in the economics section put together. This is the part of the partnership we&apos;re actually most interested in finding out about.
+              This is the part of the partnership we&apos;re actually most interested in finding out about.
             </p>
           </div>
         </FadeIn>

@@ -14,7 +14,7 @@ export function CalculatorControls({ inputs, setInputs }: Props) {
     setInputs({
       activationsY1: s.activationsY1,
       onlineMix: s.onlineMix,
-      activeMembersY2: s.activeMembersY2,
+      annualGrowthRate: s.annualGrowthRate,
       retentionMonths: s.retentionMonths,
       productAttachRate: s.productAttachRate,
     });
@@ -63,18 +63,18 @@ export function CalculatorControls({ inputs, setInputs }: Props) {
           format={(v) => `${v}% online`}
         />
         <Slider
-          label="Active members in Year 2"
-          min={20}
-          max={150}
+          label="Annual growth in new joiners"
+          min={0}
+          max={50}
           step={5}
-          value={inputs.activeMembersY2}
-          onChange={(v) => setInputs({ ...inputs, activeMembersY2: v })}
-          format={(v) => `${v} members`}
+          value={Math.round(inputs.annualGrowthRate * 100)}
+          onChange={(v) => setInputs({ ...inputs, annualGrowthRate: v / 100 })}
+          format={(v) => `${v}% / yr`}
         />
         <Slider
-          label="Average retention (months)"
+          label="Average retention"
           min={6}
-          max={36}
+          max={48}
           step={1}
           value={inputs.retentionMonths}
           onChange={(v) => setInputs({ ...inputs, retentionMonths: v })}

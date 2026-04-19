@@ -30,7 +30,7 @@ export function LaunchingTogether() {
               </span>
               <div className="mt-5 space-y-5 font-body text-[0.95rem] leading-[1.65] tracking-[-0.01em] text-tmrw-grey-700">
                 <p>
-                  The campaign. Co-branded creative and the paid-media budget, PR, and a launch event held at 350 Bourke. All content production &mdash; photography, short-form video, founder interviews, member stories &mdash; on the TMRW budget.
+                  The campaign. Co-branded creative and marketing materials for in the gym, PR, and a launch event held at 350 Bourke. All content production &mdash; photography, short-form video, founder interviews, member stories &mdash; on the TMRW budget.
                 </p>
                 <p>
                   Ongoing content. Quarterly storytelling drops featuring Foundation members whose protocols produce meaningful change. TMRW&apos;s ambassador network amplifies the launch; members of the Foundation community who have reach are introduced into that programme.

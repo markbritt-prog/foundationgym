@@ -3,7 +3,6 @@
 import {
   PARTNER_NAME,
   PARTNER_SUBURB,
-  PARTNER_ADDRESS,
   PROPOSAL_DATE,
   DEAL_PANELS,
   DEAL_ECONOMICS,
@@ -36,7 +35,7 @@ function generateMarkdown(): string {
   push("**Your members are already doing the work.**");
   blank();
   push(
-    `Your members are paying $55 to $90 a week to train at ${PARTNER_ADDRESS}. They chose ${PARTNER_NAME} because they wanted real coaching, real programming, real outcomes \u2014 not a commodity gym.`
+    `Your members have already made the investment to train at Bourke Street. They chose ${PARTNER_NAME} because they wanted real coaching, real programming, real outcomes \u2014 not a commodity gym.`
   );
   blank();
   push(
@@ -47,10 +46,6 @@ function generateMarkdown(): string {
     "We run the clinic. You run the gym. Together, your members get what Life Time members get at [MIORA](https://miora.lifetime.life/) and Equinox members get at [Function Health](https://www.functionhealth.com/campaign/equinox-function-health) \u2014 a precision health layer that sits next to their training, operated end-to-end by us."
   );
   blank();
-  push(
-    `We\u2019d like to start with ${PARTNER_NAME}. No other independent gym in ${PARTNER_SUBURB} has this. We think you\u2019re the right partner to prove it does.`
-  );
-  blank();
   push("---");
   blank();
 
@@ -59,7 +54,7 @@ function generateMarkdown(): string {
   blank();
   push("**Foundation introduces. TMRW operates.**");
   blank();
-  push("The whole deal, on one screen. If it doesn\u2019t fit here, it\u2019s not in the deal.");
+  push("The whole deal, on one screen.");
   blank();
   for (const p of DEAL_PANELS) {
     push(`### ${p.ordinal}`);
@@ -98,11 +93,11 @@ function generateMarkdown(): string {
   );
   blank();
   push(
-    `Our working hypothesis: ${PARTNER_NAME}\u2019s retention across the TMRW cohort improves by **15 to 25 percent** over 12 months. We\u2019ll have a real answer by month 6.`
+    `Our working hypothesis: ${PARTNER_NAME}\u2019s retention across the TMRW cohort improves by **15 to 25 percent** over 12 months. We\u2019d love to prove that together over 12 months.`
   );
   blank();
   push(
-    "If that\u2019s directionally right, it\u2019s a bigger number than everything in the economics section put together. This is the part of the partnership we\u2019re actually most interested in finding out about."
+    "This is the part of the partnership we\u2019re actually most interested in finding out about."
   );
   blank();
   push("---");
@@ -189,7 +184,7 @@ function generateMarkdown(): string {
   push("### What TMRW drives");
   blank();
   push(
-    "The campaign. Co-branded creative and the paid-media budget, PR, and a launch event held at 350 Bourke. All content production \u2014 photography, short-form video, founder interviews, member stories \u2014 on the TMRW budget."
+    "The campaign. Co-branded creative and marketing materials for in the gym, PR, and a launch event held at 350 Bourke. All content production \u2014 photography, short-form video, founder interviews, member stories \u2014 on the TMRW budget."
   );
   blank();
   push(

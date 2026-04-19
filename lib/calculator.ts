@@ -3,7 +3,7 @@ import { COMMERCIAL } from "./constants";
 export interface CalcInputs {
   activationsY1: number;
   onlineMix: number;          // 0–1, share of activations that happen online via partner code
-  activeMembersY2: number;
+  annualGrowthRate: number;   // 0–1, YoY growth in new joiners
   retentionMonths: number;
   productAttachRate: number;
 }
@@ -14,7 +14,7 @@ export interface YearResult {
   newJoiners: number;
   onlineJoiners: number;
   inPersonJoiners: number;
-  joiningIncome: number;       // blended online + in-person
+  joiningIncome: number;
   monthlyIncome: number;
   productIncome: number;
   total: number;
@@ -69,93 +69,61 @@ export const computeYear = computeYearEcon;
 
 export function compute(inputs: CalcInputs): CalcResult {
   const annualChurnRate = Math.min(1, 12 / Math.max(1, inputs.retentionMonths));
+  const growth = inputs.annualGrowthRate;
 
-  // Year 1
-  const y1Active = inputs.activationsY1;
-  const y1 = computeYearEcon(
-    y1Active,
-    y1Active,
-    inputs.onlineMix,
-    inputs.productAttachRate
-  );
+  const years: YearResult[] = [];
+  let prevActive = 0;
 
-  // Year 2
-  const y2Active = inputs.activeMembersY2;
-  const retainedFromY1 = Math.round(
-    inputs.activationsY1 * Math.max(0, 1 - annualChurnRate)
-  );
-  const y2New = Math.max(0, y2Active - retainedFromY1);
-  const y2 = computeYearEcon(
-    y2Active,
-    y2New,
-    inputs.onlineMix,
-    inputs.productAttachRate
-  );
-
-  // Years 3–5
-  const annualNewJoiners = inputs.activationsY1;
-  const laterYears: YearResult[] = [];
-  let prevActive = y2Active;
-
-  for (let yr = 3; yr <= 5; yr++) {
+  for (let i = 0; i < 5; i++) {
+    const newJoiners = Math.round(inputs.activationsY1 * Math.pow(1 + growth, i));
     const retained = Math.round(prevActive * (1 - annualChurnRate));
-    const active = retained + annualNewJoiners;
+    const active = retained + newJoiners;
     const econ = computeYearEcon(
       active,
-      annualNewJoiners,
+      newJoiners,
       inputs.onlineMix,
       inputs.productAttachRate
     );
-    laterYears.push({ year: yr, ...econ });
+    years.push({ year: i + 1, ...econ });
     prevActive = active;
   }
 
-  const years: YearResult[] = [
-    { year: 1, ...y1 },
-    { year: 2, ...y2 },
-    ...laterYears,
-  ];
-
   const fiveYearTotal = years.reduce((s, y) => s + y.total, 0);
   const annualisedAverage = fiveYearTotal / 5;
-
-  const equilibriumActive = Math.round(
-    (inputs.activationsY1 * inputs.retentionMonths) / 12
-  );
-  const steadyState = computeYearEcon(
-    equilibriumActive,
-    annualNewJoiners,
-    inputs.onlineMix,
-    inputs.productAttachRate
-  );
+  const y1Total = years[0].total;
+  const steadyStateAnnual = years[years.length - 1].total;
 
   return {
     years,
     fiveYearTotal,
-    y1Total: y1.total,
+    y1Total,
     annualisedAverage,
-    steadyStateAnnual: steadyState.total,
+    steadyStateAnnual,
   };
 }
 
 /**
  * Sensitivity cell — 5-year annual average revenue to Foundation.
- * Assumes blended activation rate at inputs.onlineMix held constant.
+ * Assumes 20% YoY growth in new joiners and an 18-month average retention
+ * unless overridden by caller.
  */
 export function computeSensitivityCell(
   activationsY1: number,
   attachRate: number,
-  onlineMix: number = 0.7
+  onlineMix: number = 0.7,
+  annualGrowthRate: number = 0.2,
+  retentionMonths: number = 18
 ): number {
   const blended = blendedActivationRate(onlineMix);
-  const yearlyNew = [0, 1, 2, 3, 4].map((i) => activationsY1 + i * 10);
+  const annualChurnRate = Math.min(1, 12 / Math.max(1, retentionMonths));
 
   let total = 0;
+  let prevActive = 0;
   for (let i = 0; i < 5; i++) {
-    const priorYearNew = i > 0 ? yearlyNew[i - 1] : 0;
-    const active = yearlyNew[i] + 0.5 * priorYearNew;
+    const newJoiners = activationsY1 * Math.pow(1 + annualGrowthRate, i);
+    const active = prevActive * (1 - annualChurnRate) + newJoiners;
 
-    const joining = yearlyNew[i] * blended;
+    const joining = newJoiners * blended;
     const monthly = active * COMMERCIAL.foundationMonthlyShare * 12;
     const product =
       active *
@@ -164,6 +132,7 @@ export function computeSensitivityCell(
       COMMERCIAL.productRevenueShare;
 
     total += joining + monthly + product;
+    prevActive = active;
   }
   return total / 5;
 }

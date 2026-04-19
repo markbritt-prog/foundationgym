@@ -1,5 +1,5 @@
 import { FadeIn } from "@/components/ui/FadeIn";
-import { PARTNER_NAME, PARTNER_SUBURB, PARTNER_ADDRESS } from "@/lib/constants";
+import { PARTNER_NAME } from "@/lib/constants";
 
 export function WhatYouveBuilt() {
   return (
@@ -20,7 +20,7 @@ export function WhatYouveBuilt() {
         <FadeIn delay={0.15}>
           <div className="mt-8 md:mt-10 space-y-6 font-body text-[0.95rem] sm:text-[1rem] md:text-[1.1rem] leading-[1.6] tracking-[-0.01em] text-tmrw-grey-700">
             <p>
-              Your members are paying $55 to $90 a week to train at {PARTNER_ADDRESS}. They chose {PARTNER_NAME} because they wanted real coaching, real programming, real outcomes &mdash; not a commodity gym.
+              Your members have already made the investment to train at Bourke Street. They chose {PARTNER_NAME} because they wanted real coaching, real programming, real outcomes &mdash; not a commodity gym.
             </p>
             <p>
               The work they&apos;re putting in &mdash; the lifts, the conditioning, the recovery &mdash; is changing their biology in ways they can&apos;t see, and can&apos;t feel, until years later. That&apos;s the gap. It&apos;s not a gap in {PARTNER_NAME}; it&apos;s a gap in what any gym can offer on its own.
@@ -45,9 +45,6 @@ export function WhatYouveBuilt() {
                 Function Health
               </a>
               {" "}&mdash; a precision health layer that sits next to their training, operated end-to-end by us.
-            </p>
-            <p>
-              We&apos;d like to start with {PARTNER_NAME}. No other independent gym in {PARTNER_SUBURB} has this. We think you&apos;re the right partner to prove it does.
             </p>
           </div>
         </FadeIn>

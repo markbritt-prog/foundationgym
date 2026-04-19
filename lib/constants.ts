@@ -38,6 +38,7 @@ export const DEAL_PANELS = [
       "50% off TMRW joining fee \u2014 $249, not $499",
       "Priority scheduling at TMRW collection centres",
       "The full longevity programme, itemised below ($7,500 value)",
+      "Complimentary session with a performance nutritionist or peptide doctor",
       "Protocols designed to integrate with their Foundation training",
     ],
     footnote: "Members bill TMRW directly. Foundation never touches a clinical transaction.",

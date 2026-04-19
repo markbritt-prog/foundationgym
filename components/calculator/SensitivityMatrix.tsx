@@ -32,7 +32,7 @@ export function SensitivityMatrix({ inputs, className = "" }: Props) {
         WHAT THE PARTNERSHIP IS POTENTIALLY WORTH.
       </h3>
       <p className="font-body text-[0.9rem] text-tmrw-grey-700 mt-4 max-w-2xl leading-[1.6] tracking-[-0.01em]">
-        5-year annual average revenue to Foundation across activation and attach scenarios. Assumes a 70% online / 30% collection-centre channel mix, +10 new activations per year on top of the Year 1 base, and an 18-month average retention. The highlighted cell reflects your current slider position.
+        5-year annual average revenue to Foundation across Year&nbsp;1 activations and attach scenarios. Holds your current growth and retention sliders constant. The highlighted cell reflects your current slider position.
       </p>
 
       <div className="mt-8 md:mt-10 -mx-6 md:mx-0 overflow-x-auto">
@@ -63,7 +63,13 @@ export function SensitivityMatrix({ inputs, className = "" }: Props) {
                   {Math.round(attach * 100)}% ATTACH
                 </td>
                 {ACTIVATION_COLS.map((acts) => {
-                  const v = computeSensitivityCell(acts, attach, inputs.onlineMix);
+                  const v = computeSensitivityCell(
+                    acts,
+                    attach,
+                    inputs.onlineMix,
+                    inputs.annualGrowthRate,
+                    inputs.retentionMonths
+                  );
                   const isCurrent =
                     attach === currentAttach && acts === currentActivations;
                   return (
@@ -90,7 +96,7 @@ export function SensitivityMatrix({ inputs, className = "" }: Props) {
       </p>
 
       <p className="font-body text-[0.75rem] italic text-tmrw-grey-700 mt-5 leading-[1.55] tracking-[-0.01em] max-w-2xl">
-        Average of Year 1 through Year 5. Cohort model: each year adds +10 new members vs the previous year. Active members in any year = that year&apos;s new joiners + 50% of the prior year&apos;s joiners. Channel mix held constant at 70% online.
+        Average of Year&nbsp;1 through Year&nbsp;5. Cohort model: new joiners grow at your annual growth rate; active members each year = last year&apos;s retained cohort plus this year&apos;s new joiners, with churn derived from your retention slider.
       </p>
     </div>
   );
