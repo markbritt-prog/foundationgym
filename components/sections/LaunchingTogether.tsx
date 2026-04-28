@@ -6,7 +6,7 @@ export function LaunchingTogether() {
       <div className="max-w-6xl mx-auto px-6 md:px-10">
         <FadeIn>
           <span className="font-ui text-[0.65rem] md:text-[0.7rem] uppercase tracking-[0.04em] text-tmrw-grey-700 mb-4 block">
-            08 &mdash; LAUNCHING TOGETHER
+            09 &mdash; LAUNCHING TOGETHER
           </span>
         </FadeIn>
 

@@ -91,7 +91,7 @@ export function ValueStack() {
       <div className="max-w-6xl mx-auto px-6 md:px-10">
         <FadeIn>
           <span className="font-ui text-[0.65rem] md:text-[0.7rem] uppercase tracking-[0.04em] text-tmrw-grey-700">
-            06 &mdash; THE LONGEVITY PROGRAMME
+            07 &mdash; THE LONGEVITY PROGRAMME
           </span>
         </FadeIn>
 

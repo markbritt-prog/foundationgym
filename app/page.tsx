@@ -8,6 +8,7 @@ import { WhyNow } from "@/components/sections/WhyNow";
 import { DealOnOneScreen } from "@/components/sections/DealOnOneScreen";
 import { CompoundingBenefit } from "@/components/sections/CompoundingBenefit";
 import { MemberJourney } from "@/components/sections/MemberJourney";
+import { CustomerProposition } from "@/components/sections/CustomerProposition";
 import { ValueStack } from "@/components/sections/ValueStack";
 import { FinancialPartnership } from "@/components/sections/FinancialPartnership";
 import { LaunchingTogether } from "@/components/sections/LaunchingTogether";
@@ -28,6 +29,7 @@ export default function Home() {
       <DealOnOneScreen />
       <CompoundingBenefit />
       <MemberJourney />
+      <CustomerProposition />
       <ValueStack />
       <FinancialPartnership />
       <LaunchingTogether />

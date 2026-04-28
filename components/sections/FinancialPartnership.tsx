@@ -16,7 +16,7 @@ export function FinancialPartnership() {
     <section id="financial" className="bg-tmrw-white py-16 sm:py-20 md:py-24 lg:py-32">
       <div className="max-w-6xl mx-auto px-6 md:px-10">
         <span className="font-ui text-[0.65rem] md:text-[0.7rem] uppercase tracking-[0.04em] text-tmrw-infusion mb-5 block">
-          07 &mdash; THE ECONOMICS
+          08 &mdash; THE ECONOMICS
         </span>
 
         <h2 className="font-display text-[1.875rem] sm:text-[2.25rem] md:text-[2.75rem] lg:text-[4rem] uppercase leading-[0.95] tracking-[-0.01em] text-tmrw-black">

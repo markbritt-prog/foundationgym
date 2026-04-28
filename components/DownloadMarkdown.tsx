@@ -147,8 +147,28 @@ function generateMarkdown(): string {
   push("---");
   blank();
 
-  // 06 Programme
-  push("## 06 \u2014 The Longevity Programme");
+  // 06 Customer Proposition
+  push("## 06 \u2014 The Member Offer");
+  blank();
+  push("**What your members pay.**");
+  blank();
+  push(
+    `Public retail pricing on the left. The ${PARTNER_NAME} member offer on the right. Same programme, same monthly price, half the joining fee.`
+  );
+  blank();
+  push("| | Public retail | Foundation members |");
+  push("| --- | --- | --- |");
+  push("| Joining fee | $499 (one-off) | **$249** (50% off, save $250) |");
+  push("| Monthly | $249 | $249 |");
+  push("| Weekly equivalent | ~$57 / week | ~$57 / week |");
+  blank();
+  push("*What that membership actually buys, itemised next.*");
+  blank();
+  push("---");
+  blank();
+
+  // 07 Programme
+  push("## 07 \u2014 The Longevity Programme");
   blank();
   push("**What the member gets.**");
   blank();
@@ -185,7 +205,7 @@ function generateMarkdown(): string {
   blank();
 
   // 07 Economics
-  push("## 07 \u2014 The Economics");
+  push("## 08 \u2014 The Economics");
   blank();
   push("**Realistic forecasts.**");
   blank();
@@ -205,7 +225,7 @@ function generateMarkdown(): string {
   blank();
 
   // 08 Launching Together
-  push("## 08 \u2014 Launching Together");
+  push("## 09 \u2014 Launching Together");
   blank();
   push("**Inviting your members on a new journey.**");
   blank();
@@ -245,7 +265,7 @@ function generateMarkdown(): string {
   blank();
 
   // 09 Peptides
-  push("## 09 \u2014 Peptides, Specifically");
+  push("## 10 \u2014 Peptides, Specifically");
   blank();
   push("**Rapidly changing category.**");
   blank();
@@ -265,7 +285,7 @@ function generateMarkdown(): string {
   blank();
 
   // 10 Terms
-  push("## 10 \u2014 Partnership Terms");
+  push("## 11 \u2014 Partnership Terms");
   blank();
   push(
     "**Indicative term sheet.** The launch-term shape. Everything below is indicative \u2014 the formal agreement is drafted once we align."
@@ -281,7 +301,7 @@ function generateMarkdown(): string {
   blank();
 
   // 11 Next Steps
-  push("## 11 \u2014 What Happens Next");
+  push("## 12 \u2014 What Happens Next");
   blank();
   push("**3 steps to launch.**");
   blank();
