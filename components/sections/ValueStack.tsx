@@ -73,8 +73,8 @@ const DIALS: { label: string; question: string }[] = [
     question: "Peptide consultation, performance nutrition, deep-dive on gut health \u2014 there are several extras we could pull into the complimentary session for Foundation members. Which one moves your members?",
   },
   {
-    label: "The revenue share mix ($50 / $15 / 5%)",
-    question: "$50 per activation, $15 per active member per month, 5% of product revenue. Is this enough for you to actively champion this, or should we stretch it to make sure you\u2019re pushing it hard?",
+    label: "The revenue share mix ($75 / $15 / 5%)",
+    question: "$75 per activation, $15 per active member per month, 5% of product revenue. Is this enough for you to actively champion this, or should we stretch it to make sure you\u2019re pushing it hard?",
   },
 ];
 

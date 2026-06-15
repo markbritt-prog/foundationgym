@@ -153,12 +153,14 @@ function generateMarkdown(): string {
   push("**We\u2019ve simplified everything.**");
   blank();
   push(
-    `We\u2019ve dropped the joining fee across the board and reduced the weekly price \u2014 same offer for everyone, no special-case discount. On top of that, ${PARTNER_NAME} members get one complimentary clinical consult.`
+    `We\u2019ve dropped the joining fee and reduced the weekly price \u2014 same offer for everyone, no special-case discount. On top of that, ${PARTNER_NAME} members get one complimentary clinical consult.`
   );
+  blank();
+  push("> Heads up: we\u2019re still testing the role of a joining fee, so this may evolve before launch.");
   blank();
   push("| | Public retail \u2014 before | Public retail \u2014 now |");
   push("| --- | --- | --- |");
-  push("| Joining fee | ~~$499~~ (one-off) | **$0 \u2014 waived across the board** |");
+  push("| Joining fee | ~~$499~~ (one-off) | **$0** (under review) |");
   push("| Weekly | ~~~$57 / week (at $249/mo)~~ | **$69 / week** ($299/mo, all in) |");
   blank();
   push(
@@ -201,7 +203,7 @@ function generateMarkdown(): string {
   );
   blank();
   push("01. **What\u2019s the right additional offer value?** \u2014 peptide consultation, performance nutrition, deep-dive on gut health \u2014 there are several extras we could pull into the complimentary session for Foundation members. Which one moves your members?");
-  push("02. **The revenue share mix ($50 / $15 / 5%)** \u2014 $50 per activation, $15 per active member per month, 5% of product revenue. Is this enough for you to actively champion this, or should we stretch it to make sure you\u2019re pushing it hard?");
+  push("02. **The revenue share mix ($75 / $15 / 5%)** \u2014 $75 per activation, $15 per active member per month, 5% of product revenue. Is this enough for you to actively champion this, or should we stretch it to make sure you\u2019re pushing it hard?");
   blank();
   push("---");
   blank();

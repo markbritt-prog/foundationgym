@@ -22,7 +22,9 @@ export function CustomerProposition() {
 
         <FadeIn>
           <p className="font-body text-[0.9rem] sm:text-[0.95rem] md:text-[1.05rem] leading-[1.55] tracking-[-0.01em] text-tmrw-grey-700 max-w-2xl mt-5">
-            We&apos;ve dropped the joining fee across the board and reduced the weekly price &mdash; same offer for everyone, no special-case discount. On top of that, {PARTNER_NAME} members get one complimentary clinical consult.
+            We&apos;ve dropped the joining fee and reduced the weekly price &mdash; same offer for everyone, no special-case discount. {PARTNER_NAME} members also get a complimentary clinical consult on top.
+            <br />
+            <span className="text-tmrw-grey-500 italic">Heads up: we&apos;re still testing the role of a joining fee, so this may evolve before launch.</span>
           </p>
         </FadeIn>
 
@@ -68,7 +70,7 @@ export function CustomerProposition() {
                 <PriceRow
                   label="Joining fee"
                   value="$0"
-                  note="Waived across the board"
+                  note="Waived for now — still testing whether to bring one back"
                   emphasised
                 />
                 <PriceRow

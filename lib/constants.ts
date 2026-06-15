@@ -15,7 +15,7 @@ export const COMMERCIAL = {
   previousJoiningFee: 499,
   previousMonthlyFee: 249,
   // Foundation’s referral economics.
-  foundationActivation: 50,
+  foundationActivation: 75,
   foundationMonthlyShare: 15,
   productRevenueShare: 0.05,
   productAvgSpendPerAttached: 3000,
@@ -39,7 +39,7 @@ export const DEAL_PANELS = [
     ordinal: "02 — THE MEMBER OFFER",
     title: "What your members get",
     lines: [
-      "No joining fee — waived across the board",
+      "No joining fee today — we’re still testing whether to bring one back",
       "$69 a week, all in",
       "The full longevity programme, itemised later ($7,500 value)",
       "Complimentary session with a performance nutritionist or peptide doctor",
@@ -64,7 +64,7 @@ export const DEAL_ECONOMICS = {
   ordinal: "04 — THE ECONOMICS",
   title: "What Foundation earns",
   rows: [
-    { value: "$50", label: "PER ACTIVATION", note: "Member signs up via Foundation’s partner code" },
+    { value: "$75", label: "PER ACTIVATION", note: "Member signs up via Foundation’s partner code" },
     { value: "$15", label: "PER ACTIVE MEMBER / MONTH", note: "Ongoing, for the life of their TMRW membership" },
     { value: "5%", label: "OF TMRW PRODUCT REVENUE", note: "Per member, on supplements, peptides, retests" },
   ],
@@ -142,8 +142,8 @@ export const TERMS_STAGE1 = [
   { label: "Exclusivity", value: `Launch TMRW gym partner in ${PARTNER_SUBURB} for first 6 months` },
   { label: "Term", value: "3 years from go-live" },
   { label: "Attribution", value: "Foundation-assigned partner code. Used at signup." },
-  { label: "Member pricing", value: "$69 per week ($299/month). No joining fee." },
-  { label: "Foundation revenue lines", value: "$50 per activation + $15 per active member per month + 5% of TMRW product revenue per member" },
+  { label: "Member pricing", value: "$69 per week ($299/month). No joining fee currently — TMRW is still testing whether to reintroduce one." },
+  { label: "Foundation revenue lines", value: "$75 per activation + $15 per active member per month + 5% of TMRW product revenue per member" },
   { label: "Setup fee", value: "None" },
   { label: "Clinical liability", value: "TMRW. Foundation carries none." },
   { label: "Co-branded events", value: "2–4 per year at 350 Bourke, at Foundation’s choice. TMRW provides speakers and content." },
