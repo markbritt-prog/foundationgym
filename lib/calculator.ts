@@ -2,7 +2,6 @@ import { COMMERCIAL } from "./constants";
 
 export interface CalcInputs {
   activationsY1: number;
-  onlineMix: number;              // 0–1, share of activations that happen online via partner code
   annualNewJoinerIncrement: number; // integer count added to new joiners each subsequent year
   retentionMonths: number;
   productAttachRate: number;
@@ -12,8 +11,6 @@ export interface YearResult {
   year: number;
   activeMembers: number;
   newJoiners: number;
-  onlineJoiners: number;
-  inPersonJoiners: number;
   joiningIncome: number;
   monthlyIncome: number;
   productIncome: number;
@@ -28,24 +25,12 @@ export interface CalcResult {
   steadyStateAnnual: number;
 }
 
-function blendedActivationRate(onlineMix: number): number {
-  return (
-    onlineMix * COMMERCIAL.onlineActivation +
-    (1 - onlineMix) * COMMERCIAL.inPersonActivation
-  );
-}
-
 function computeYearEcon(
   activeMembers: number,
   newJoiners: number,
-  onlineMix: number,
   attachRate: number
 ): Omit<YearResult, "year"> {
-  const onlineJoiners = Math.round(newJoiners * onlineMix);
-  const inPersonJoiners = Math.max(0, newJoiners - onlineJoiners);
-  const joiningIncome =
-    onlineJoiners * COMMERCIAL.onlineActivation +
-    inPersonJoiners * COMMERCIAL.inPersonActivation;
+  const joiningIncome = newJoiners * COMMERCIAL.foundationActivation;
   const monthlyIncome =
     activeMembers * COMMERCIAL.foundationMonthlyShare * 12;
   const productIncome =
@@ -56,8 +41,6 @@ function computeYearEcon(
   return {
     activeMembers,
     newJoiners,
-    onlineJoiners,
-    inPersonJoiners,
     joiningIncome,
     monthlyIncome,
     productIncome,
@@ -80,12 +63,7 @@ export function compute(inputs: CalcInputs): CalcResult {
     );
     const retained = Math.round(prevActive * (1 - annualChurnRate));
     const active = retained + newJoiners;
-    const econ = computeYearEcon(
-      active,
-      newJoiners,
-      inputs.onlineMix,
-      inputs.productAttachRate
-    );
+    const econ = computeYearEcon(active, newJoiners, inputs.productAttachRate);
     years.push({ year: i + 1, ...econ });
     prevActive = active;
   }
@@ -106,17 +84,14 @@ export function compute(inputs: CalcInputs): CalcResult {
 
 /**
  * Sensitivity cell — 5-year annual average revenue to Foundation.
- * Assumes +25 new joiners per year and an 18-month average retention unless
- * overridden by caller.
+ * Assumes +25 new joiners per year and 18-month retention unless overridden.
  */
 export function computeSensitivityCell(
   activationsY1: number,
   attachRate: number,
-  onlineMix: number = 0.7,
   annualNewJoinerIncrement: number = 25,
   retentionMonths: number = 18
 ): number {
-  const blended = blendedActivationRate(onlineMix);
   const annualChurnRate = Math.min(1, 12 / Math.max(1, retentionMonths));
 
   let total = 0;
@@ -125,7 +100,7 @@ export function computeSensitivityCell(
     const newJoiners = Math.max(0, activationsY1 + i * annualNewJoinerIncrement);
     const active = prevActive * (1 - annualChurnRate) + newJoiners;
 
-    const joining = newJoiners * blended;
+    const joining = newJoiners * COMMERCIAL.foundationActivation;
     const monthly = active * COMMERCIAL.foundationMonthlyShare * 12;
     const product =
       active *

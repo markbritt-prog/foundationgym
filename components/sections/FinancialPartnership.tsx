@@ -35,7 +35,7 @@ export function FinancialPartnership() {
         </div>
 
         <p className="font-body text-[0.75rem] italic text-tmrw-grey-700 mt-10 max-w-3xl leading-[1.6] tracking-[-0.01em]">
-          Product-line attach and spend assumptions are the model&apos;s most sensitive inputs and have no empirical anchor yet. Base-case attach of 25% assumes members who convert become peptide-tier members at approximately $3,000 annual spend across supplements, compounded peptides, retests, and protocol adjustments. The online-vs-collection-centre channel mix is the second-most sensitive input &mdash; collection-centre activations pay 3&times; online rates, reflecting their higher conversion and lifetime value. The first six months of the launch will confirm or revise these figures.
+          Product-line attach and spend assumptions are the model&apos;s most sensitive inputs and have no empirical anchor yet. Base-case attach of 25% assumes members who convert become peptide-tier members at approximately $3,000 annual spend across supplements, compounded peptides, retests, and protocol adjustments. The first six months of the launch will confirm or revise these figures.
         </p>
 
         <YearBuildTable result={result} className="mt-24" />

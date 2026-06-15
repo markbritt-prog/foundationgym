@@ -69,16 +69,12 @@ const TOTAL_STACK_VALUE = STACK.reduce((sum, item) => sum + item.subtotal, 0);
 
 const DIALS: { label: string; question: string }[] = [
   {
-    label: "The joining-fee discount (50%)",
-    question: "Is this the hook that\u2019ll actually move your members, or are they price-insensitive enough that we could dial it back to 25%?",
-  },
-  {
     label: "What\u2019s the right additional offer value?",
-    question: "Peptide consultation, performance nutrition, deep-dive on gut health \u2014 there are several extras we could pull into the member offer to sharpen it. Which one moves your members?",
+    question: "Peptide consultation, performance nutrition, deep-dive on gut health \u2014 there are several extras we could pull into the complimentary session for Foundation members. Which one moves your members?",
   },
   {
-    label: "The revenue share mix ($100 / $300 / $10 / 5%)",
-    question: "Is this enough for you to actively champion this, or should we stretch it to make sure you\u2019re pushing it hard?",
+    label: "The revenue share mix ($50 / $15 / 5%)",
+    question: "$50 per activation, $15 per active member per month, 5% of product revenue. Is this enough for you to actively champion this, or should we stretch it to make sure you\u2019re pushing it hard?",
   },
 ];
 

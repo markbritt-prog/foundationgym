@@ -150,17 +150,20 @@ function generateMarkdown(): string {
   // 06 Customer Proposition
   push("## 06 \u2014 The Member Offer");
   blank();
-  push("**What your members pay.**");
+  push("**We\u2019ve simplified everything.**");
   blank();
   push(
-    `Public retail pricing on the left. The ${PARTNER_NAME} member offer on the right. Same programme, same monthly price, half the joining fee.`
+    `We\u2019ve dropped the joining fee across the board and reduced the weekly price \u2014 same offer for everyone, no special-case discount. On top of that, ${PARTNER_NAME} members get one complimentary clinical consult.`
   );
   blank();
-  push("| | Public retail | Foundation members |");
+  push("| | Public retail \u2014 before | Public retail \u2014 now |");
   push("| --- | --- | --- |");
-  push("| Joining fee | $499 (one-off) | **$249** (50% off, save $250) |");
-  push("| Monthly | $249 | $249 |");
-  push("| Weekly equivalent | ~$57 / week | ~$57 / week |");
+  push("| Joining fee | ~~$499~~ (one-off) | **$0 \u2014 waived across the board** |");
+  push("| Weekly | ~~~$57 / week (at $249/mo)~~ | **$69 / week** ($299/mo, all in) |");
+  blank();
+  push(
+    `**On top, for ${PARTNER_NAME} members:** one complimentary session with a performance nutritionist or a peptide doctor \u2014 their pick.`
+  );
   blank();
   push("*What that membership actually buys, itemised next.*");
   blank();
@@ -191,15 +194,14 @@ function generateMarkdown(): string {
   blank();
   push("### The Dials");
   blank();
-  push("**Three things we\u2019d like your take on.**");
+  push("**Two things we\u2019d like your take on.**");
   blank();
   push(
-    "We\u2019ve structured this to go live in three weeks. Before anything gets locked in, there are three dials we\u2019d genuinely like your view on \u2014 we want this to be a shape you\u2019ll push, not a shape you\u2019ll tolerate."
+    "We\u2019ve structured this to go live in three weeks. Before anything gets locked in, there are two dials we\u2019d genuinely like your view on \u2014 we want this to be a shape you\u2019ll push, not a shape you\u2019ll tolerate."
   );
   blank();
-  push("01. **The joining-fee discount (50%)** \u2014 is this the hook that\u2019ll actually move your members, or are they price-insensitive enough that we could dial it back to 25%?");
-  push("02. **What\u2019s the right additional offer value?** \u2014 peptide consultation, performance nutrition, deep-dive on gut health \u2014 there are several extras we could pull into the member offer to sharpen it. Which one moves your members?");
-  push("03. **The revenue share mix ($100 / $300 / $10 / 5%)** \u2014 is this enough for you to actively champion this, or should we stretch it to make sure you\u2019re pushing it hard?");
+  push("01. **What\u2019s the right additional offer value?** \u2014 peptide consultation, performance nutrition, deep-dive on gut health \u2014 there are several extras we could pull into the complimentary session for Foundation members. Which one moves your members?");
+  push("02. **The revenue share mix ($50 / $15 / 5%)** \u2014 $50 per activation, $15 per active member per month, 5% of product revenue. Is this enough for you to actively champion this, or should we stretch it to make sure you\u2019re pushing it hard?");
   blank();
   push("---");
   blank();
@@ -218,7 +220,7 @@ function generateMarkdown(): string {
   push("- 5-year run rate compounds as the active cohort builds against 24-month average retention.");
   blank();
   push(
-    "Product-line attach and spend assumptions are the model\u2019s most sensitive inputs and have no empirical anchor yet. Base-case attach of 25% assumes members who convert become peptide-tier members at approximately $3,000 annual spend across supplements, compounded peptides, retests, and protocol adjustments. The online-vs-collection-centre channel mix is the second-most sensitive input \u2014 collection-centre activations pay 3\u00d7 online rates, reflecting their higher conversion and lifetime value. The first six months of the launch will confirm or revise these figures."
+    "Product-line attach and spend assumptions are the model\u2019s most sensitive inputs and have no empirical anchor yet. Base-case attach of 25% assumes members who convert become peptide-tier members at approximately $3,000 annual spend across supplements, compounded peptides, retests, and protocol adjustments. The first six months of the launch will confirm or revise these figures."
   );
   blank();
   push("---");

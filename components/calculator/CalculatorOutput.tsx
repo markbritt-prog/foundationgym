@@ -29,12 +29,8 @@ export function CalculatorOutput({ result }: Props) {
 
       <div className="mt-6 border-t border-tmrw-grey-200 pt-2">
         <OutputRow
-          label="Online joining"
-          value={`${y1.onlineJoiners} \u00d7 $${COMMERCIAL.onlineActivation}`}
-        />
-        <OutputRow
-          label="In-person joining"
-          value={`${y1.inPersonJoiners} \u00d7 $${COMMERCIAL.inPersonActivation}`}
+          label="Activation income"
+          value={`${y1.newJoiners} \u00d7 $${COMMERCIAL.foundationActivation}`}
         />
         <OutputRow label="Joining total" value={formatDollarsShort(y1.joiningIncome)} />
         <OutputRow label="Monthly income" value={formatDollarsShort(y1.monthlyIncome)} />

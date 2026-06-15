@@ -3,16 +3,20 @@ export const PARTNER_SUBURB = "Surry Hills";
 export const PARTNER_ADDRESS = "350 Bourke Street";
 export const PROPOSAL_DATE = "April 2026";
 
-// ─── COMMERCIAL MODEL (unchanged) ────────────────────────────
+// ─── COMMERCIAL MODEL ────────────────────────────────────────
 
 export const COMMERCIAL = {
-  joiningFee: 499,
-  joiningDiscount: 0.5,
-  memberPaysJoining: 249,
-  onlineActivation: 100,
-  inPersonActivation: 300,
-  monthlyFee: 249,
-  foundationMonthlyShare: 10,
+  // Public retail — joining fee waived across the board.
+  joiningFee: 0,
+  weeklyFee: 69,
+  monthlyFee: 299, // weeklyFee * 52 / 12, rounded
+  // Public retail before the simplification (referenced in the
+  // member-offer comparison panel).
+  previousJoiningFee: 499,
+  previousMonthlyFee: 249,
+  // Foundation’s referral economics.
+  foundationActivation: 50,
+  foundationMonthlyShare: 15,
   productRevenueShare: 0.05,
   productAvgSpendPerAttached: 3000,
 } as const;
@@ -21,7 +25,7 @@ export const COMMERCIAL = {
 
 export const DEAL_PANELS = [
   {
-    ordinal: "01 \u2014 FOUNDATION'S PART",
+    ordinal: "01 — FOUNDATION'S PART",
     title: "What you do",
     lines: [
       "Partner code in the member app and welcome sequence",
@@ -32,40 +36,39 @@ export const DEAL_PANELS = [
     footnote: "We're asking Foundation to introduce. Everything that happens after that sits with us.",
   },
   {
-    ordinal: "02 \u2014 THE MEMBER OFFER",
+    ordinal: "02 — THE MEMBER OFFER",
     title: "What your members get",
     lines: [
-      "50% off TMRW joining fee \u2014 $249, not $499",
-      "Priority scheduling at TMRW collection centres",
-      "The full longevity programme, itemised below ($7,500 value)",
+      "No joining fee — waived across the board",
+      "$69 a week, all in",
+      "The full longevity programme, itemised later ($7,500 value)",
       "Complimentary session with a performance nutritionist or peptide doctor",
       "Protocols designed to integrate with their Foundation training",
     ],
     footnote: "Members bill TMRW directly. Foundation never touches a clinical transaction.",
   },
   {
-    ordinal: "03 \u2014 TMRW'S PART",
+    ordinal: "03 — TMRW'S PART",
     title: "What we do",
     lines: [
       "Every member, onboarded, serviced, and supported by us",
       "Credentialled clinicians, compounding pharmacy, prescribing pathway",
       "Full indemnity and product liability sit with TMRW",
-      "Member comms, bookings, billing, fulfilment \u2014 all of it",
+      "Member comms, bookings, billing, fulfilment — all of it",
     ],
     footnote: "Foundation introduces. TMRW operates. That's the whole shape of it.",
   },
 ] as const;
 
 export const DEAL_ECONOMICS = {
-  ordinal: "04 \u2014 THE ECONOMICS",
+  ordinal: "04 — THE ECONOMICS",
   title: "What Foundation earns",
   rows: [
-    { value: "$100", label: "PER ONLINE ACTIVATION", note: "Member signs up with Foundation's partner code" },
-    { value: "$300", label: "PER IN-PERSON ACTIVATION", note: "Member activates at a TMRW collection centre" },
-    { value: "$10", label: "PER ACTIVE MEMBER / MONTH", note: "Ongoing, for the life of their TMRW membership" },
+    { value: "$50", label: "PER ACTIVATION", note: "Member signs up via Foundation’s partner code" },
+    { value: "$15", label: "PER ACTIVE MEMBER / MONTH", note: "Ongoing, for the life of their TMRW membership" },
     { value: "5%", label: "OF TMRW PRODUCT REVENUE", note: "Per member, on supplements, peptides, retests" },
   ],
-  footnote: "Modest on paper. The real return is in the section next door \u2014 what this does to your retention.",
+  footnote: "Modest on paper. The real return is in the section next door — what this does to your retention.",
 } as const;
 
 // ─── 04 — MEMBER JOURNEY ─────────────────────────────────────
@@ -74,19 +77,19 @@ export const JOURNEY_STEPS = [
   {
     step: "01",
     title: "Sign Up",
-    desc: "Member signs up at startmytomorrow.com with Foundation's partner code, or books into a TMRW collection centre. 50% off joining applied automatically.",
+    desc: "Member signs up at startmytomorrow.com with Foundation’s partner code, or books into a TMRW collection centre. No joining fee — same for everyone.",
     time: "2 min",
   },
   {
     step: "02",
     title: "Health Story",
-    desc: "Complete the TMRW Health Story online \u2014 medical history, goals, training context. Done on their phone before bloods.",
+    desc: "Complete the TMRW Health Story online — medical history, goals, training context. Done on their phone before bloods.",
     time: "10 min",
   },
   {
     step: "03",
     title: "Bloods",
-    desc: "TMRW phlebotomist takes bloods at the member\u2019s nearest collection centre. Scheduling worked around their Foundation training week.",
+    desc: "TMRW phlebotomist takes bloods at the member’s nearest collection centre. Scheduling worked around their Foundation training week.",
     time: "15 min",
   },
   {
@@ -98,24 +101,22 @@ export const JOURNEY_STEPS = [
   {
     step: "05",
     title: "Epigenetic Results + Plan",
-    desc: "Full epigenetic results including disease risk and system scores. Complete Better TMRW plan \u2014 shareable with their Foundation coach.",
-    time: "2\u20133 weeks",
+    desc: "Full epigenetic results including disease risk and system scores. Complete Better TMRW plan — shareable with their Foundation coach.",
+    time: "2–3 weeks",
   },
   {
     step: "06",
     title: "Retest + Optimise",
-    desc: "Full re-test \u2014 bloods plus epigenetics \u2014 compared against baseline. This is where the pattern becomes visible. Updated protocols, peptide review with TMRW\u2019s prescribing doctor.",
+    desc: "Full re-test — bloods plus epigenetics — compared against baseline. This is where the pattern becomes visible. Updated protocols, peptide review with TMRW’s prescribing doctor.",
     time: "12 weeks after last test",
   },
   {
     step: "07",
     title: "Ongoing Support",
-    desc: "Regular clinical check-ins and preferred access to TMRW\u2019s prescribing peptide doctor. The retest + optimise cycle runs every 12 weeks.",
+    desc: "Regular clinical check-ins and preferred access to TMRW’s prescribing peptide doctor. The retest + optimise cycle runs every 12 weeks.",
     time: "Ongoing",
   },
 ] as const;
-
-// ─── 08 — WHAT WE LEARN ──────────────────────────────────────
 
 // ─── WHAT CHANGES FOR FOUNDATION (unused but kept) ───────────
 
@@ -134,45 +135,45 @@ export const GYM_VALUE = [
   },
 ] as const;
 
-// ─── 10 — TERMS ──────────────────────────────────────────────
+// ─── 11 — TERMS ──────────────────────────────────────────────
 
 export const TERMS_STAGE1 = [
   { label: "Type", value: "Referral channel partnership. TMRW runs the clinic end-to-end." },
   { label: "Exclusivity", value: `Launch TMRW gym partner in ${PARTNER_SUBURB} for first 6 months` },
   { label: "Term", value: "3 years from go-live" },
-  { label: "Attribution", value: "Foundation-assigned partner code. Used for online signup and at TMRW collection centre booking." },
-  { label: "Member pricing", value: "$249 joining (50% off), $249 per month thereafter" },
-  { label: "Foundation revenue lines", value: "$100 per online activation + $300 per in-person activation + $10 per active member per month + 5% of TMRW product revenue per member" },
+  { label: "Attribution", value: "Foundation-assigned partner code. Used at signup." },
+  { label: "Member pricing", value: "$69 per week ($299/month). No joining fee." },
+  { label: "Foundation revenue lines", value: "$50 per activation + $15 per active member per month + 5% of TMRW product revenue per member" },
   { label: "Setup fee", value: "None" },
   { label: "Clinical liability", value: "TMRW. Foundation carries none." },
-  { label: "Co-branded events", value: "2\u20134 per year at 350 Bourke, at Foundation\u2019s choice. TMRW provides speakers and content." },
+  { label: "Co-branded events", value: "2–4 per year at 350 Bourke, at Foundation’s choice. TMRW provides speakers and content." },
   { label: "Co-launch marketing", value: "Coordinated social launch. TMRW provides creative, assets, and paid budget." },
   { label: "Temporary signage", value: "Modest co-branded signage during the launch period. Comes down when the launch window ends." },
   { label: "Digital device for sign-up", value: "TMRW provides an iPad or similar in-gym for on-the-spot member activation during the launch window." },
-  { label: "Influencer visibility", value: "Foundation members with reach invited into TMRW\u2019s ambassador programme. Co-branded content, amplified across both sides." },
+  { label: "Influencer visibility", value: "Foundation members with reach invited into TMRW’s ambassador programme. Co-branded content, amplified across both sides." },
   { label: "Data and privacy", value: "Clinical record sits with TMRW. Australian Privacy Act." },
   { label: "Termination", value: "Either party, 30 days written notice" },
 ] as const;
 
-// ─── 11 — NEXT STEPS ─────────────────────────────────────────
+// ─── 12 — NEXT STEPS ─────────────────────────────────────────
 
 export const NEXT_STEPS = [
   {
     step: "01",
     title: "Alignment between the teams",
-    desc: "A working session between the Foundation and TMRW teams. Align on the shape, adjust anything that doesn\u2019t feel right, confirm the launch plan.",
+    desc: "A working session between the Foundation and TMRW teams. Align on the shape, adjust anything that doesn’t feel right, confirm the launch plan.",
     timeline: "28 April",
   },
   {
     step: "02",
     title: "Launch preparation",
-    desc: "Partner code issued. Member-facing assets produced \u2014 email copy, in-app messages, in-class script, launch social. TMRW briefs the clinical team. Foundation schedules the launch event.",
+    desc: "Partner code issued. Member-facing assets produced — email copy, in-app messages, in-class script, launch social. TMRW briefs the clinical team. Foundation schedules the launch event.",
     timeline: "Early May",
   },
   {
     step: "03",
     title: "Go live",
-    desc: "Launch across Foundation\u2019s channels with a co-branded event at 350 Bourke. Members sign up, onboard, and start their programme.",
+    desc: "Launch across Foundation’s channels with a co-branded event at 350 Bourke. Members sign up, onboard, and start their programme.",
     timeline: "Mid-May",
   },
 ] as const;
@@ -180,15 +181,16 @@ export const NEXT_STEPS = [
 // ─── NAV (legacy, not used) ──────────────────────────────────
 
 export const NAV_SECTIONS = [
-  { id: "what-youve-built", label: "01 \u2014 WHAT YOU'VE BUILT" },
-  { id: "deal", label: "02 \u2014 HOW THIS WORKS" },
-  { id: "compounding-benefit", label: "03 \u2014 COMPOUNDING BENEFIT" },
-  { id: "member-journey", label: "04 \u2014 JOURNEY" },
-  { id: "value-stack", label: "05 \u2014 PROGRAMME" },
-  { id: "financial", label: "06 \u2014 ECONOMICS" },
-  { id: "launching-together", label: "07 \u2014 LAUNCHING" },
-  { id: "learnings", label: "08 \u2014 LEARNINGS" },
-  { id: "peptides", label: "09 \u2014 PEPTIDES" },
-  { id: "terms", label: "10 \u2014 TERMS" },
-  { id: "next-steps", label: "11 \u2014 NEXT" },
+  { id: "what-youve-built", label: "01 — WHAT YOU'VE BUILT" },
+  { id: "why-now", label: "02 — WHY NOW" },
+  { id: "deal", label: "03 — HOW THIS WORKS" },
+  { id: "compounding-benefit", label: "04 — COMPOUNDING BENEFIT" },
+  { id: "member-journey", label: "05 — JOURNEY" },
+  { id: "customer-proposition", label: "06 — THE MEMBER OFFER" },
+  { id: "value-stack", label: "07 — PROGRAMME" },
+  { id: "financial", label: "08 — ECONOMICS" },
+  { id: "launching-together", label: "09 — LAUNCHING" },
+  { id: "peptides", label: "10 — PEPTIDES" },
+  { id: "terms", label: "11 — TERMS" },
+  { id: "next-steps", label: "12 — NEXT" },
 ] as const;

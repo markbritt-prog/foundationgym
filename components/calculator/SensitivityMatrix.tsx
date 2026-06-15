@@ -66,7 +66,6 @@ export function SensitivityMatrix({ inputs, className = "" }: Props) {
                   const v = computeSensitivityCell(
                     acts,
                     attach,
-                    inputs.onlineMix,
                     inputs.annualNewJoinerIncrement,
                     inputs.retentionMonths
                   );

@@ -13,7 +13,6 @@ export function CalculatorControls({ inputs, setInputs }: Props) {
     if (!s) return;
     setInputs({
       activationsY1: s.activationsY1,
-      onlineMix: s.onlineMix,
       annualNewJoinerIncrement: s.annualNewJoinerIncrement,
       retentionMonths: s.retentionMonths,
       productAttachRate: s.productAttachRate,
@@ -52,15 +51,6 @@ export function CalculatorControls({ inputs, setInputs }: Props) {
           value={inputs.activationsY1}
           onChange={(v) => setInputs({ ...inputs, activationsY1: v })}
           format={(v) => `${v} members`}
-        />
-        <Slider
-          label="Online activation mix"
-          min={40}
-          max={90}
-          step={5}
-          value={Math.round(inputs.onlineMix * 100)}
-          onChange={(v) => setInputs({ ...inputs, onlineMix: v / 100 })}
-          format={(v) => `${v}% online`}
         />
         <Slider
           label="New joiners added each year"
