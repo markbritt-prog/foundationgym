@@ -23,6 +23,10 @@ export function FinancialPartnership() {
           REALISTIC FORECASTS.
         </h2>
 
+        <p className="font-body text-[0.95rem] sm:text-[1rem] md:text-[1.05rem] leading-[1.55] tracking-[-0.01em] text-tmrw-grey-700 max-w-2xl mt-5">
+          Modelled against a <span className="text-tmrw-black font-semibold">50/50 split between Brighter and Cellular</span>. Activation income blends $50 (Brighter) and $75 (Cellular) per joiner; ongoing share blends $50/quarter (Brighter) and $15/month (Cellular).
+        </p>
+
         <CalculatorHero result={result} />
 
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_360px] gap-8 lg:gap-12 mt-14 lg:mt-20">

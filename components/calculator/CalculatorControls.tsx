@@ -45,8 +45,8 @@ export function CalculatorControls({ inputs, setInputs }: Props) {
       <div className="mt-12 space-y-10">
         <Slider
           label="Activations in Year 1"
-          min={20}
-          max={150}
+          min={0}
+          max={50}
           step={5}
           value={inputs.activationsY1}
           onChange={(v) => setInputs({ ...inputs, activationsY1: v })}
@@ -55,7 +55,7 @@ export function CalculatorControls({ inputs, setInputs }: Props) {
         <Slider
           label="New joiners added each year"
           min={0}
-          max={60}
+          max={30}
           step={5}
           value={inputs.annualNewJoinerIncrement}
           onChange={(v) => setInputs({ ...inputs, annualNewJoinerIncrement: v })}

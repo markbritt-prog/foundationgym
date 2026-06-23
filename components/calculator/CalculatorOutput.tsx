@@ -40,9 +40,9 @@ export function CalculatorOutput({ result }: Props) {
         <OutputRow label="Product share of total" value={`${Math.round(productShareOfTotal)}%`} />
       </div>
 
-      <div className="mt-2 pb-2">
-        <p className="font-body text-[0.7rem] italic text-tmrw-grey-500 leading-[1.5] tracking-[-0.01em]">
-          Blended at 50% Brighter / 50% Cellular.
+      <div className="mt-3 pb-1">
+        <p className="font-ui text-[0.6rem] uppercase tracking-[0.04em] text-tmrw-infusion">
+          50 / 50 BRIGHTER · CELLULAR
         </p>
       </div>
 

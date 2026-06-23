@@ -8,7 +8,7 @@ interface Props {
 }
 
 const ATTACH_ROWS = [0.15, 0.2, 0.25, 0.3, 0.35];
-const ACTIVATION_COLS = [30, 40, 50, 60, 70];
+const ACTIVATION_COLS = [10, 20, 30, 40, 50];
 
 function nearest<T extends number>(value: T, options: T[]): T {
   return options.reduce((a, b) =>

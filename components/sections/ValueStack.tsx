@@ -15,14 +15,14 @@ interface StackItem {
 const STACK: StackItem[] = [
   {
     label: "Epigenetic age testing (TruAge / TruHealth bundle)",
-    qty: "3 \u00d7",
+    qty: "2 \u00d7",
     unitPrice: 1300,
-    subtotal: 3900,
+    subtotal: 2600,
     reference: {
       provider: "Biogenix",
       url: "https://biogenix.com.au/",
     },
-    note: "Baseline, 4-month retest, 8-month retest. DNA methylation, OMICmAge, DunedinPACE, SymphonyAge, telomere length.",
+    note: "Two comprehensive panels per year, baseline and retest. DNA methylation, OMICmAge, DunedinPACE, SymphonyAge, telomere length.",
   },
   {
     label: "Comprehensive blood panel",
@@ -33,7 +33,7 @@ const STACK: StackItem[] = [
       provider: "Bloody Good Tests",
       url: "https://bloodygood.com.au/products/the-bloody-good-test",
     },
-    note: "100+ biomarkers across energy, hormones, nutrition, inflammation, organ function.",
+    note: "100+ biomarkers across energy, hormones, nutrition, inflammation, organ function. A second retest runs where clinically indicated.",
   },
   {
     label: "Deep-dive clinician consultations",

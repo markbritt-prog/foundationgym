@@ -36,7 +36,7 @@ function generateMarkdown(): string {
   push("**Come down. Get measured. Rise up with a plan.**");
   blank();
   push(
-    "You call yourselves Longevity Specialists. Train like an athlete at any age. Live stronger for longer. But the fitness layer alone can only take a member so far toward it."
+    `${PARTNER_NAME} is uniquely framed in the longevity space — train like an athlete at any age, live stronger for longer. But the fitness layer alone can only take a member so far toward it.`
   );
   blank();
   push(
@@ -208,14 +208,14 @@ function generateMarkdown(): string {
   blank();
   push("| Item | Qty | Retail / unit | Subtotal |");
   push("| --- | --- | --- | --- |");
-  push("| Epigenetic age testing (TruAge / TruHealth bundle) | 3 \u00d7 | $1,300 | $3,900 |");
-  push("| Comprehensive blood panel | 1 \u00d7 | $400 | $400 |");
+  push("| Epigenetic age testing (TruAge / TruHealth bundle) | 2 \u00d7 | $1,300 | $2,600 |");
+  push("| Comprehensive blood panel (+ second retest where clinically indicated) | 1 \u00d7 | $400 | $400 |");
   push("| Deep-dive clinician consultations | 3 \u00d7 | $220 | $660 |");
   push("| Peptide doctor consultation | 1 \u00d7 | $220 | $220 |");
   push("| Doctor-approved personalised medical plan | 1 \u00d7 | $160 | $160 |");
   push("| Precision supplement protocol | 12 months | $180 | $2,160 |");
   blank();
-  push("**Total member value, Year 1: $7,500**");
+  push("**Total member value, Year 1: $6,200**");
   blank();
   push("*Assumes full 12-month retention and protocol adherence.*");
   blank();
@@ -239,12 +239,12 @@ function generateMarkdown(): string {
   push("**Realistic forecasts.**");
   blank();
   push(
-    "The interactive calculator on the site updates live against slider inputs across 5 scenarios (Soft Open, Conservative, Base, Strong, Bullish)."
+    "Modelled against a **50/50 split between Brighter and Cellular**. Activation income blends $50 (Brighter) and $75 (Cellular) per joiner; ongoing share blends $50/quarter (Brighter) and $15/month (Cellular). The interactive calculator on the site updates live across 5 scenarios (Soft Open, Conservative, Base, Strong, Bullish)."
   );
   blank();
   push("**Base-case outputs:**");
-  push(`- Year 1 to ${PARTNER_NAME}: 75 new members; +25 each subsequent year.`);
-  push("- 5-year run rate compounds as the active cohort builds against 24-month average retention.");
+  push(`- Year 1 to ${PARTNER_NAME}: 30 new members; +15 each subsequent year.`);
+  push("- Active cohort peaks at ~150 in Year 5 against 24-month average retention.");
   blank();
   push(
     "Product-line attach and spend assumptions are the model\u2019s most sensitive inputs and have no empirical anchor yet. Base-case attach of 25% assumes members who convert become peptide-tier members at approximately $3,000 annual spend across supplements, compounded peptides, retests, and protocol adjustments. The first six months of the launch will confirm or revise these figures."

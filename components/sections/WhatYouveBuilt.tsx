@@ -29,7 +29,7 @@ export function WhatYouveBuilt() {
         <FadeIn delay={0.15}>
           <div className="mt-12 md:mt-16 space-y-6 font-body text-[1rem] sm:text-[1.05rem] md:text-[1.15rem] leading-[1.65] tracking-[-0.01em] text-tmrw-grey-700 max-w-3xl">
             <p>
-              You call yourselves Longevity Specialists. Train like an athlete at any age. Live stronger for longer. But the fitness layer alone can only take a member so far toward it.
+              {PARTNER_NAME} is uniquely framed in the longevity space &mdash; train like an athlete at any age, live stronger for longer. But the fitness layer alone can only take a member so far toward it.
             </p>
             <p>
               Your members have already made the investment to train at Bourke Street. They chose {PARTNER_NAME} because they wanted real coaching, real programming, real outcomes, real community. The work they&apos;re putting in is changing their biology &mdash; in ways they can&apos;t see, and can&apos;t feel, until years later.
