@@ -9,7 +9,7 @@ export const SECTIONS: readonly NavSection[] = [
   { id: "what-youve-built", ordinal: "01", label: "What You've Built", shortLabel: "Your Members" },
   { id: "why-now", ordinal: "02", label: "Why Now", shortLabel: "Why Now" },
   { id: "deal", ordinal: "03", label: "How This Works", shortLabel: "The Deal" },
-  { id: "compounding-benefit", ordinal: "04", label: "The Compounding Benefit", shortLabel: "Retention" },
+  { id: "compounding-benefit", ordinal: "04", label: "Our Hypothesis", shortLabel: "Hypothesis" },
   { id: "member-journey", ordinal: "05", label: "The Member Journey", shortLabel: "Journey" },
   { id: "customer-proposition", ordinal: "06", label: "The Member Offer", shortLabel: "Offer" },
   { id: "value-stack", ordinal: "07", label: "The Longevity Programme", shortLabel: "Programme" },

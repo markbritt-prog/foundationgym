@@ -113,22 +113,20 @@ function generateMarkdown(): string {
   push("---");
   blank();
 
-  // 04 Compounding Benefit
-  push("## 04 \u2014 The Compounding Benefit");
+  // 04 Our Hypothesis
+  push("## 04 \u2014 Our Hypothesis");
   blank();
-  push("**The member who can see their biology change doesn\u2019t cancel.**");
+  push("**The member who can see their biology change doesn\u2019t cancel either service.**");
   blank();
   push(
     `Every ${PARTNER_NAME} member who does this with us is a member who can see, in data, what their training is actually doing. Six months in, their epigenetic age drops. Twelve months in, their biomarkers shift. They attribute that to you, and to us. Both.`
   );
   blank();
   push(
-    "We want to be honest: we haven\u2019t proven this out at scale yet. The launch window is partly designed to measure it. But the logic is clean \u2014 a member on an integrated protocol doesn\u2019t churn out of either side. Fitness alone churns. Supplements alone churn. Fitness plus measured biology plus personalised protocols? That\u2019s different."
+    "Fitness alone churns. Supplements alone churn. Fitness plus measured biology plus personalised protocols? That\u2019s different."
   );
   blank();
-  push(
-    `Our working hypothesis: ${PARTNER_NAME}\u2019s retention across the TMRW cohort improves by **15 to 25 percent** over 12 months. We\u2019d love to prove that together over 12 months.`
-  );
+  push("We\u2019d love to prove that together over 12 months.");
   blank();
   push(
     "This is the part of the partnership we\u2019re actually most interested in finding out about."
