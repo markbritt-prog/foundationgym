@@ -73,8 +73,8 @@ const DIALS: { label: string; question: string }[] = [
     question: "Peptide consultation, performance nutrition, deep-dive on gut health \u2014 there are several extras we could pull into the complimentary session for Foundation members. Which one moves your members?",
   },
   {
-    label: "The revenue share mix ($75 / $15 / 5%)",
-    question: "$75 per activation, $15 per active member per month, 5% of product revenue. Is this enough for you to actively champion this, or should we stretch it to make sure you\u2019re pushing it hard?",
+    label: "The revenue mix (Brighter vs Cellular)",
+    question: "Brighter pays Foundation $50 on activation + $50/quarter ongoing. Cellular pays $75 on activation + $15/month ongoing. Plus 5% of product revenue (incl. peptides) across both. Is that mix worth pushing hard, or do we need to dial it up to get behind it?",
   },
 ];
 

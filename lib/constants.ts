@@ -3,25 +3,82 @@ export const PARTNER_SUBURB = "Surry Hills";
 export const PARTNER_ADDRESS = "350 Bourke Street";
 export const PROPOSAL_DATE = "April 2026";
 
+// ─── PLANS — TMRW's two-tier membership ──────────────────────
+
+export const PLANS = [
+  {
+    key: "brighter",
+    name: "Brighter",
+    monthlyPrice: 199,
+    tagline: "A daily formula, made from your own blood.",
+    description:
+      "Read in full, compounded from your results, and retested through the year so you can watch it work.",
+    lines: [
+      "75+ blood markers across 11 organ systems",
+      "Estimated biological age and disease risk, from your blood",
+      "A medical plan and daily formula compounded to your results",
+      "Bloods retested twice a year, formula adjusted every quarter",
+      "A doctor and a naturopath on one team, all year",
+      "Advanced treatments — hormone, cognitive, peptide — where indicated",
+    ],
+    footer: "The picture an advanced longevity doctor would build for you — at the price of a membership.",
+  },
+  {
+    key: "cellular",
+    name: "Cellular",
+    monthlyPrice: 299,
+    badge: "DEEPER",
+    tagline: "The deepest read of your biology.",
+    description:
+      "Your cells reveal what your blood can’t — validated against the clocks built at Harvard, Yale and Dunedin.",
+    lines: [
+      "Biological age, validated and read organ by organ",
+      "Disease risk, validated against your cells",
+      "Your pace of ageing, tracked year on year, and toxin exposure",
+      "1,700+ cellular biomarkers, read three times a year",
+      "A doctor consult on every cellular read",
+      "Everything in Brighter, included",
+      "Advanced treatments — hormone, cognitive, peptide — where indicated",
+    ],
+    footer: "The only membership that reads your cells. ~$2,600 a year of testing, included.",
+  },
+] as const;
+
 // ─── COMMERCIAL MODEL ────────────────────────────────────────
 
 export const COMMERCIAL = {
-  // Public retail — joining fee waived across the board.
-  joiningFee: 0,
-  weeklyFee: 69,
-  monthlyFee: 299, // weeklyFee * 52 / 12, rounded
-  // Public retail before the simplification (referenced in the
-  // member-offer comparison panel).
+  // Public retail history (referenced in the before/after panel).
   previousJoiningFee: 499,
   previousMonthlyFee: 249,
-  // Foundation’s referral economics.
-  foundationActivation: 75,
-  foundationMonthlyShare: 15,
+
+  // No joining fee. TMRW dropped it across the board — meaningful
+  // inhibitor to growth, so we’ve made it easier to start.
+  joiningFee: 0,
+
+  // Per-plan public prices.
+  brighterMonthlyPrice: 199,
+  cellularMonthlyPrice: 299,
+
+  // Per-plan Foundation referral economics.
+  brighterFoundationActivation: 50,
+  brighterFoundationQuarterly: 50,        // paid quarterly in arrears (churn-dependent)
+  cellularFoundationActivation: 75,
+  cellularFoundationMonthlyShare: 15,
+
+  // Blended economics assuming a 50/50 Brighter/Cellular mix.
+  // Used by the financial calculator.
+  foundationActivationBlended:
+    (50 + 75) / 2,                        // $62.50 per activation
+  foundationMonthlyShareBlended:
+    (50 / 3 + 15) / 2,                    // ≈ $15.83 per active member / month
+
+  // Product revenue share (incl. peptides) is the third Foundation
+  // revenue line, on top of the plan economics.
   productRevenueShare: 0.05,
   productAvgSpendPerAttached: 3000,
 } as const;
 
-// ─── 02 — THE DEAL (reframed panels) ─────────────────────────
+// ─── 03 — THE DEAL (reframed panels) ─────────────────────────
 
 export const DEAL_PANELS = [
   {
@@ -30,18 +87,18 @@ export const DEAL_PANELS = [
     lines: [
       "Partner code in the member app and welcome sequence",
       "One quarterly TMRW event at 350 Bourke",
+      "Host 2–3 on-site activation events during the launch window",
       "One marketing lead as point of contact",
-      "Nothing clinical. Nothing operational. Nothing you're not already doing.",
+      "Nothing clinical. Nothing operational beyond hosting.",
     ],
-    footnote: "We're asking Foundation to introduce. Everything that happens after that sits with us.",
+    footnote: "We’re asking Foundation to introduce. Everything that happens after that sits with us.",
   },
   {
     ordinal: "02 — THE MEMBER OFFER",
     title: "What your members get",
     lines: [
-      "No joining fee today — we’re still testing whether to bring one back",
-      "$69 a week, all in",
-      "The full longevity programme, itemised later ($7,500 value)",
+      "Their choice of Brighter ($199/mo) or Cellular ($299/mo)",
+      "No joining fee — dropped across the board",
       "Complimentary session with a performance nutritionist or peptide doctor",
       "Protocols designed to integrate with their Foundation training",
     ],
@@ -52,11 +109,11 @@ export const DEAL_PANELS = [
     title: "What we do",
     lines: [
       "Every member, onboarded, serviced, and supported by us",
+      "Phlebotomists on-site for the activation events at 350 Bourke",
       "Credentialled clinicians, compounding pharmacy, prescribing pathway",
       "Full indemnity and product liability sit with TMRW",
-      "Member comms, bookings, billing, fulfilment — all of it",
     ],
-    footnote: "Foundation introduces. TMRW operates. That's the whole shape of it.",
+    footnote: "Foundation introduces. TMRW operates. That’s the whole shape of it.",
   },
 ] as const;
 
@@ -64,20 +121,32 @@ export const DEAL_ECONOMICS = {
   ordinal: "04 — THE ECONOMICS",
   title: "What Foundation earns",
   rows: [
-    { value: "$75", label: "PER ACTIVATION", note: "Member signs up via Foundation’s partner code" },
-    { value: "$15", label: "PER ACTIVE MEMBER / MONTH", note: "Ongoing, for the life of their TMRW membership" },
-    { value: "5%", label: "OF TMRW PRODUCT REVENUE", note: "Per member, on supplements, peptides, retests" },
+    {
+      value: "$50",
+      label: "PER BRIGHTER ACTIVATION",
+      note: "+ $50 per active Brighter member, paid quarterly in arrears",
+    },
+    {
+      value: "$75",
+      label: "PER CELLULAR ACTIVATION",
+      note: "+ $15 per active Cellular member, paid monthly",
+    },
+    {
+      value: "5%",
+      label: "OF TMRW PRODUCT REVENUE",
+      note: "Per member, on supplements, peptides, retests",
+    },
   ],
   footnote: "Modest on paper. The real return is in the section next door — what this does to your retention.",
 } as const;
 
-// ─── 04 — MEMBER JOURNEY ─────────────────────────────────────
+// ─── 05 — MEMBER JOURNEY ─────────────────────────────────────
 
 export const JOURNEY_STEPS = [
   {
     step: "01",
     title: "Sign Up",
-    desc: "Member signs up at startmytomorrow.com with Foundation’s partner code, or books into a TMRW collection centre. No joining fee — same for everyone.",
+    desc: "Member signs up at startmytomorrow.com with Foundation’s partner code, picks Brighter or Cellular, or activates on-site at a TMRW pop-up event. No joining fee — same for everyone.",
     time: "2 min",
   },
   {
@@ -89,7 +158,7 @@ export const JOURNEY_STEPS = [
   {
     step: "03",
     title: "Bloods",
-    desc: "TMRW phlebotomist takes bloods at the member’s nearest collection centre. Scheduling worked around their Foundation training week.",
+    desc: "TMRW phlebotomist takes bloods on-site at 350 Bourke (during activation events) or at the member’s nearest collection centre. Scheduling worked around their Foundation training week.",
     time: "15 min",
   },
   {
@@ -100,8 +169,8 @@ export const JOURNEY_STEPS = [
   },
   {
     step: "05",
-    title: "Epigenetic Results + Plan",
-    desc: "Full epigenetic results including disease risk and system scores. Complete Better TMRW plan — shareable with their Foundation coach.",
+    title: "Cellular + Plan",
+    desc: "For Cellular members: 1,700+ cellular markers read against the Harvard/Yale/Dunedin clocks. For everyone: complete Better TMRW plan — shareable with their Foundation coach.",
     time: "2–3 weeks",
   },
   {
@@ -135,17 +204,35 @@ export const GYM_VALUE = [
   },
 ] as const;
 
+// ─── LAUNCH INCENTIVE OPTIONS (ideas for discussion) ─────────
+
+export const LAUNCH_INCENTIVE_OPTIONS = [
+  {
+    label: "Option A — Standard",
+    body: "Run the economics above as-is. No joining fee for any member, the revenue share runs from day one, and the launch sells itself on the new pricing alone.",
+  },
+  {
+    label: "Option B — 50% off first one or two months",
+    body: "Foundation members get their first one or two months at half price, then revert to the standard $199 (Brighter) or $299 (Cellular). TMRW absorbs the discount.",
+  },
+  {
+    label: "Option C — First month of Brighter free",
+    body: "Every new Foundation member gets their first month of Brighter included in the gym offer. TMRW absorbs the supplement and clinical cost. Foundation forgoes the $50 activation payment for that signup — so the member gets the value instead of the channel.",
+  },
+] as const;
+
 // ─── 11 — TERMS ──────────────────────────────────────────────
 
 export const TERMS_STAGE1 = [
   { label: "Type", value: "Referral channel partnership. TMRW runs the clinic end-to-end." },
   { label: "Exclusivity", value: `Launch TMRW gym partner in ${PARTNER_SUBURB} for first 6 months` },
   { label: "Term", value: "3 years from go-live" },
-  { label: "Attribution", value: "Foundation-assigned partner code. Used at signup." },
-  { label: "Member pricing", value: "$69 per week ($299/month). No joining fee currently — TMRW is still testing whether to reintroduce one." },
-  { label: "Foundation revenue lines", value: "$75 per activation + $15 per active member per month + 5% of TMRW product revenue per member" },
+  { label: "Attribution", value: "Foundation-assigned partner code. Used at signup or at on-site activation events." },
+  { label: "Member pricing", value: "Brighter $199/mo. Cellular $299/mo. No joining fee — TMRW is still testing whether to reintroduce one." },
+  { label: "Foundation revenue lines", value: "Brighter: $50 per activation + $50 per active member per quarter (in arrears). Cellular: $75 per activation + $15 per active member per month. Plus 5% of TMRW product revenue (incl. peptides) per member." },
   { label: "Setup fee", value: "None" },
   { label: "Clinical liability", value: "TMRW. Foundation carries none." },
+  { label: "On-site activation events", value: "2–3 TMRW pop-ups at 350 Bourke during the launch window. TMRW supplies phlebotomist, kit, and on-the-day signage." },
   { label: "Co-branded events", value: "2–4 per year at 350 Bourke, at Foundation’s choice. TMRW provides speakers and content." },
   { label: "Co-launch marketing", value: "Coordinated social launch. TMRW provides creative, assets, and paid budget." },
   { label: "Temporary signage", value: "Modest co-branded signage during the launch period. Comes down when the launch window ends." },
@@ -167,7 +254,7 @@ export const NEXT_STEPS = [
   {
     step: "02",
     title: "Launch preparation",
-    desc: "Partner code issued. Member-facing assets produced — email copy, in-app messages, in-class script, launch social. TMRW briefs the clinical team. Foundation schedules the launch event.",
+    desc: "Partner code issued. On-site event dates locked. Member-facing assets produced — email copy, in-app messages, in-class script, launch social. TMRW briefs the clinical team and schedules phlebotomists.",
     timeline: "Early May",
   },
   {

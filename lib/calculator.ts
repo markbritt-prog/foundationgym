@@ -30,9 +30,9 @@ function computeYearEcon(
   newJoiners: number,
   attachRate: number
 ): Omit<YearResult, "year"> {
-  const joiningIncome = newJoiners * COMMERCIAL.foundationActivation;
+  const joiningIncome = newJoiners * COMMERCIAL.foundationActivationBlended;
   const monthlyIncome =
-    activeMembers * COMMERCIAL.foundationMonthlyShare * 12;
+    activeMembers * COMMERCIAL.foundationMonthlyShareBlended * 12;
   const productIncome =
     activeMembers *
     attachRate *
@@ -100,8 +100,8 @@ export function computeSensitivityCell(
     const newJoiners = Math.max(0, activationsY1 + i * annualNewJoinerIncrement);
     const active = prevActive * (1 - annualChurnRate) + newJoiners;
 
-    const joining = newJoiners * COMMERCIAL.foundationActivation;
-    const monthly = active * COMMERCIAL.foundationMonthlyShare * 12;
+    const joining = newJoiners * COMMERCIAL.foundationActivationBlended;
+    const monthly = active * COMMERCIAL.foundationMonthlyShareBlended * 12;
     const product =
       active *
       attachRate *

@@ -4,6 +4,8 @@ import {
   PARTNER_NAME,
   PARTNER_SUBURB,
   PROPOSAL_DATE,
+  PLANS,
+  LAUNCH_INCENTIVE_OPTIONS,
   DEAL_PANELS,
   DEAL_ECONOMICS,
   JOURNEY_STEPS,
@@ -150,24 +152,47 @@ function generateMarkdown(): string {
   // 06 Customer Proposition
   push("## 06 \u2014 The Member Offer");
   blank();
-  push("**We\u2019ve simplified everything.**");
+  push("**Two ways in.**");
   blank();
   push(
-    `We\u2019ve dropped the joining fee and reduced the weekly price \u2014 same offer for everyone, no special-case discount. On top of that, ${PARTNER_NAME} members get one complimentary clinical consult.`
+    "Brighter reads 75+ blood markers. Cellular adds 1,700+ cellular markers and validated clocks. Same clinical team, two depths of read \u2014 the member chooses."
   );
   blank();
-  push("> Heads up: we\u2019re still testing the role of a joining fee, so this may evolve before launch.");
+  for (const plan of PLANS) {
+    const badge = "badge" in plan && plan.badge ? ` *(${plan.badge})*` : "";
+    push(`### ${plan.name} \u2014 $${plan.monthlyPrice}/mo${badge}`);
+    blank();
+    push(`*${plan.tagline}*`);
+    blank();
+    push(plan.description);
+    blank();
+    for (const line of plan.lines) push(`- ${line}`);
+    blank();
+    push(`*${plan.footer}*`);
+    blank();
+  }
+  push("### Joining fee");
   blank();
-  push("| | Public retail \u2014 before | Public retail \u2014 now |");
-  push("| --- | --- | --- |");
-  push("| Joining fee | ~~$499~~ (one-off) | **$0** (under review) |");
-  push("| Weekly | ~~~$57 / week (at $249/mo)~~ | **$69 / week** ($299/mo, all in) |");
+  push(
+    "Was ~~$499~~. Now **$0** \u2014 dropped across the board. We found it was a meaningful inhibitor to growth, so we made starting easier. We expect higher adoption as a result. (Still under review.)"
+  );
   blank();
   push(
     `**On top, for ${PARTNER_NAME} members:** one complimentary session with a performance nutritionist or a peptide doctor \u2014 their pick.`
   );
   blank();
-  push("*What that membership actually buys, itemised next.*");
+  push("### Launch incentive \u2014 ideas for discussion");
+  blank();
+  push(
+    "None of these are baked in. They\u2019re shapes we could give the launch offer to drive faster adoption \u2014 pick the one (or none) that fits how Foundation wants to push this."
+  );
+  blank();
+  for (let i = 0; i < LAUNCH_INCENTIVE_OPTIONS.length; i++) {
+    const opt = LAUNCH_INCENTIVE_OPTIONS[i];
+    push(`${String(i + 1).padStart(2, "0")}. **${opt.label}** \u2014 ${opt.body}`);
+  }
+  blank();
+  push("*What each plan actually buys, itemised next.*");
   blank();
   push("---");
   blank();
@@ -203,7 +228,7 @@ function generateMarkdown(): string {
   );
   blank();
   push("01. **What\u2019s the right additional offer value?** \u2014 peptide consultation, performance nutrition, deep-dive on gut health \u2014 there are several extras we could pull into the complimentary session for Foundation members. Which one moves your members?");
-  push("02. **The revenue share mix ($75 / $15 / 5%)** \u2014 $75 per activation, $15 per active member per month, 5% of product revenue. Is this enough for you to actively champion this, or should we stretch it to make sure you\u2019re pushing it hard?");
+  push("02. **The revenue mix (Brighter vs Cellular)** \u2014 Brighter pays Foundation $50 on activation + $50/quarter ongoing. Cellular pays $75 on activation + $15/month ongoing. Plus 5% of product revenue (incl. peptides) across both. Is that mix worth pushing hard, or do we need to dial it up to get behind it?");
   blank();
   push("---");
   blank();

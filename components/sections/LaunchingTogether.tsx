@@ -30,6 +30,9 @@ export function LaunchingTogether() {
               </span>
               <div className="mt-5 space-y-5 font-body text-[0.95rem] leading-[1.65] tracking-[-0.01em] text-tmrw-grey-700">
                 <p>
+                  On-site activation. 2&ndash;3 TMRW pop-up events at 350 Bourke during the launch window &mdash; phlebotomist, sign-up device, and on-the-day signage. Members get the friction-free path from training floor to first blood draw.
+                </p>
+                <p>
                   The campaign. Co-branded creative and marketing materials for in the gym, PR, and a launch event held at 350 Bourke. All content production &mdash; photography, short-form video, founder interviews, member stories &mdash; on the TMRW budget.
                 </p>
                 <p>
@@ -46,7 +49,7 @@ export function LaunchingTogether() {
               </span>
               <div className="mt-5 space-y-5 font-body text-[0.95rem] leading-[1.65] tracking-[-0.01em] text-tmrw-grey-700">
                 <p>
-                  Channels and coordination. Foundation&apos;s social accounts and email announcing the partnership in coordinated sequence with TMRW. Partner code in the member app and new-member welcome sequence. One co-branded in-gym launch event, plus one TMRW event per quarter after that.
+                  Channels and coordination. Foundation&apos;s social accounts and email announcing the partnership in coordinated sequence with TMRW. Partner code in the member app and new-member welcome sequence. Space inside the gym for the 2&ndash;3 on-site activation events. One TMRW event per quarter after that.
                 </p>
                 <p>
                   Member comms and introductions. Warm introductions to Foundation members who could be ambassadors or influencer candidates. Founder, coach, and operations team availability for co-branded content days.

@@ -30,12 +30,20 @@ export function CalculatorOutput({ result }: Props) {
       <div className="mt-6 border-t border-tmrw-grey-200 pt-2">
         <OutputRow
           label="Activation income"
-          value={`${y1.newJoiners} \u00d7 $${COMMERCIAL.foundationActivation}`}
+          value={`${y1.newJoiners} \u00d7 ~$${Math.round(
+            COMMERCIAL.foundationActivationBlended
+          )}`}
         />
         <OutputRow label="Joining total" value={formatDollarsShort(y1.joiningIncome)} />
-        <OutputRow label="Monthly income" value={formatDollarsShort(y1.monthlyIncome)} />
+        <OutputRow label="Ongoing income" value={formatDollarsShort(y1.monthlyIncome)} />
         <OutputRow label="Product revenue share" value={formatDollarsShort(y1.productIncome)} />
         <OutputRow label="Product share of total" value={`${Math.round(productShareOfTotal)}%`} />
+      </div>
+
+      <div className="mt-2 pb-2">
+        <p className="font-body text-[0.7rem] italic text-tmrw-grey-500 leading-[1.5] tracking-[-0.01em]">
+          Blended at 50% Brighter / 50% Cellular.
+        </p>
       </div>
 
       <div className="mt-6 border-t border-tmrw-grey-200 pt-2">
