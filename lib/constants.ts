@@ -122,14 +122,14 @@ export const DEAL_ECONOMICS = {
   title: "What Foundation earns",
   rows: [
     {
-      value: "$50",
-      label: "PER BRIGHTER ACTIVATION",
-      note: "+ $50 per active Brighter member, paid quarterly in arrears",
+      value: "$50 + $50/qtr",
+      label: "PER BRIGHTER MEMBER",
+      note: "$50 on activation + $50 per quarter ongoing, paid in arrears",
     },
     {
-      value: "$75",
-      label: "PER CELLULAR ACTIVATION",
-      note: "+ $15 per active Cellular member, paid monthly",
+      value: "$75 + $15/mo",
+      label: "PER CELLULAR MEMBER",
+      note: "$75 on activation + $15 per month ongoing",
     },
     {
       value: "5%",
