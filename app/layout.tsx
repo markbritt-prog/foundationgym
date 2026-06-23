@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "TMRW \u00d7 VRTUS \u2014 Partnership Proposal",
-  description: "Integrated precision health for premium fitness partners.",
+  title: "TMRW \u00d7 The Foundation \u2014 Partnership Proposal",
+  description: "Integrated precision health for Foundation members, Surry Hills.",
   robots: "noindex, nofollow",
   icons: {
     icon: "https://res.cloudinary.com/dkbhatjde/image/upload/v1774156339/TMRW_Monogram_Black_m8ld50.svg",

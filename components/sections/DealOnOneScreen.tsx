@@ -4,22 +4,22 @@ import { DEAL_PANELS, DEAL_ECONOMICS } from "@/lib/constants";
 export function DealOnOneScreen() {
   return (
     <section id="deal" className="bg-tmrw-grey-50 py-16 sm:py-20 md:py-24 lg:py-32">
-      <div className="max-w-5xl mx-auto px-6 md:px-10">
+      <div className="max-w-6xl mx-auto px-6 md:px-10">
         <FadeIn>
-          <span className="font-ui text-[0.65rem] md:text-[0.7rem] uppercase tracking-[0.04em] text-tmrw-syringe mb-5 block">
-            04 &mdash; THE DEAL
+          <span className="font-ui text-[0.65rem] md:text-[0.7rem] uppercase tracking-[0.04em] text-tmrw-grey-700 mb-5 block">
+            03 &mdash; HOW THIS WORKS
           </span>
         </FadeIn>
 
         <FadeIn>
           <h2 className="font-display text-[1.875rem] sm:text-[2.25rem] md:text-[2.75rem] lg:text-[4rem] uppercase leading-[0.95] tracking-[-0.01em] text-tmrw-black">
-            WHAT&apos;S ON THE TABLE.
+            FOUNDATION INTRODUCES.<br />TMRW OPERATES.
           </h2>
         </FadeIn>
 
         <FadeIn>
           <p className="font-body text-[0.9rem] sm:text-[0.95rem] md:text-[1.05rem] leading-[1.55] tracking-[-0.01em] text-tmrw-grey-700 max-w-2xl mt-5">
-            The entire partnership, at a glance.
+            The whole deal, on one screen.
           </p>
         </FadeIn>
 
@@ -35,8 +35,8 @@ export function DealOnOneScreen() {
         </div>
 
         <FadeIn delay={0.4}>
-          <p className="font-body text-[0.8rem] italic text-tmrw-grey-700 mt-8 text-center tracking-[-0.01em]">
-            Year 1 base case: ~$138k to VRTUS. Model the full economics below &darr;
+          <p className="font-body text-[0.85rem] md:text-[0.9rem] italic text-tmrw-grey-700 mt-8 text-center tracking-[-0.01em]">
+            Modest on paper. The real return is what this does to your retention &mdash; next section.
           </p>
         </FadeIn>
       </div>
@@ -59,8 +59,9 @@ function DealPanel({ panel }: { panel: typeof DEAL_PANELS[number] }) {
             key={line}
             className={`py-1.5 ${i > 0 ? "border-t border-tmrw-grey-100" : ""}`}
           >
-            <p className="font-body text-[0.875rem] text-tmrw-grey-700 leading-[1.55] tracking-[-0.01em]">
-              &mdash; {line}
+            <p className="font-body text-[0.875rem] text-tmrw-grey-700 leading-[1.55] tracking-[-0.01em] flex gap-2">
+              <span aria-hidden="true" className="shrink-0">&mdash;</span>
+              <span className="flex-1">{line}</span>
             </p>
           </div>
         ))}

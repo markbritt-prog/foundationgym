@@ -1,6 +1,7 @@
 "use client";
 import type { CalcInputs, CalcResult } from "@/lib/calculator";
 import { formatDollarsShort } from "@/lib/calculator";
+import { COMMERCIAL } from "@/lib/constants";
 
 interface Props {
   inputs: CalcInputs;
@@ -13,7 +14,7 @@ export function CalculatorOutput({ result }: Props) {
 
   return (
     <div className="lg:sticky lg:top-24 border border-tmrw-grey-200 bg-tmrw-grey-50 p-7 rounded-sm">
-      <span className="font-ui text-[0.65rem] uppercase tracking-[0.04em] text-tmrw-syringe">
+      <span className="font-ui text-[0.65rem] uppercase tracking-[0.04em] text-tmrw-grey-700">
         CURRENT MODEL
       </span>
 
@@ -22,15 +23,27 @@ export function CalculatorOutput({ result }: Props) {
           {formatDollarsShort(y1.total)}
         </div>
         <div className="font-ui text-[0.65rem] uppercase tracking-[0.04em] text-tmrw-grey-700 mt-2">
-          YEAR 1 TO VRTUS
+          YEAR 1 TO FOUNDATION
         </div>
       </div>
 
       <div className="mt-6 border-t border-tmrw-grey-200 pt-2">
-        <OutputRow label="Joining fee income" value={formatDollarsShort(y1.joiningIncome)} />
-        <OutputRow label="Monthly income" value={formatDollarsShort(y1.monthlyIncome)} />
+        <OutputRow
+          label="Activation income"
+          value={`${y1.newJoiners} \u00d7 ~$${Math.round(
+            COMMERCIAL.foundationActivationBlended
+          )}`}
+        />
+        <OutputRow label="Joining total" value={formatDollarsShort(y1.joiningIncome)} />
+        <OutputRow label="Ongoing income" value={formatDollarsShort(y1.monthlyIncome)} />
         <OutputRow label="Product revenue share" value={formatDollarsShort(y1.productIncome)} />
         <OutputRow label="Product share of total" value={`${Math.round(productShareOfTotal)}%`} />
+      </div>
+
+      <div className="mt-3 pb-1">
+        <p className="font-ui text-[0.6rem] uppercase tracking-[0.04em] text-tmrw-infusion">
+          50 / 50 BRIGHTER · CELLULAR
+        </p>
       </div>
 
       <div className="mt-6 border-t border-tmrw-grey-200 pt-2">

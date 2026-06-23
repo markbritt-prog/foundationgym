@@ -1,11 +1,12 @@
 import { FadeIn } from "@/components/ui/FadeIn";
+import { PARTNER_NAME, PARTNER_SUBURB } from "@/lib/constants";
 
 export function WhyNow() {
   return (
     <section id="why-now" className="bg-tmrw-grey-50 py-14 sm:py-16 md:py-20 lg:py-24">
-      <div className="max-w-5xl mx-auto px-6 md:px-10">
+      <div className="max-w-6xl mx-auto px-6 md:px-10">
         <FadeIn>
-          <span className="font-ui text-[0.65rem] md:text-[0.7rem] uppercase tracking-[0.04em] text-tmrw-syringe mb-4 block">
+          <span className="font-ui text-[0.65rem] md:text-[0.7rem] uppercase tracking-[0.04em] text-tmrw-grey-700 mb-4 block">
             02 &mdash; WHY NOW
           </span>
         </FadeIn>
@@ -19,7 +20,7 @@ export function WhyNow() {
         <div className="mt-8 md:mt-10 space-y-6 font-body text-[0.925rem] md:text-[0.95rem] leading-[1.65] tracking-[-0.01em] text-tmrw-grey-700">
           <FadeIn delay={0.1}>
             <p>
-              Health and fitness spending in Australia rose 27% year-on-year in early 2025 against broader discretionary declines. Fitness has moved from a discretionary purchase to essential lifestyle maintenance. The VRTUS member already pays a premium for outcomes. The question is whether the category next to fitness &mdash; longevity, diagnostics, protocol-driven health &mdash; sits inside VRTUS, or somewhere else.
+              Health and fitness spending in Australia rose 27% year-on-year in early 2025 against broader discretionary declines. Fitness has moved from a discretionary purchase to essential lifestyle maintenance. The {PARTNER_NAME} member already pays a premium for outcomes. The question is whether the category next to fitness &mdash; longevity, diagnostics, protocol-driven health &mdash; sits adjacent to {PARTNER_NAME}, or somewhere else.
             </p>
           </FadeIn>
           <FadeIn delay={0.15}>
@@ -56,7 +57,7 @@ export function WhyNow() {
               >
                 Fountain Life
               </a>
-              . Each was built bespoke over years on proprietary clinical infrastructure. What Australia has lacked is the platform that lets a premium operator run the integrated model without having to build the clinic. That&apos;s what TMRW is &mdash; and VRTUS in Bondi is where we want to prove it.
+              . Each was built bespoke over years on proprietary clinical infrastructure. What Australia has lacked is the platform that lets a premium operator run the integrated model without having to build the clinic. That&apos;s what TMRW is &mdash; and {PARTNER_NAME} in {PARTNER_SUBURB} is where we want to prove it.
             </p>
           </FadeIn>
           <FadeIn delay={0.25}>

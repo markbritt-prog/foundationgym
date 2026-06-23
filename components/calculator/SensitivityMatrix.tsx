@@ -7,8 +7,8 @@ interface Props {
   className?: string;
 }
 
-const ATTACH_ROWS = [0.2, 0.25, 0.3, 0.35];
-const ACTIVATION_COLS = [100, 200, 300, 400, 500];
+const ATTACH_ROWS = [0.15, 0.2, 0.25, 0.3, 0.35];
+const ACTIVATION_COLS = [10, 20, 30, 40, 50];
 
 function nearest<T extends number>(value: T, options: T[]): T {
   return options.reduce((a, b) =>
@@ -32,7 +32,7 @@ export function SensitivityMatrix({ inputs, className = "" }: Props) {
         WHAT THE PARTNERSHIP IS POTENTIALLY WORTH.
       </h3>
       <p className="font-body text-[0.9rem] text-tmrw-grey-700 mt-4 max-w-2xl leading-[1.6] tracking-[-0.01em]">
-        5-year annual average revenue to VRTUS across activation and attach scenarios. Assumes +50 new members per year on top of the Year 1 base and an 18-month average retention, which produces a growing active cohort each year. The highlighted cell reflects your current slider position.
+        5-year annual average revenue to Foundation across Year&nbsp;1 activations and attach scenarios. Holds your current annual-increment and retention sliders constant. The highlighted cell reflects your current slider position.
       </p>
 
       <div className="mt-8 md:mt-10 -mx-6 md:mx-0 overflow-x-auto">
@@ -63,7 +63,12 @@ export function SensitivityMatrix({ inputs, className = "" }: Props) {
                   {Math.round(attach * 100)}% ATTACH
                 </td>
                 {ACTIVATION_COLS.map((acts) => {
-                  const v = computeSensitivityCell(acts, attach);
+                  const v = computeSensitivityCell(
+                    acts,
+                    attach,
+                    inputs.annualNewJoinerIncrement,
+                    inputs.retentionMonths
+                  );
                   const isCurrent =
                     attach === currentAttach && acts === currentActivations;
                   return (
@@ -71,7 +76,7 @@ export function SensitivityMatrix({ inputs, className = "" }: Props) {
                       key={acts}
                       className={`py-4 px-2 text-center font-body text-[0.875rem] md:text-[0.95rem] tracking-[-0.01em] transition-colors whitespace-nowrap ${
                         isCurrent
-                          ? "bg-tmrw-syringe text-tmrw-white font-semibold"
+                          ? "bg-tmrw-infusion text-tmrw-black font-semibold"
                           : "text-tmrw-black"
                       }`}
                     >
@@ -90,7 +95,7 @@ export function SensitivityMatrix({ inputs, className = "" }: Props) {
       </p>
 
       <p className="font-body text-[0.75rem] italic text-tmrw-grey-700 mt-5 leading-[1.55] tracking-[-0.01em] max-w-2xl">
-        Average of Year 1 through Year 5. Cohort model: each year adds +50 new members vs the previous year. Active members in any year = that year&apos;s new joiners + 50% of the prior year&apos;s joiners.
+        Average of Year&nbsp;1 through Year&nbsp;5. Cohort model: new joiners grow by your fixed annual increment; active members each year = last year&apos;s retained cohort plus this year&apos;s new joiners, with churn derived from your retention slider.
       </p>
     </div>
   );

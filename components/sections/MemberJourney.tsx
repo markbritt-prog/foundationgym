@@ -2,19 +2,18 @@ import { FadeIn } from "@/components/ui/FadeIn";
 import { JOURNEY_STEPS, PARTNER_NAME } from "@/lib/constants";
 
 function accentFor(i: number): { text: string; border: string } {
-  // Alternate syringe red / toxic green across steps
-  return i % 2 === 0
-    ? { text: "text-tmrw-syringe", border: "border-tmrw-syringe" }
-    : { text: "text-tmrw-infusion", border: "border-tmrw-infusion" };
+  // Quiet default, single accent on the retest/optimise step which is the payoff
+  if (i === 5) return { text: "text-tmrw-infusion", border: "border-tmrw-infusion" };
+  return { text: "text-tmrw-grey-500", border: "border-tmrw-grey-700" };
 }
 
 export function MemberJourney() {
   return (
     <section id="member-journey" className="bg-tmrw-black py-14 sm:py-16 md:py-20 lg:py-24">
-      <div className="max-w-5xl mx-auto px-6 md:px-10">
+      <div className="max-w-6xl mx-auto px-6 md:px-10">
         <FadeIn>
-          <span className="font-ui text-[0.65rem] md:text-[0.7rem] uppercase tracking-[0.04em] text-tmrw-infusion mb-4 block">
-            03 &mdash; THE MEMBER JOURNEY
+          <span className="font-ui text-[0.65rem] md:text-[0.7rem] uppercase tracking-[0.04em] text-tmrw-grey-300 mb-4 block">
+            05 &mdash; THE MEMBER JOURNEY
           </span>
         </FadeIn>
 
@@ -26,7 +25,7 @@ export function MemberJourney() {
 
         <FadeIn>
           <p className="font-body text-[0.9rem] sm:text-[0.95rem] md:text-[1.05rem] text-tmrw-grey-300 mt-4 max-w-xl leading-[1.55] tracking-[-0.01em]">
-            The entire onboarding happens at {PARTNER_NAME}. No external appointments, no waiting. One visit to start.
+            A {PARTNER_NAME} member signs up online or at a TMRW collection centre. Protocol is built on their data and shipped direct.
           </p>
         </FadeIn>
 

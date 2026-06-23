@@ -15,14 +15,14 @@ interface StackItem {
 const STACK: StackItem[] = [
   {
     label: "Epigenetic age testing (TruAge / TruHealth bundle)",
-    qty: "3 \u00d7",
+    qty: "2 \u00d7",
     unitPrice: 1300,
-    subtotal: 3900,
+    subtotal: 2600,
     reference: {
       provider: "Biogenix",
       url: "https://biogenix.com.au/",
     },
-    note: "Baseline, 4-month retest, 8-month retest. DNA methylation, OMICmAge, DunedinPACE, SymphonyAge, telomere length.",
+    note: "Two comprehensive panels per year, baseline and retest. DNA methylation, OMICmAge, DunedinPACE, SymphonyAge, telomere length.",
   },
   {
     label: "Comprehensive blood panel",
@@ -33,7 +33,7 @@ const STACK: StackItem[] = [
       provider: "Bloody Good Tests",
       url: "https://bloodygood.com.au/products/the-bloody-good-test",
     },
-    note: "100+ biomarkers across energy, hormones, nutrition, inflammation, organ function.",
+    note: "100+ biomarkers across energy, hormones, nutrition, inflammation, organ function. A second retest runs where clinically indicated.",
   },
   {
     label: "Deep-dive clinician consultations",
@@ -67,18 +67,14 @@ const STACK: StackItem[] = [
 
 const TOTAL_STACK_VALUE = STACK.reduce((sum, item) => sum + item.subtotal, 0);
 
-const DIALS: { label: string; detail: string }[] = [
+const DIALS: { label: string; question: string }[] = [
   {
-    label: "The joining-fee discount",
-    detail: "currently 50%.",
+    label: "What\u2019s the right additional offer value?",
+    question: "Peptide consultation, performance nutrition, deep-dive on gut health \u2014 there are several extras we could pull into the complimentary session for Foundation members. Which one moves your members?",
   },
   {
-    label: "The peptide and high-performance nutrition consult",
-    detail: "currently included.",
-  },
-  {
-    label: "The revenue share mix to VRTUS",
-    detail: "currently $249 per activation, $10 per active member per month, 10% of product revenue.",
+    label: "The revenue mix (Brighter vs Cellular)",
+    question: "Brighter pays Foundation $50 on activation + $50/quarter ongoing. Cellular pays $75 on activation + $15/month ongoing. Plus 5% of product revenue (incl. peptides) across both. Is that mix worth pushing hard, or do we need to dial it up to get behind it?",
   },
 ];
 
@@ -88,10 +84,10 @@ export function ValueStack() {
       id="value-stack"
       className="bg-tmrw-white py-16 sm:py-20 md:py-24 lg:py-32"
     >
-      <div className="max-w-5xl mx-auto px-6 md:px-10">
+      <div className="max-w-6xl mx-auto px-6 md:px-10">
         <FadeIn>
-          <span className="font-ui text-[0.65rem] md:text-[0.7rem] uppercase tracking-[0.04em] text-tmrw-infusion">
-            05 &mdash; THE LONGEVITY PROGRAMME
+          <span className="font-ui text-[0.65rem] md:text-[0.7rem] uppercase tracking-[0.04em] text-tmrw-grey-700">
+            07 &mdash; THE LONGEVITY PROGRAMME
           </span>
         </FadeIn>
 
@@ -103,7 +99,7 @@ export function ValueStack() {
 
         <FadeIn>
           <p className="font-body text-[0.9rem] sm:text-[0.95rem] md:text-[1.05rem] leading-[1.55] tracking-[-0.01em] text-tmrw-grey-700 max-w-2xl mt-5">
-            What a VRTUS member receives in year one, and what they&apos;d
+            What a Foundation member receives in year one, and what they&apos;d
             pay for equivalent care elsewhere in Australia.
           </p>
         </FadeIn>
@@ -141,7 +137,7 @@ export function ValueStack() {
                       href={item.reference.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1.5 mt-2 font-ui text-[0.6rem] tracking-[0.04em] uppercase text-tmrw-grey-700 hover:text-tmrw-syringe transition-colors min-h-[32px]"
+                      className="inline-flex items-center gap-1.5 mt-2 font-ui text-[0.6rem] tracking-[0.04em] uppercase text-tmrw-grey-700 hover:text-tmrw-black transition-colors min-h-[32px]"
                     >
                       Priced at {item.reference.provider}
                       <svg width="9" height="9" viewBox="0 0 9 9" fill="none">
@@ -203,35 +199,37 @@ export function ValueStack() {
         <div className="mt-20 md:mt-24 pt-16 md:pt-20 border-t border-tmrw-grey-200">
           <FadeIn>
             <span className="font-ui text-[0.65rem] md:text-[0.7rem] tracking-[0.04em] uppercase text-tmrw-grey-700">
-              THE BALANCE
+              THE DIALS
             </span>
           </FadeIn>
 
           <FadeIn>
             <h3 className="font-display text-[1.5rem] sm:text-[1.75rem] md:text-[2rem] leading-none tracking-[-0.01em] uppercase text-tmrw-black mt-4">
-              Three things worth your feedback.
+              Three things we&apos;d like your take on.
             </h3>
           </FadeIn>
 
           <FadeIn>
             <p className="font-body text-[0.95rem] md:text-[1rem] leading-[1.6] tracking-[-0.01em] text-tmrw-grey-700 max-w-2xl mt-5">
-              We think we&apos;ve structured a compelling offer to drive
-              adoption at scale, but we want your feedback on the balance.
-              Three things in particular.
+              We&apos;ve structured this to go live in three weeks. Before anything gets locked in, there are three dials we&apos;d genuinely like your view on &mdash; we want this to be a shape you&apos;ll push, not a shape you&apos;ll tolerate.
             </p>
           </FadeIn>
 
           <div className="mt-8 md:mt-10">
             {DIALS.map((dial, i) => (
               <FadeIn key={dial.label} delay={0.06 * i}>
-                <div className="flex items-baseline gap-4 md:gap-6 py-4 md:py-5 border-b border-tmrw-grey-200 last:border-0">
-                  <span className="font-ui text-[0.6rem] tracking-[0.04em] uppercase text-tmrw-grey-700 shrink-0 w-8">
+                <div className="flex items-baseline gap-4 md:gap-6 py-5 md:py-6 border-b border-tmrw-grey-200 last:border-0">
+                  <span className="font-ui text-[0.6rem] tracking-[0.04em] uppercase text-tmrw-grey-500 shrink-0 w-8">
                     {String(i + 1).padStart(2, "0")}
                   </span>
-                  <p className="font-body text-[0.95rem] md:text-[1rem] text-tmrw-black leading-[1.5] tracking-[-0.01em]">
-                    <span className="text-tmrw-black">{dial.label}</span>
-                    <span className="text-tmrw-grey-700"> &mdash; {dial.detail}</span>
-                  </p>
+                  <div className="flex-1">
+                    <p className="font-body text-[0.95rem] md:text-[1rem] text-tmrw-black leading-[1.5] tracking-[-0.01em] font-semibold">
+                      {dial.label}
+                    </p>
+                    <p className="font-body text-[0.9rem] md:text-[0.95rem] text-tmrw-grey-700 leading-[1.6] tracking-[-0.01em] mt-2">
+                      {dial.question}
+                    </p>
+                  </div>
                 </div>
               </FadeIn>
             ))}
@@ -239,8 +237,7 @@ export function ValueStack() {
 
           <FadeIn delay={0.3}>
             <p className="font-body text-[0.875rem] md:text-[0.95rem] leading-[1.6] tracking-[-0.01em] text-tmrw-grey-700 max-w-2xl mt-8">
-              These are the pieces we expect to move as we learn what works.
-              The next section shows the commercial shape as it currently stands.
+              These are the pieces we expect to move as we learn what works. The next section shows the commercial shape as it currently stands.
             </p>
           </FadeIn>
         </div>

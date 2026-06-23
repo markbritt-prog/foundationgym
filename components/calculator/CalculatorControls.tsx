@@ -13,7 +13,7 @@ export function CalculatorControls({ inputs, setInputs }: Props) {
     if (!s) return;
     setInputs({
       activationsY1: s.activationsY1,
-      activeMembersY2: s.activeMembersY2,
+      annualNewJoinerIncrement: s.annualNewJoinerIncrement,
       retentionMonths: s.retentionMonths,
       productAttachRate: s.productAttachRate,
     });
@@ -45,26 +45,26 @@ export function CalculatorControls({ inputs, setInputs }: Props) {
       <div className="mt-12 space-y-10">
         <Slider
           label="Activations in Year 1"
-          min={50}
-          max={500}
-          step={10}
+          min={0}
+          max={50}
+          step={5}
           value={inputs.activationsY1}
           onChange={(v) => setInputs({ ...inputs, activationsY1: v })}
           format={(v) => `${v} members`}
         />
         <Slider
-          label="Active members in Year 2"
-          min={100}
-          max={650}
-          step={10}
-          value={inputs.activeMembersY2}
-          onChange={(v) => setInputs({ ...inputs, activeMembersY2: v })}
-          format={(v) => `${v} members`}
+          label="New joiners added each year"
+          min={0}
+          max={30}
+          step={5}
+          value={inputs.annualNewJoinerIncrement}
+          onChange={(v) => setInputs({ ...inputs, annualNewJoinerIncrement: v })}
+          format={(v) => `+${v} / yr`}
         />
         <Slider
-          label="Average retention (months)"
+          label="Average retention"
           min={6}
-          max={36}
+          max={48}
           step={1}
           value={inputs.retentionMonths}
           onChange={(v) => setInputs({ ...inputs, retentionMonths: v })}
@@ -72,7 +72,7 @@ export function CalculatorControls({ inputs, setInputs }: Props) {
         />
         <Slider
           label="Product-line attach rate"
-          min={10}
+          min={5}
           max={50}
           step={1}
           value={Math.round(inputs.productAttachRate * 100)}

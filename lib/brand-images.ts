@@ -70,17 +70,9 @@ export function getBrandImageUrl(id: string, width?: number): string {
   return cloudinaryUrl(id, width);
 }
 
-// Environmental / editorial pool — suitable as atmospheric hero background.
-// Avoids tight portraits that crop awkwardly behind the logo card.
-const HERO_POOL = [
-  "09_251030_TMRW_1187_edited_1_apqtry",
-  "06_TMRW_0767_ten8ay",
-  "06_TMRW_0710_scr6br",
-  "03_250801_TMRW_1295_1_xnqklr",
-  "02_250801_TMRW_0672_1_tmbarf",
-];
-
-export const HERO_IMAGE_ID = HERO_POOL[0];
+// Deliberately chosen. Not randomised. The hero of a partnership proposal
+// only gets one first impression — don't leave that to Math.random().
+export const HERO_IMAGE_ID = "251128_TMRW_PAUL_HINES_1887_y9myed";
 
 export function getHeroImage(width: number = 1400): string {
   return cloudinaryUrl(HERO_IMAGE_ID, width);

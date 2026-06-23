@@ -6,7 +6,7 @@ export function Peptides() {
       id="peptides"
       className="bg-tmrw-white py-12 md:py-16 lg:py-20 scroll-mt-14"
     >
-      <div className="max-w-5xl mx-auto px-6 md:px-10">
+      <div className="max-w-6xl mx-auto px-6 md:px-10">
         <FadeIn>
           <span className="font-ui text-[0.65rem] md:text-[0.7rem] uppercase tracking-[0.04em] text-tmrw-grey-700">
             10 &mdash; PEPTIDES, SPECIFICALLY
@@ -15,7 +15,7 @@ export function Peptides() {
 
         <FadeIn>
           <h2 className="font-display text-[1.25rem] sm:text-[1.5rem] md:text-[1.75rem] lg:text-[2rem] leading-none tracking-[-0.01em] uppercase text-tmrw-black mt-5 md:mt-6">
-            THE CATEGORY, SPECIFICALLY.
+            RAPIDLY CHANGING CATEGORY.
           </h2>
         </FadeIn>
 
@@ -34,7 +34,7 @@ export function Peptides() {
 
           <FadeIn delay={0.15}>
             <p>
-              Integrated appropriately &mdash; per individual clinical assessment, never as a default &mdash; peptides are what make the model&apos;s ARPU assumptions real. A member on a peptide protocol is paying substantially more per year than a member on supplements alone, which is why the calculator&apos;s base case assumes approximately $3,000 annual spend at 30% attach. Not every member is a candidate; clinicians assess suitability, including any competitive sporting considerations. The 70% who don&apos;t convert still drive the joining-fee and per-member-per-month streams. The 30% who do are what make this category meaningfully more valuable than a typical supplement channel &mdash; and what keep VRTUS&apos;s Stage 1 economics above the threshold that makes this partnership worth doing.
+              Integrated appropriately &mdash; per individual clinical assessment, never as a default &mdash; peptides are what make the model&apos;s ARPU assumptions real. A member on a peptide protocol is paying substantially more per year than a member on supplements alone, which is why the calculator&apos;s base case assumes approximately $3,000 annual spend at 25% attach. Not every member is a candidate; clinicians assess suitability, including any competitive sporting considerations. The 75% who don&apos;t convert still drive the joining-fee and per-member-per-month streams, but we&apos;ll make an additional purchase of supplements, sleep protocols, HRT, etc.
             </p>
           </FadeIn>
         </div>

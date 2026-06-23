@@ -84,7 +84,7 @@ export function YearBuildTable({ result, className = "" }: Props) {
       </div>
 
       <p className="mt-5 font-body text-[0.75rem] italic text-tmrw-grey-700 leading-[1.55] tracking-[-0.01em] max-w-2xl">
-        Years 3 to 5 continue activating new members at the Year 1 rate while existing members churn at the retention rate you&apos;ve set. The active base converges toward its natural equilibrium &mdash; higher retention means more members stay, growing the base and its recurring revenue.
+        New joiners grow by the fixed annual increment you&apos;ve set (Base assumes Year&nbsp;1 = 75 with +25 each year). Existing members churn at the rate implied by your retention slider. Higher retention means more members stay, compounding the active base and its recurring revenue across the five years.
       </p>
     </div>
   );

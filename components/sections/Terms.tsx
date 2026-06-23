@@ -4,7 +4,7 @@ import { TERMS_STAGE1 } from "@/lib/constants";
 export function Terms() {
   return (
     <section id="terms" className="bg-tmrw-white border-t border-tmrw-grey-200 py-10 sm:py-12 md:py-14 lg:py-16">
-      <div className="max-w-5xl mx-auto px-6 md:px-10">
+      <div className="max-w-6xl mx-auto px-6 md:px-10">
         <FadeIn>
           <h2 className="font-body text-[1.125rem] sm:text-[1.25rem] md:text-[1.5rem] lg:text-[1.75rem] leading-[1.1] tracking-[-0.01em] text-tmrw-black">
             Indicative term sheet.
@@ -13,7 +13,7 @@ export function Terms() {
 
         <FadeIn>
           <p className="font-body text-[0.875rem] text-tmrw-grey-700 leading-[1.6] tracking-[-0.01em] mt-4 mb-10 max-w-xl">
-            Stage 1, launch term. Stage 2 terms are out of scope for this document and would be drafted jointly at month 6 if we proceed.
+            The launch-term shape. Everything below is indicative &mdash; the formal agreement is drafted once we align.
           </p>
         </FadeIn>
 

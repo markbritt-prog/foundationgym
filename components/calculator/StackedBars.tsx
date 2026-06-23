@@ -57,7 +57,7 @@ export function StackedBars({ years }: Props) {
                 y={bottom - totalH}
                 width={BAR_W}
                 height={productH}
-                fill="#E61317"
+                fill="#E4A30B"
               >
                 <title>Year {y.year} product share: {formatDollarsShort(y.productIncome)}</title>
               </rect>
@@ -93,7 +93,7 @@ export function StackedBars({ years }: Props) {
       <div className="flex items-center justify-center gap-5 md:gap-8 mt-5 flex-wrap">
         <LegendDot color="bg-tmrw-black" label="JOINING" />
         <LegendDot color="bg-tmrw-grey-700" label="MONTHLY" />
-        <LegendDot color="bg-tmrw-syringe" label="PRODUCT SHARE" />
+        <LegendDot color="bg-tmrw-infusion" label="PRODUCT SHARE" />
       </div>
     </div>
   );

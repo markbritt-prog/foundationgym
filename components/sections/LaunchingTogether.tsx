@@ -3,22 +3,22 @@ import { FadeIn } from "@/components/ui/FadeIn";
 export function LaunchingTogether() {
   return (
     <section id="launching-together" className="bg-tmrw-white py-14 sm:py-16 md:py-20 lg:py-24">
-      <div className="max-w-5xl mx-auto px-6 md:px-10">
+      <div className="max-w-6xl mx-auto px-6 md:px-10">
         <FadeIn>
-          <span className="font-ui text-[0.65rem] md:text-[0.7rem] uppercase tracking-[0.04em] text-tmrw-syringe mb-4 block">
-            08 &mdash; LAUNCHING TOGETHER
+          <span className="font-ui text-[0.65rem] md:text-[0.7rem] uppercase tracking-[0.04em] text-tmrw-grey-700 mb-4 block">
+            09 &mdash; LAUNCHING TOGETHER
           </span>
         </FadeIn>
 
         <FadeIn>
           <h2 className="font-display text-[1.375rem] sm:text-[1.625rem] md:text-[2rem] lg:text-[2.5rem] uppercase leading-none tracking-[-0.01em] text-tmrw-black">
-            A LAUNCH, NOT A SOFT OPEN.
+            INVITING YOUR MEMBERS<br />ON A NEW JOURNEY.
           </h2>
         </FadeIn>
 
         <FadeIn>
           <p className="font-body text-[0.9rem] sm:text-[0.95rem] md:text-[1.05rem] leading-[1.55] tracking-[-0.01em] text-tmrw-grey-700 max-w-xl mt-4">
-            The partnership works if it&apos;s announced, seen, and talked about.
+            Your model is clearly more mature and developed than us, but you&apos;re pushing the boundaries on a different approach. We&apos;re not framing this as a partnership between two brands trying to extract from a stable market. The launch should feel like inviting customers to join a new type of journey.
           </p>
         </FadeIn>
 
@@ -30,10 +30,13 @@ export function LaunchingTogether() {
               </span>
               <div className="mt-5 space-y-5 font-body text-[0.95rem] leading-[1.65] tracking-[-0.01em] text-tmrw-grey-700">
                 <p>
-                  The campaign. Co-branded creative and the paid-media budget, PR, and a launch event held at VRTUS. All content production &mdash; photography, short-form video, founder interviews, member stories &mdash; on the TMRW budget.
+                  On-site activation. 2&ndash;3 TMRW pop-up events at 350 Bourke during the launch window &mdash; phlebotomist, sign-up device, and on-the-day signage. Members get the friction-free path from training floor to first blood draw.
                 </p>
                 <p>
-                  Ongoing content. Quarterly storytelling drops featuring VRTUS members whose protocols produce meaningful change. TMRW&apos;s ambassador network amplifies the launch; members of the VRTUS community who have reach are introduced into that programme.
+                  The campaign. Co-branded creative and marketing materials for in the gym, PR, and a launch event held at 350 Bourke. All content production &mdash; photography, short-form video, founder interviews, member stories &mdash; on the TMRW budget.
+                </p>
+                <p>
+                  Ongoing content. Quarterly storytelling drops featuring Foundation members whose protocols produce meaningful change. TMRW&apos;s ambassador network amplifies the launch; members of the Foundation community who have reach are introduced into that programme.
                 </p>
               </div>
             </div>
@@ -42,20 +45,20 @@ export function LaunchingTogether() {
           <FadeIn delay={0.2}>
             <div>
               <span className="font-ui text-[0.65rem] uppercase tracking-[0.04em] text-tmrw-grey-700 block">
-                WHAT VRTUS PROVIDES
+                WHAT FOUNDATION PROVIDES
               </span>
               <div className="mt-5 space-y-5 font-body text-[0.95rem] leading-[1.65] tracking-[-0.01em] text-tmrw-grey-700">
                 <p>
-                  Channels and coordination. The VRTUS social accounts announcing the partnership in coordinated sequence with TMRW. Access to the in-gym digital screens on the standard content loop. Modest signage near the entrance noting that VRTUS is a TMRW collection centre.
+                  Channels and coordination. Foundation&apos;s social accounts and email announcing the partnership in coordinated sequence with TMRW. Partner code in the member app and new-member welcome sequence. Space inside the gym for the 2&ndash;3 on-site activation events. One TMRW event per quarter after that.
                 </p>
                 <p>
-                  Member comms and introductions. Email, app notification, and newsletter inclusion at launch. Warm introductions to VRTUS members who could be ambassadors or influencer candidates. Founder, trainer, and operations team availability for co-branded content days.
+                  Member comms and introductions. Warm introductions to Foundation members who could be ambassadors or influencer candidates. Founder, coach, and operations team availability for co-branded content days.
                 </p>
                 <p>
-                  A pace-of-aging leaderboard among VRTUS members. Epigenetic data makes competitive wellness visible and shareable &mdash; the gym with the lowest biological age in Bondi.
+                  A pace-of-aging leaderboard among Foundation members. Epigenetic data makes competitive wellness visible and shareable &mdash; the Surry Hills gym with the lowest biological age.
                 </p>
                 <p>
-                  One marketing lead as a point of contact. TMRW integrates into the VRTUS marketing calendar rather than competing with it.
+                  One marketing lead as a point of contact. TMRW integrates into the Foundation marketing calendar rather than competing with it.
                 </p>
               </div>
             </div>

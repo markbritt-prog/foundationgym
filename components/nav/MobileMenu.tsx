@@ -83,7 +83,7 @@ export function MobileMenu({ open, onClose, activeId, onSelect }: Props) {
                   >
                     <span
                       className={`font-ui text-[0.65rem] uppercase tracking-[0.04em] shrink-0 w-6 ${
-                        isActive ? "text-tmrw-syringe" : "text-tmrw-grey-700"
+                        isActive ? "text-tmrw-white" : "text-tmrw-grey-700"
                       }`}
                     >
                       {ordinal}

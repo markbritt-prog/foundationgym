@@ -2,7 +2,7 @@ import { COMMERCIAL } from "./constants";
 
 export interface CalcInputs {
   activationsY1: number;
-  activeMembersY2: number;
+  annualNewJoinerIncrement: number; // integer count added to new joiners each subsequent year
   retentionMonths: number;
   productAttachRate: number;
 }
@@ -30,8 +30,9 @@ function computeYearEcon(
   newJoiners: number,
   attachRate: number
 ): Omit<YearResult, "year"> {
-  const joiningIncome = newJoiners * COMMERCIAL.vrtusJoiningShare;
-  const monthlyIncome = activeMembers * COMMERCIAL.vrtusMonthlyShare * 12;
+  const joiningIncome = newJoiners * COMMERCIAL.foundationActivationBlended;
+  const monthlyIncome =
+    activeMembers * COMMERCIAL.foundationMonthlyShareBlended * 12;
   const productIncome =
     activeMembers *
     attachRate *
@@ -47,91 +48,60 @@ function computeYearEcon(
   };
 }
 
-// Backwards-compatible export for any external callers.
 export const computeYear = computeYearEcon;
 
 export function compute(inputs: CalcInputs): CalcResult {
   const annualChurnRate = Math.min(1, 12 / Math.max(1, inputs.retentionMonths));
 
-  // ── Year 1: all activations are new ──
-  const y1Active = inputs.activationsY1;
-  const y1 = computeYearEcon(y1Active, y1Active, inputs.productAttachRate);
+  const years: YearResult[] = [];
+  let prevActive = 0;
 
-  // ── Year 2: some Y1 members retained, rest are new ──
-  const y2Active = inputs.activeMembersY2;
-  const retainedFromY1 = Math.round(
-    inputs.activationsY1 * Math.max(0, 1 - annualChurnRate)
-  );
-  const y2New = Math.max(0, y2Active - retainedFromY1);
-  const y2 = computeYearEcon(y2Active, y2New, inputs.productAttachRate);
-
-  // ── Years 3-5: gym continues activating at the Y1 rate while the active
-  //    base converges toward equilibrium (Y1 × retention / 12). Higher
-  //    retention → larger active base → more monthly + product revenue. ──
-  const annualNewJoiners = inputs.activationsY1;
-  const laterYears: YearResult[] = [];
-  let prevActive = y2Active;
-
-  for (let yr = 3; yr <= 5; yr++) {
+  for (let i = 0; i < 5; i++) {
+    const newJoiners = Math.max(
+      0,
+      inputs.activationsY1 + i * inputs.annualNewJoinerIncrement
+    );
     const retained = Math.round(prevActive * (1 - annualChurnRate));
-    const active = retained + annualNewJoiners;
-    const econ = computeYearEcon(active, annualNewJoiners, inputs.productAttachRate);
-    laterYears.push({ year: yr, ...econ });
+    const active = retained + newJoiners;
+    const econ = computeYearEcon(active, newJoiners, inputs.productAttachRate);
+    years.push({ year: i + 1, ...econ });
     prevActive = active;
   }
 
-  const years: YearResult[] = [
-    { year: 1, ...y1 },
-    { year: 2, ...y2 },
-    ...laterYears,
-  ];
-
   const fiveYearTotal = years.reduce((s, y) => s + y.total, 0);
   const annualisedAverage = fiveYearTotal / 5;
-
-  const equilibriumActive = Math.round(
-    inputs.activationsY1 * inputs.retentionMonths / 12
-  );
-  const steadyState = computeYearEcon(
-    equilibriumActive,
-    annualNewJoiners,
-    inputs.productAttachRate,
-  );
+  const y1Total = years[0].total;
+  const steadyStateAnnual = years[years.length - 1].total;
 
   return {
     years,
     fiveYearTotal,
-    y1Total: y1.total,
+    y1Total,
     annualisedAverage,
-    steadyStateAnnual: steadyState.total,
+    steadyStateAnnual,
   };
 }
 
 /**
- * Sensitivity cell — 5-year *annual average* revenue to VRTUS.
- *
- * Assumptions:
- *  - Y1 new activations = `activationsY1` (matrix x-axis)
- *  - Each subsequent year adds +50 new activations vs the prior year
- *  - 18-month average retention \u2014 modelled as active = this year\u2019s joiners +
- *    50% of last year\u2019s joiners (linear approximation of an 18-month tail)
- *  - Attach rate held constant across the 5 years
+ * Sensitivity cell — 5-year annual average revenue to Foundation.
+ * Assumes +25 new joiners per year and 18-month retention unless overridden.
  */
 export function computeSensitivityCell(
   activationsY1: number,
-  attachRate: number
+  attachRate: number,
+  annualNewJoinerIncrement: number = 25,
+  retentionMonths: number = 18
 ): number {
-  const yearlyNew = [0, 1, 2, 3, 4].map(
-    (i) => activationsY1 + i * 50
-  );
+  const annualChurnRate = Math.min(1, 12 / Math.max(1, retentionMonths));
 
   let total = 0;
+  let prevActive = 0;
   for (let i = 0; i < 5; i++) {
-    const priorYearNew = i > 0 ? yearlyNew[i - 1] : 0;
-    const active = yearlyNew[i] + 0.5 * priorYearNew;
+    const newJoiners = Math.max(0, activationsY1 + i * annualNewJoinerIncrement);
+    const active = prevActive * (1 - annualChurnRate) + newJoiners;
 
-    const joining = yearlyNew[i] * COMMERCIAL.vrtusJoiningShare;
-    const monthly = active * COMMERCIAL.vrtusMonthlyShare * 12;
+    const joining = newJoiners * COMMERCIAL.foundationActivationBlended;
+    const monthly = active * COMMERCIAL.foundationMonthlyShareBlended * 12;
     const product =
       active *
       attachRate *
@@ -139,8 +109,8 @@ export function computeSensitivityCell(
       COMMERCIAL.productRevenueShare;
 
     total += joining + monthly + product;
+    prevActive = active;
   }
-
   return total / 5;
 }
 

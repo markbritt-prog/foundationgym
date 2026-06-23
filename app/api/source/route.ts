@@ -66,7 +66,7 @@ export async function GET() {
       headers: {
         "Content-Type": "application/zip",
         "Content-Disposition":
-          'attachment; filename="TMRW-VRTUS-proposal-source.zip"',
+          'attachment; filename="TMRW-Foundation-proposal-source.zip"',
         "Cache-Control": "no-store",
       },
     });
